@@ -3,15 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet"href="Stylesheet.css"/>
     <title>Inscription</title>
 </head>
 
+<header>
+    <h1>Wisd'home</h1>
+</header>
+
 <body>
-    <header>
 
-    </header>
-
-    <section>
+    <div>
         <h2>Inscription</h2>
         <article class="accueil article">
             <p>
@@ -53,11 +55,12 @@
             </p>
         </article>
 
-    </section>
+    </div>
+</body>
 
     <footer>
 
     </footer>
-</body>
+
 
 </html>
