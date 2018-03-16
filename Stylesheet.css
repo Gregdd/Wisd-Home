@@ -1,5 +1,6 @@
 body{
     font-family:"Arial";
+    margin :0;
 }
 header{
     text-align: left;
@@ -17,4 +18,30 @@ footer{
     padding-top:0.1px;
     padding-bottom:0.1px;
 
+}
+div{
+    padding : 10px;
+}
+fieldset{
+    margin : 10px;
+}
+ul{
+    display: flex;
+    margin:0;
+    padding : 0;
+    float :right;
+    padding-top: 20px;
+
+}
+li{
+    list-style:none;
+    padding:10px;
+    border: solid;
+    border-radius: 10px;
+    margin:10px;
+    align:left;
+}
+a{
+    text-decoration: none;
+    color: white;
 }
