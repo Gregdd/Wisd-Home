@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Wisd'Home - Page d'accueil</title>
-        <link rel="stylesheet" href="Style Page d'accueil.css" />
+        <link rel="stylesheet"href="Stylesheet.css"/>
     </head>
 
     <body>
