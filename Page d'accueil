@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Wisd'Home - Page d'accueil</title>
+        <link rel="stylesheet" href="Style Page d'accueil.css" />
+    </head>
+
+    <body>
+    <image Logo="logo.jpg" />
+    <h1>Wisd'Home</h1>
+    <ul>
+      <li><a href="Inscription.html">Inscription</a></li>
+      <li><a href="Connexion.html">Connexion</a></li>
+    </ul>
+    <image Domotique="Domotique.jpg" />
+    <p>Bienvenue sur Wisd'Home</p>
+    <p><a href="Commencer.html">Commencer</a></p>
+    <p>Qui sommes-nous ?</p>
+    <p class="txt"> GRAND TEXTE SUR L'ENTREPRISE</p>
+    <image Entreprise="Entreprise.jpg" />
 
 
-
+    </body>
+</html>
