@@ -10,10 +10,11 @@
 
 <header>
     <image Logo="logo.jpg" />
+    <h1>Wisd'Home</h1>
 </header>
 
 <body>
-    <h1>Wisd'Home</h1>
+    
     <ul>
         <li><a href="Inscription.html">Inscription</a></li>
         <li><a href="Connexion.html">Connexion</a></li>
