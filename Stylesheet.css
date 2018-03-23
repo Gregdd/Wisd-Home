@@ -41,7 +41,11 @@ li{
     margin:10px;
     align:left;
 }
-a{
+.white{
     text-decoration: none;
     color: white;
 }
+a{
+    text-decoration : none;
+}
+
