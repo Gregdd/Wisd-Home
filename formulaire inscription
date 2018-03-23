@@ -50,7 +50,7 @@
             <input type="submit"><br>
         </form><br>
 
-        <a href="Connexion.html">Déjà inscrit?</a>
+        <a href="Connexion.php">Déjà inscrit?</a>
 
 
     </article>
