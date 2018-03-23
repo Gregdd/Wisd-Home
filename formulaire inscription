@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <link rel="stylesheet"href="Stylesheet.css"/>
     <title>Inscription</title>
+
+</head>
+
     <header>
         <h1>Wisd'Home</h1>
     </header>
-</head>
 
 <body>
 
