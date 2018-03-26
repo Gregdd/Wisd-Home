@@ -6,24 +6,23 @@ header{
     text-align: left;
     background-color:#000080;
     color:white;
-    padding-left:20px;
-    padding-top:5px;
-    padding-bottom:5px;
+    padding-left:3%;
+    padding-top: 1%;
+    padding-bottom:1%;
 }
 footer{
     text-align: left;
     background-color:#000080;
     color:white;
-    padding-left:20px;
-    padding-top:0.1px;
-    padding-bottom:0.1px;
-
+    padding-left:5%;
+    padding-top:0.5%;
+    padding-bottom:0.5%;
 }
 div{
-    padding : 10px;
+    padding : 5%;
 }
 fieldset{
-    margin : 10px;
+    margin-left : 5%;
 }
 ul{
     display: flex;
@@ -39,7 +38,8 @@ li{
     border: solid;
     border-radius: 10px;
     margin:10px;
-    align:left;
+    
+
 }
 .white{
     text-decoration: none;
