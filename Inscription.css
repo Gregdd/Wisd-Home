@@ -1,0 +1,15 @@
+div{
+    margin-left : 5%;
+}
+.gauche{
+    display : inline-block;
+    vertical-align: top;
+    margin-right : 20%;
+    margin-left : 15%;
+
+}
+.droite{
+    display : inline-block;
+    vertical-align: top;
+    margin-left : auto;
+}
