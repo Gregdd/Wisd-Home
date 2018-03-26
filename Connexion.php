@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -9,7 +8,7 @@
 </head>
 
 <header>
-    <?php include 'Header.php';?>
+    <?php include 'Header_1.php';?>
 </header>
 
 
@@ -27,18 +26,18 @@
             <input type="password" name="pass" id="pass" size="30" maxlength="30" /><br/><br/>
             <label for="Souvenir"> Se souvenir de moi</label>
             <input type="checkbox" name="Souvenir" id="Souvenir" /><br/><br/>
-            <input type="submit" value="Connexion"><br/>
+            <input type="submit" value="Connexion"><br/><br/>
         </form>
 
-        <div>
-            Mot de passe oublié ? <a1 href="modifMDP" title="Mot de passe oublié" target="_blank">Cliquez ici</a1>
-        </div>
+        <a href="modifMDP" title="Mot de passe oublié" target="_blank">Mot de passe oublié ?</a>
 
     </fieldset>
 </div>
 
 </body>
 
-
+<footer>
+    
+</footer>
 
 </html>
