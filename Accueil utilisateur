@@ -3,15 +3,22 @@
     <head>
         <meta charset="utf-8" />
         <title>Wisd'Home - Page d'accueil</title>
-        <link rel="stylesheet" href="Style Page d'accueil.css" />
+        <link rel="stylesheet" href="01.css" />
     </head>
 
     <body>
-    <ul>
-    <li><a href="">My home</li>
-    <li><a href="">Consommation</li>
-    <li><a href="">Mon profil</li>
-    <li><a href="">Capteurs</li>
+      <div class="bouton">
+   <a href="My home">My home</a>
+</div>
+<div class="bouton">
+   <a href="Consommation">Consommation</a>
+</div>
+<div class="bouton">
+   <a href="Mon profil">Mon profil</a>
+</div>
+<div class="bouton">
+   <a href="Capteurs">Capteurs</a>
+</div>
 
         </body>
 </html>
