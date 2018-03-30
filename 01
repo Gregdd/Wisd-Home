@@ -1,0 +1,12 @@
+.bouton a {
+display:block;
+width:23%;
+line-height:50px;
+text-align:center;
+vertical-align:middle;
+background:black;
+color:white;
+text-decoration:none;
+float:left;
+margin:1%;
+}
