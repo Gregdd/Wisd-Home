@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Wisd'Home - Page d'accueil</title>
+        <link rel="stylesheet" href="Style créer maison.css" />
+    </head>
+
+    <body>
+
+// Menu du haut
+
+    <ul>
+      <li> Acceuil </li>
+      <li> My Home </li>
+      <li> Consommation </li>
+      <li> Capteurs </li>
+      <li> Mon profil </li>
+    </ul>
+
+      <p> Selectionner le nombre de pièces </p> </br>
+
+// Carré sur les pièces et capteurs
+
+<ul id="MenuDeroulant">
+
+      <li> <a href="#">1</a></li>
+      <li> <a href="#">2</a> </li>
+      <li> <a href="#">3</a> </li>
+      <li> <a href="#">4</a> </li>
+      <li> <a href="#">5</a> </li>
+      <li> <a href="#">6</a> </li>
+      <li> <a href="#">7</a> </li>
+    </ul>
+
+    <p> Nom de la pièce </p>
+    <form method="get" action="traitement.php">
+      <p>Insérer un nom de pièce</p>
+    </form>
+
+    <p> Ajouter un capteur </p> </br>
+    <p> Capteur 1 </p>
+
+    <ul id="MenuDeroulant">
+
+      <li> <a href="#">Type de capteur</a> </li>
+      <li> <a href="#">Humidité</a> </li>
+      <li> <a href="#">Température</a> </li>
+      <li> <a href="#">Présence</a> </li>
+      <li> <a href="#">Fumée</a> </li>
+      <li> <a href="#">CO2</a> </li>
+      <li> <a href="#">Luminosité</a> </li>
+      <li> <a href="#">Caméra</a> </li>
+    </ul>
+  </br>
+  <p> Enregistrer la pièce </p>
+
+
+
+        </body>
+</html>
