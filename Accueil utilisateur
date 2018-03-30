@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Wisd'Home - Page d'accueil</title>
+        <link rel="stylesheet" href="Style Page d'accueil.css" />
+    </head>
+
+    <body>
+    <ul>
+    <li><a href="">My home</li>
+    <li><a href="">Consommation</li>
+    <li><a href="">Mon profil</li>
+    <li><a href="">Capteurs</li>
+
+        </body>
+</html>
