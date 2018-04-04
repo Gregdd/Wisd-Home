@@ -18,7 +18,7 @@
       <li> Mon profil </li>
     </ul>
 
-      <p> Selectionner le nombre de pièces </p> </br>
+      <p> Selectionner le nombre de pièces </p> <br/>
 
 // Carré sur les pièces et capteurs
 
@@ -52,7 +52,7 @@
       <li> <a href="#">Luminosité</a> </li>
       <li> <a href="#">Caméra</a> </li>
     </ul>
-  </br>
+  <br/>
   <p> Enregistrer la pièce </p>
 
 
