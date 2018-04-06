@@ -53,7 +53,7 @@
         </fieldset>
     </form>
     
-    <a href="Abonnement.html" title="Abonnement" target="_blank" class="Abonnement">Abonnement</
+    <a href="Abonnement.html" title="Abonnement" target="_blank" class="Abonnement">Abonnement</a>
     
     <fieldset>
         <legend>Contact</legend>
