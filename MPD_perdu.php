@@ -28,8 +28,6 @@
             <input type="submit" value="Valider"> <a href="Accueil_2.php" title="Page d'accueil"></a><br/><br/>
         </form>
 
-        <a href="MDP_perdu.php" title="Mot de passe oublié" target="_blank">Mot de passe oublié ?</a>
-
     </fieldset>
 </div>
 </body>
