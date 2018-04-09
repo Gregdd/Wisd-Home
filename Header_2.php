@@ -2,12 +2,17 @@
 <html>
 <meta charset="utf-8" />
 <link rel="stylesheet" href="Header%202.css" />
-<div class=logo>
-  <a href="Accueil_1"><img src="logo.jpg" alt="Wisd'Home"/></a></div>
+
 <ol>
     <li><p>Nom Prénom</p></li><br/>
     <li><a class="white" href="Accueil_1.php">Deconnexion</a></li>
 </ol>
+
+<div class=logo>
+  <a href="Accueil_1"><img src="logo.jpg" alt="Wisd'Home"/></a>
+</div>
+
+
 
 <ul>
     <li><a class = "white" href="Accueil_1.php">Accueil</a></li>
