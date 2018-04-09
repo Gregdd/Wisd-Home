@@ -9,7 +9,7 @@
 </ol>
 
 <div class=logo>
-  <a href="Accueil_1"><img src="logo.jpg" alt="Wisd'Home"/></a>
+  <a href="Accueil_1"><img src="logo.jpg" width="200" alt="Wisd'Home"/></a>
 </div>
 
 
