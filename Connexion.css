@@ -1,0 +1,14 @@
+form{
+	text-align: center;
+}
+
+fieldset{
+	text-align: center;
+	width: 30%;
+	height: 10%;
+	margin-left: 35%;
+}
+
+legend{
+	margin-left:40%;
+}
