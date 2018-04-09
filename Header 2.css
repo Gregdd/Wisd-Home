@@ -1,0 +1,34 @@
+.image {
+ background: url("logo.jpg");
+ border: none;
+ width: 20px; /* largeur à spécifier */
+ height: 20px; /* longueur à spécifier */
+ cursor: pointer;
+ float: left;
+}
+ul {
+    list-style-type: none;
+    margin: 2%;
+    padding: 0;
+    font-size: 20px;
+}
+ul li {
+    float: left;
+}
+ul li a {
+    display: block;
+    background-color: #ffffff;
+    padding: 8px 30px;
+    text-decoration: none;
+    border-color: #000000;
+}
+ul li a:hover {
+    background-color: #000000;
+    color: white;
+}
+ol {
+  float: right;
+  list-style-type: none;
+  margin: 20px;
+  font-size: 20px;
+}
