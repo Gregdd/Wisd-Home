@@ -1,8 +1,8 @@
 .logo{
- background: url("logo.jpg");
+  display: block;
  border: none;
- width: 20px; /* largeur à spécifier */
- height: 250px; /* longueur à spécifier */
+ width: 0px; /* largeur à spécifier */
+ height: 65px; /* longueur à spécifier */
  cursor: pointer;
 }
 ul {
