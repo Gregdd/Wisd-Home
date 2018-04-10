@@ -1,0 +1,19 @@
+h1{
+	text-align: center;
+	color: red;
+}
+h2{
+	text-align: center;
+	text-decoration: underline;
+	color: blue;
+}
+a[title=abonnement]{
+	border: 6px black solid;
+}
+#conteneur{
+	display: flex;
+	justify-content: space-around;
+	margin: auto;
+
+}
+
