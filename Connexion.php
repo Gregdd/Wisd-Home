@@ -7,14 +7,14 @@
 <link rel="stylesheet" href="Stylesheet.css"/>
 <link rel="stylesheet" href="Connexion.css"/>
 </head>
-
+    
+<body>
+    
 <header>
 <?php include 'Header_1.php';?>
 </header>
 
-
-<body>
-
+<main>
 <div>
     <fieldset>
         <legend>Connexion</legend>
@@ -34,11 +34,11 @@
 
     </fieldset>
 </div>
-
-</body>
+</main>
 
 <footer>
     
 </footer>
-
+    
+</body>
 </html>
