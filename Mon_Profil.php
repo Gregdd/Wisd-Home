@@ -5,15 +5,19 @@
     <meta charset="utf-8" />
     <title>Mon profil</title>
     <link rel="stylesheet" href="profil.css" />
+	<link rel="stylesheet" href="Stylesheet.css"/>
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
 </head>
-
+	
+<body>
+	
 <header>
     <?php include 'Header_2.php';?>
 </header>
 
-<body>
+	<main>
+
 <div>
     <h1>Mon profil</h1>
     <form method="post" action="profil.php">
@@ -70,10 +74,13 @@
         <input type="submit" value="Envoyer"/>
     </fieldset>
 </div>
-</body>
 
+</main>
 <footer>
 
 </footer>
+</body>
+
+
 
 </html>

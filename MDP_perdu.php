@@ -8,11 +8,13 @@
 <link rel="stylesheet" href="MDP_perdu.css"/>
 </head>
 
+<body>
+    
 <header>
 <?php include 'Header_1.php';?>
 </header>
 
-<body>
+    <main>
 <div>
     <fieldset>
         <legend>Modification du mot de passe</legend>
@@ -30,6 +32,10 @@
 
     </fieldset>
 </div>
+    </main>
+    <footer>
+        
+    </footer>
 </body>
 
 </html>
