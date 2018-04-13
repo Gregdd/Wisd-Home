@@ -6,19 +6,13 @@
     <link rel="stylesheet" href="Stylesheet.css"/>
 </head>
 
-
+<body>
 <header>
-
-    <ul>
-        <li><a href="Inscription.php">Inscription</a></li>
-        <li><a href="Connexion.php">Connexion</a></li>
-    </ul>
-    <h1>Wisd'home</h1>
-    <image Logo="logo.jpg" />
+    <?php include 'Header_1.php'; ?>
 </header>
 
-<body>
 
+<main>
 <div>
     <image Domotique="Domotique.jpg" />
     <p>Bienvenue sur Wisd'Home</p>
@@ -27,11 +21,12 @@
     <p class="txt"> GRAND TEXTE SUR L'ENTREPRISE</p>
     <image Entreprise="Entreprise.jpg" />
 </div>
-
-</body>
-
+</main>
+    
+    
 <footer>
 
 </footer>
+</body>
 
 </html>
