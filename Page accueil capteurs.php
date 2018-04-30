@@ -1,255 +1,201 @@
 <!DOCTYPE html>
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Accueil utilisateur </title>
-    <style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Catalogue</title>
+    <link rel="stylesheet" type="text/css" href="Page_acceuil_capteur.css">
+    <link rel="stylesheet" type="text/css" href="style_tableau.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="Image/icon.png" />
 
-
-    .menu1 ul {
-    list-style-type: none;
-    margin-top:3%;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-  .menu1 li {
-    float: right;
-}
-
- .menu1 li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
- .menu1 li a:hover {
-    background-color: #111;
-}
-
- .menu2 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-}
-
-.menu2 li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-/* Change the link color on hover */
-.menu2 li a:hover {
-    background-color: #555;
-    color: white;
-}
-
-div.img
-  {
-  margin:3px;
-  border:5px solid #bebebe;
-  height:auto;
-  width:auto;
-  float:left;
-  text-align:center;
-  }
-div.img img
-  {
-  display:inline;
-  margin:3px;
-  border:1px solid #bebebe;
-  }
-div.img a:hover img
-  {
-  border:1px solid #333333;
-  }
-div.desc
-  {
-  text-align:center;
-  font-weight:normal;
-  width:150px;
-  font-size:12px;
-  margin:10px 5px 10px 5px;
-  }
-.onoffswitch {
-    margin-left:30px;
-    position: relative; width: 90px;
-    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-}
-
-.onoffswitch-checkbox {
-    display: none;
-}
-.onoffswitch-label {
-    display: block; overflow: hidden; cursor: pointer;
-    border: 2px solid #999999; border-radius: 20px;
-}
-.onoffswitch-inner {
-    display: block; width: 200%; margin-left: -100%;
-    transition: margin 0.3s ease-in 0s;
-}
-.onoffswitch-inner:before, .onoffswitch-inner:after {
-    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
-    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
-    box-sizing: border-box;
-}
-.onoffswitch-inner:before {
-    content: "ON";
-    padding-left: 10px;
-    background-color: #34A7C1; color: #FFFFFF;
-}
-.onoffswitch-inner:after {
-    content: "OFF";
-    padding-right: 10px;
-    background-color: #EEEEEE; color: #999999;
-    text-align: right;
-}
-.onoffswitch-switch {
-    display: block; width: 18px; margin: 6px;
-    background: #FFFFFF;
-    position: absolute; top: 0; bottom: 0;
-    right: 56px;
-    border: 2px solid #999999; border-radius: 20px;
-    transition: all 0.3s ease-in 0s;
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-    margin-left: 0;
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-    right: 0px;
-}
-#submit{
-margin-left:150px;
-}
-
-
-input[type="range"] {
-    position: relative;
-    margin-left: 1em;
-}
-input[type="range"]:after,
-input[type="range"]:before {
-    position: absolute;
-    top: 1em;
-    color: #aaa;
-}
-input[type="range"]:before {
-    left:0em;
-    content: attr(min);
-}
-input[type="range"]:after {
-    right: 0em;
-    content: attr(max);
-}
-.pres{
-
-margin-left:16%;
-}
-
-    </style>
 </head>
 
-<header>
 
-</header>
 
-<div class="menu1">
-<ul >
-    <li><a href="default.asp">Se deconnecter</a></li>
-    <li><a href="news.asp">Gerer ma maison </a></li>
-    <li><a href="contact.asp">Mon profil</a></li>
-</ul>
-</div>
+<body>
 
-</br></br>
 
-<div class="menu2">
+<article>
+    <h2>Choix de la pièce</h2>
+
+
+
+
     <ul>
-        <li><a href="default.asp">Salon</a></li>
-        <li><a href="news.asp">Piece 1</a></li>
-        <li><a href="contact.asp">chambre1</a></li>
-        <li><a href="about.asp">chambre 2</a></li>
+        <li class="carre">
+            <a href="">
+                <p class="titre">Salon</p></a>
+        </li>
+
+        <li class="carre">
+            <a href="">
+                <p class="titre">Piece 1</p></a>
+        </li>
+
+        <li class="carre">
+            <a href="">
+                <p class="titre">Piece 2</p></a>
+        </li>
+        <li class="carre">
+            <a href="">
+                <p class="titre">Piece 3</p></a>
+        </li>
+        <li class="carre">
+            <a href="">
+                <p class="titre">Piece 4</p></a>
+        </li>
     </ul>
 
-</div>
-<img class="pres" src="http://www.kikelleandco.fr/wp-content/uploads/2017/03/prise-mural-hdmi.jpg" width="600" height="200">
 
 
-</br></br>
+</article>
+<article>
 
-<div class="img">
-    <a target="_blank" href="">
-        <img src="luminosite.png"  width="150" height="150">
-    </a>
-    <div class="desc">info sur le capteur</div>
-</div>
+    <h2> Capteurs  </h2><hr>
+    <ul>
 
-<div class="img">
-    <a target="_blank" href="">
-        <img src="camera.jpg" alt="Ballade" width="150" height="150">
-    </a>
-    <div class="desc">info sur le capteur</div>
-</div>
+        <li class="carre" >
+            <a href="">
+                <center><img src="Image/goutte.png" alt="Humidité" title="Humidité" class="pics" style="width:30%"/></center><br/>
+                <p class="titre">Humidité</p></a>
+            <button onclick="document.getElementById('modal-wrapper').style.display='block'" >
+                Humidité</button>
 
-<div class="img">
-    <a target="_blank" href="/i/tulip_flaming_club.jpg">
-        <img src="volets.png" alt="Ballade" width="150" height="150">
-    </a>
-    <div class="desc">info sur le capteur</div>
+            <div id="modal-wrapper" class="modal">
 
-    <div class="onoffswitch">
-        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-        <label class="onoffswitch-label" for="myonoffswitch">
-            <span class="onoffswitch-inner"></span>
-            <span class="onoffswitch-switch"></span>
-        </label>
-    </div>
-</div>
+                <form class="modal-content animate" action="/action_page.php">
 
-<div class="img">
-    <a target="_blank" href="/i/tulip_fringed_family.jpg">
-        <img src="temp.jpg" alt="Ballade" width="150" height="150">
-    </a>
-    <div class="desc">info sur le capteur</div>
-    <input type="range" value="15" max="50" min="0" step="5">
+                    <div class="imgcontainer">
+                        <img src="Image/goutte.png" alt="Avatar" class="avatar">
+                        <h1 style="text-align:center">Modal Popup Box</h1>
+                    </div>
 
-</div>
+                    <div class="container">
+                        <label class="name" for="firstName">Prénom : </label><input id="firstName" name="firstName" type="text"/>
+                        <input type="text" placeholder="Enter Valeur" name="uname">
+                        </br></br><button type="submit">valider</button>
+                    </div>
 
-<div class="img">
-    <a target="_blank" href="/i/tulip_peach_blossom.jpg">
-        <img src="/i/tulip_peach_blossom_s.jpg" alt="Ballade" width="150" height="150">
-    </a>
-    <div class="desc">info sur le capteur</div>
-</div>
-</br></br>
-<br></br>
-<fieldset>
-    <legend>Ajouter un nouveau capteur/actionneur</legend>
-    Type de capteur :
-    <select>
-        <option>capteur de temperarure</option>
-        <option>detecteur d emouvement</option>
-    </select> </br>
+                </form>
 
-    Piece :
-    <select>
-        <option>Salon </option>
-        <option>Chambre1</option>
-        <option>chambre2</option>
-    </select> </br></fieldset></br>
-    <input id="submit" type="submit" value="Valider" >
-
-</fieldset>
+            </div>
 
 
+
+
+        </li>
+
+
+        <li class="carre">
+            <a href="">
+                <img src="Image/camera.png" alt="Camera" title="Caméra" class="pics" style="width:30%"/><br/>
+                <p class="titre">Camera</p></a>
+        </li>
+
+        <li class="carre">
+            <a href="">
+                <img src="Image/temp.png" style="width:30%" alt="Température" title="Température" class="pics"/><br/>
+                <p class="titre">Température</p></a>
+        </li>
+
+        <li class="carre">
+            <a href="">
+                <img src="Image/mouvement.png" style="width:30%"  alt="Capteur de mouvement" title="Capteur de mouvement" class="pics"/><br/>
+                <p class="titre">Capteur de mouvement</p></a>
+        </li>
+    </ul>
+
+    <ul>
+
+        <li class="carre">
+            <a href="">
+                <img src="Image/luminosite.png" style="width:30%"  alt="Luminosite" title="Luminosité" class="pics"/><br/>
+                <p class="titre">Luminosité</p></a>
+        </li>
+
+        <li class="carre">
+            <a href="">
+                <img src="Image/feu.png" style="width:30%"  alt="Capteur de fumee" title="Capteur de fumée" class="pics"/><br/>
+                <p class="titre">Capteur de fumée</p></a>
+        </li>
+
+        <li class="carre">
+            <a href="">
+                <img src="Image/consoeau.png" style="width:30%" alt="Capteur de consommation d'eau" title="Capteur de consommation d'eau" class="pics"/><br>
+                <p class="titre">Capteur de consomation d'eau</p></a>
+        </li>
+
+        <li class="carre">
+            <a href="">
+                <img src="Image/consoelec.png" style="width:30%"  alt="Capteur de consommation d'électricité" title="Capteur d'électricité" class="pics"/><br>
+                <p class="titre">Capteur de consomation d'électricité</p></a>
+        </li>
+    </ul>
+
+</article>
+
+</br>
+
+    <article>
+
+        <h2> Actionneurs </h2><hr>
+        <ul>
+
+            <li class="carre" >
+                <a href="">
+                    <center><img src="Image/goutte.png" alt="Humidité" title="Humidité" class="pics" style="width:30%"/></center><br/>
+                    <p class="titre">Humidité</p></a>
+            </li>
+
+
+            <li class="carre">
+                <a href="">
+                    <img src="Image/camera.png" alt="Camera" title="Caméra" class="pics" style="width:30%"/><br/>
+                    <p class="titre">Camera</p></a>
+            </li>
+
+            <li class="carre">
+                <a href="">
+                    <img src="Image/temp.png" style="width:30%" alt="Température" title="Température" class="pics"/><br/>
+                    <p class="titre">Température</p></a>
+            </li>
+
+            <li class="carre">
+                <a href="">
+                    <img src="Image/mouvement.png" style="width:30%"  alt="Capteur de mouvement" title="Capteur de mouvement" class="pics"/><br/>
+                    <p class="titre">Capteur de mouvement</p></a>
+            </li>
+        </ul>
+
+        <ul>
+
+            <li class="carre">
+                <a href="">
+                    <img src="Image/luminosite.png" style="width:30%"  alt="Luminosite" title="Luminosité" class="pics"/><br/>
+                    <p class="titre">Luminosité</p></a>
+            </li>
+
+            <li class="carre">
+                <a href="">
+                    <img src="Image/feu.png" style="width:30%"  alt="Capteur de fumee" title="Capteur de fumée" class="pics"/><br/>
+                    <p class="titre">Capteur de fumée</p></a>
+            </li>
+
+            <li class="carre">
+                <a href="">
+                    <img src="Image/consoeau.png" style="width:30%" alt="Capteur de consommation d'eau" title="Capteur de consommation d'eau" class="pics"/><br>
+                    <p class="titre">Capteur de consomation d'eau</p></a>
+            </li>
+
+            <li class="carre">
+                <a href="">
+                    <img src="Image/consoelec.png" style="width:30%"  alt="Capteur de consommation d'électricité" title="Capteur d'électricité" class="pics"/><br>
+                    <p class="titre">Capteur de consomation d'électricité</p></a>
+            </li>
+        </ul>
+
+    </article>
 
 </body>
-</html>
+
