@@ -1,0 +1,95 @@
+body{
+    font-family: Arial;
+    font-size: 100px;
+}
+
+img{
+    float:left;
+    width:30%;
+    position:relative;
+    left:40px;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+hr{
+    width:100%;
+    position:relative;
+    right:10px;
+    border-color: black;
+}
+article{
+    background-color: #3F5378;
+    width:98%;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-right: 30px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: white;
+    overflow: auto;
+}
+
+
+
+/*attention au hover qui par défaut
+est bleu et souligné*/
+
+a:hover{
+    text-decoration: none;
+    color:black;
+}
+
+.black{
+  color: black;
+
+}
+.select{
+    color :black;
+}
+
+.tableau{color: black;}
+
+td{
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.com_en_cours{
+  background-color: #3F5378;
+  border: 3px solid #3F5378;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.com_en_cours a:hover{
+    text-decoration: none;
+    color:purple;
+}
+
+.com_en_cours a{
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+}
+ul{
+  display: flex;
+}
+li{
+    text-align:center;
+}
+.carre{
+  border-radius: 5px;
+  list-style: none;
+  background-color: white;
+  padding:70px;
+  margin-right: 10px;
+}
+.titre{
+    position:relative;
+    top:50px;
+    right:25px;
+}
