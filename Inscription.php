@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="Stylesheet.css"/>
     <link rel="stylesheet" href="Inscription.css"/>
     <title>Inscription</title>
 </head>
