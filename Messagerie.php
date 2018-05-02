@@ -13,9 +13,8 @@
 <body>
 	
 <header>
-    <h1>Wisd'home</h1>
-    <image Logo="logo.jpg" />
-</header>
+        <?php include 'Header_2.php';?>
+    </header>
 
 	<main>
 
