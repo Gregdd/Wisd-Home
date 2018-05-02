@@ -14,7 +14,9 @@
 
 
 <body>
-
+<header>
+        <?php include 'Header_2.php';?>
+</header>
 
 <article>
     <h2>Choix de la pièce</h2>
