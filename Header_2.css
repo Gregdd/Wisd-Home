@@ -1,1 +1,37 @@
-
+header[role=contentinfo] {
+	padding: 1px 0; /* for ie8 & below*/
+	padding: 1.2rem 0;
+	background-color: #3F5378;
+.logo{
+  display: block;
+ border: none;
+ width: 0px; /* largeur à spécifier */
+ height: 65px; /* longueur à spécifier */
+ cursor: pointer;
+}
+ul {
+    list-style-type: none;
+    margin: 2%;
+    padding: 20px;
+    font-size: 20px;
+}
+ul li {
+    float: left;
+}
+ul li a {
+    display: block;
+    background-color: #ffffff;
+    padding: 8px 30px;
+    text-decoration: none;
+    border-color: #000000;
+}
+ul li a:hover {
+    background-color: #000000;
+    color: white;
+}
+ol {
+  align: right;
+  list-style-type: none;
+  margin: 20px;
+  font-size: 20px;
+}
