@@ -9,12 +9,10 @@
 </head>
 
 <body>
-    
-<header>
-<?php include 'Header_1.php';?>
-</header>
 
-    <main>
+<?php include 'Header_1.php';?>
+
+<main>
 <div>
     <fieldset>
         <legend>Modification du mot de passe</legend>
@@ -33,9 +31,9 @@
     </fieldset>
 </div>
     </main>
-    <footer>
-        
-    </footer>
+
+    <?php include 'Footer.php';?>
+    
 </body>
 
 </html>
