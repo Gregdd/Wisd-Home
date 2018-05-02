@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <title>Ma messagerie</title>
     <link rel="stylesheet" href="Messagerie.css" />
-    <link rel="stylesheet"href="Stylesheet.css"/>
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
 </head>
