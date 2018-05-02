@@ -11,9 +11,7 @@
 
 <body>
 
-    <header>
-        <?php include 'Header_2.php';?>
-    </header>
+<?php include 'Header_2.php';?>
 
 <main>
 
@@ -71,9 +69,7 @@
 
 </main>
 
-    <footer>
-
-    </footer>
+<?php include 'Footer.php';?>
 
 </body>
 
