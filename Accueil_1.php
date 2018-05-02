@@ -7,10 +7,8 @@
 </head>
 
 <body>
-<header>
-    <?php include 'Header_1.php'; ?>
-</header>
 
+<?php include 'Header_1.php'; ?>
 
 <main>
 <div>
@@ -23,10 +21,8 @@
 </div>
 </main>
     
+<?php include 'Footer.php';?>
     
-<footer>
-
-</footer>
 </body>
 
 </html>
