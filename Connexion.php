@@ -10,9 +10,7 @@
     
 <body>
     
-<header>
 <?php include 'Header_1.php';?>
-</header>
 
 <main>
 <div>
@@ -36,9 +34,7 @@
 </div>
 </main>
 
-<footer>
-    <?php include 'Footer.php';?>
-</footer>
+<?php include 'Footer.php';?>
     
 </body>
 </html>
