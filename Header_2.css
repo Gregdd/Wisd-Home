@@ -1,3 +1,4 @@
+
 header[role=contentinfo] {
 	padding: 1px 0; /* for ie8 & below*/
 	padding: 1.2rem 0;
@@ -30,7 +31,7 @@ ul li a:hover {
     color: white;
 }
 ol {
-  float: right;
+  align: right;
   list-style-type: none;
   margin: 20px;
   font-size: 20px;
