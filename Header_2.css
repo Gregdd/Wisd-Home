@@ -1,4 +1,7 @@
-background-color: #3F5378;
+header[role=contentinfo] {
+	padding: 1px 0; /* for ie8 & below*/
+	padding: 1.2rem 0;
+	background-color: #3F5378;
 .logo{
   display: block;
  border: none;
