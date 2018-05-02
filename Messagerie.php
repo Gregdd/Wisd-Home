@@ -11,12 +11,10 @@
 </head>
 	
 <body>
-	
-<header>
-        <?php include 'Header_2.php';?>
-    </header>
 
-	<main>
+<?php include 'Header_2.php';?>
+   
+<main>
 
     <fieldset>
         <legend>Contact</legend>
@@ -33,8 +31,10 @@
    });
 });
 ?>
-	</main>
-	<footer>
-	</footer>
+
+</main>
+
+<?php include 'Footer.php';?>
+	
 </body>
 </html>
