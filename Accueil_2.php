@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <title>Wisd'Home - Page d'accueil</title>
     <link rel="stylesheet" href="Accueil_2.css" />
-    <link rel="stylesheet" href="Stylesheet.css"/>
 </head>
 
 <body>
