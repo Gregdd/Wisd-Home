@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
-<meta charset="utf-8" />
-<link rel="stylesheet" href="Header%202.css" />
-
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="Header_2.css" />
+</head>
+    
+<header>
 <ol>
     <li><p>Nom Prénom</p></li><br/>
     <li><a class="white" href="Accueil_1.php">Deconnexion</a></li>
@@ -11,8 +14,6 @@
 <div class=logo>
   <a href="Accueil_1"><img src="logo.jpg" width="200" alt="Wisd'Home"/></a>
 </div>
-
-
 
 <ul>
     <li><a class = "white" href="Accueil_1.php">Accueil</a></li>
@@ -23,5 +24,5 @@
 
 </ul>
 
-
+</header>
 </html>
