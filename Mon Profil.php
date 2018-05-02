@@ -12,9 +12,7 @@
 
 <body>
 
-<header>
-    <?php include 'Header_2.php';?>
-</header>
+<?php include 'Header_2.php';?>
 
 <main>
 
@@ -68,9 +66,9 @@
     </div>
 
 </main>
-<footer>
 
-</footer>
+<?php include 'Footer.php';?>
+    
 </body>
 
 </html>
