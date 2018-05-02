@@ -1,0 +1,31 @@
+body{
+    font-family:"Arial";
+    margin :0;
+}
+header{
+    text-align: left;
+    background-color:#000080;
+    color:white;
+    padding-left:3%;
+    padding-top: 1%;
+    padding-bottom:1%;
+}
+ul{
+    display: flex;
+    margin:0;
+    padding : 0;
+    float :right;
+    margin-top: 2.5%;
+    margin-right : 5%;
+
+}
+li{
+    list-style:none;
+    padding:10px;
+    margin-left: 0%;
+}
+a{
+    text-decoration : none;
+    color: white;
+    font-weight :  bold;
+}
