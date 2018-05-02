@@ -1,7 +1,7 @@
 .logo{
   display: block;
  border: none;
- width: 0px; /* largeur à spécifier */
+ width: 05px; /* largeur à spécifier */
  height: 65px; /* longueur à spécifier */
  cursor: pointer;
 }
