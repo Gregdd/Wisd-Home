@@ -8,11 +8,9 @@
     <title>Inscription</title>
 </head>
 
-<header>
-    <?php include 'Header_1.php';?>
-</header>
-
 <body>
+    
+<?php include 'Header_1.php';?>
 
 <div>
     <h1>Inscription</h1><br/>
@@ -55,10 +53,9 @@
         </form>
 
 </div>
+    
+<?php include 'Footer.php';?>
+    
 </body>
-
-<footer>
-
-</footer>
 
 </html>
