@@ -10,18 +10,18 @@
 	<div id="Conteneur">
 		<div id="element">
 			DOMISEP<br/>
-			28 rue Notre Dame des Champs ????<br/>
-			75006 Paris ????<br/>
+			28 rue Notre Dame des Champs<br/>
+			75006 Paris<br/>
 		</div>
 		<div id="element">
 			Nous suivre ?<br/>
-			<img src="logo-Fb.png" alt="Fb"/>
-			<img src="twitter-logo.png" alt="Twitter"/>
+			<img src="images/fb_photo.png" alt="Fb"/>
+			<img src="images/tw_photo.png" alt="Twitter"/>
 		</div>
 		<div id="element">
 			<ul>
-				<li><a href="Mention_légales.php">Mention legales</a></li>
-				<li><a href="Conditions_d'utilisations.php">Conditions d'utilisations</a></li>
+				<li class="footer"><a href="Mention_légales.php">Mention legales</a></li>
+				<li class="footer"><a href="Conditions_d'utilisations.php">Conditions d'utilisations</a></li>
 			</ul>
 		</div>
 </footer>
