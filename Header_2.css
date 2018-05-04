@@ -1,3 +1,11 @@
+#header
+{
+    background:url(arbre.jpg) no-repeat;
+    height:600px;
+    position:relative;
+     
+}
+
 .logo{
   display: block;
  border: none;
