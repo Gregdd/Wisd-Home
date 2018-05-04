@@ -11,7 +11,7 @@
     
 <?php include 'Header_1.php';?>
 
-<div>
+<div class ="inscription">
     <h1>Inscription</h1><br/>
 
 
