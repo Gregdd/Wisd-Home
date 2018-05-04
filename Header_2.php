@@ -12,7 +12,7 @@
 </ol>
 
 <div class=logo>
-  <a href="Accueil_1"><img src="Logo Wisd'Home.jpg" width="200" alt="Wisd'Home"/></a>
+  <a href="Accueil_1.php"><img src="Logo Wisd'Home.jpg" width="200" alt="Wisd'Home"/></a>
 </div>
 
 <ul>
