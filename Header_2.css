@@ -1,38 +1,51 @@
-#header
-{
-    height:5%;     
+header{
+    text-align: left;
+    background-color:#000080;
+    color :white;
+    padding-left:3%;
+    padding-top: 1%;
+    padding-bottom:1%;
 }
-
 .logo{
-  display: block;
- border: none;
- width: 05px; /* largeur à spécifier */
- height: 65px; /* longueur à spécifier */
- cursor: pointer;
+    display: block;
+    border: none;
+    width: 0; /* largeur à spécifier */
+    height: 65px; /* longueur à spécifier */
+    cursor: pointer;
 }
-ul {
-    list-style-type: none;
-    margin: 2%;
-    padding: 20px;
+.ul2 {
+    list-style: none;
+    margin-top: 5%;
+    padding: 2%;
     font-size: 20px;
 }
-ul li {
+.ul2 .li2 {
     float: left;
 }
-ul li a {
+.ul2 .li2 .a2 {
     display: block;
-    background-color: #ffffff;
+    background-color: #000080;
     padding: 8px 30px;
     text-decoration: none;
+    color : white;
     border-color: #000000;
 }
-ul li a:hover {
+.ul2 .li2 .a2:hover {
     background-color: #000000;
     color: white;
 }
-ol li {
-  align: right;
-  list-style-type: none;
-  margin: 20px;
-  font-size: 20px;
+.ol2{
+    float: right;
+    list-style: none;
+    margin: 20px;
+    font-size: 20px;
+    color : white;
+}
+.ol2 .li2{
+    padding-bottom : 8%;
+}
+.ol2 .li2 .a2 {
+    list-style: none;
+    color : white;
+    text-decoration: none;
 }
