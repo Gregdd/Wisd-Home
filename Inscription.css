@@ -1,12 +1,15 @@
-div{
+body{
+    font-family:"Arial";
+}
+.inscription{
     margin-left : 5%;
+    padding-bottom : 10%;
 }
 .gauche{
     display : inline-block;
     vertical-align: top;
     margin-right : 20%;
-    margin-left : 15%;
-
+    margin-left : 20%;
 }
 .droite{
     display : inline-block;
