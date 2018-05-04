@@ -15,8 +15,8 @@
 		</div>
 		<div id="element">
 			Nous suivre ?<br/>
-			<img src="logo-Fb.jpg" alt="Fb"/>
-			<img src="twitter-logo.jpg" alt="Twitter"/>
+			<img src="logo-Fb.png" alt="Fb"/>
+			<img src="twitter-logo.png" alt="Twitter"/>
 		</div>
 		<div id="element">
 			<ul>
