@@ -1,6 +1,7 @@
 #Conteneur{
 	display: flex;
 	justify-content: space-around;
+	color: white;
 }
 
 img{
@@ -8,5 +9,19 @@ img{
 }
 
 footer{
-    background-color: #000080; 
+    background-color: #000080;
+    padding-top : 25px;
+	padding-bottom: 25px;
+	margin-top: 25px;
+	margin-bottom: 0px;
+    
+}
+
+.footer{
+	list-style:none;
+}
+
+body{
+	margin: 0;
+	font-family: "arial";
 }
