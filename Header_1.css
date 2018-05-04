@@ -1,7 +1,3 @@
-body{
-    font-family:"Arial";
-    margin :0;
-}
 header{
     text-align: left;
     background-color:#000080;
@@ -10,7 +6,7 @@ header{
     padding-top: 1%;
     padding-bottom:1%;
 }
-ul{
+.ul1{
     display: flex;
     margin:0;
     padding : 0;
@@ -19,13 +15,20 @@ ul{
     margin-right : 5%;
 
 }
-li{
+.li1{
     list-style:none;
     padding:10px;
-    margin-left: 0%;
+    margin-left: 0;
 }
-a{
+.a1{
     text-decoration : none;
     color: white;
     font-weight :  bold;
+}
+.logo{
+    display: block;
+    border: none;
+    width: 0; /* largeur à spécifier */
+    height: 65px; /* longueur à spécifier */
+    cursor: pointer;
 }
