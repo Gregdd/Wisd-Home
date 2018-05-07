@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="utf-8"/>
-<title>Connexion</title>
+<title>Modification du mot de passe</title>
 <link rel="stylesheet" href="MDP_perdu.css"/>
 </head>
 
