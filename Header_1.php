@@ -12,7 +12,7 @@
         <li class = li1><a class = "white" href="Connexion.php">Connexion</a></li>
     </ul>
 
-    <h1>Wisd'Home</h1>
+    <h1><a class = white href="Accueil_1.php">Wisd'Home</h1>
 
     <div class=logo>
         <a class = a1 href="Accueil_1.php"><img src="images/logo.jpg" width="200" alt="Wisd'Home"/></a>
