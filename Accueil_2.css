@@ -14,5 +14,9 @@
     height: 100%;
 }
 
+.bouton{
+	display: flex;
+	margin: 10%;
+}
 
 
