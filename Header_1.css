@@ -6,29 +6,30 @@ header{
     padding-top: 1%;
     padding-bottom:1%;
 }
-.ul1{
+.ulHeader1{
     display: flex;
-    margin:0;
+    margin: 5px;
     padding : 0;
     float :right;
     margin-top: 2.5%;
     margin-right : 5%;
 
 }
-.li1{
+.header1{
     list-style:none;
     padding:10px;
-    margin-left: 0;
+    margin-left: 5%;
+    border: solid;
+    border-radius: 10px;
 }
-.a1{
+.white{
     text-decoration : none;
     color: white;
-    font-weight :  bold;
+    margin: 10px;
+    padding: 10px;
 }
-.logo{
-    display: block;
-    border: none;
-    width: 0; /* largeur à spécifier */
-    height: 65px; /* longueur à spécifier */
-    cursor: pointer;
+
+body{
+	margin: 0;
+	font-family: "arial";
 }
