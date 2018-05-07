@@ -14,7 +14,7 @@
 <div>
     <image Domotique="Domotique.jpg" />
     <p>Bienvenue sur Wisd'Home</p>
-    <p><a href="Commencer.html">Commencer</a></p>
+    <p><a class = lien href="Connexion.php">Commencer</a></p>
     <p>Qui sommes-nous ?</p>
     <p class="txt"> GRAND TEXTE SUR L'ENTREPRISE</p>
     <image Entreprise="Entreprise.jpg" />
