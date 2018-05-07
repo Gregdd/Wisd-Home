@@ -8,8 +8,14 @@ fieldset{
 	height: 10%;
 	margin-left: 35%;
 	margin-bottom: 5%;
+	margin-top: 5%;
 }
 
 legend{
 	margin-left:40%;
+}
+
+body{
+	margin: 0;
+	font-family: "arial";
 }
