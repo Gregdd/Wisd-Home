@@ -24,6 +24,7 @@
 				<li class="footer"><a href="Conditions_d'utilisations.php">Conditions d'utilisations</a></li>
 			</ul>
 		</div>
+	<div/>
 </footer>
 
 
