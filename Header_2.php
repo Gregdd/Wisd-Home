@@ -11,7 +11,7 @@
     </ol>
 
     <div class=logo>
-        <a href="Accueil_2.php"><img src="images/logo.jpg" width="200" alt="Wisd'Home"/></a>
+        <a href="Accueil_2.php"><img src="Logo Wisd'Home.jpg" width="200" alt="Wisd'Home"/></a>
     </div>
 
     <ul class = ul2>
