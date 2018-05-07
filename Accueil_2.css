@@ -1,3 +1,7 @@
+body{
+	margin: 0;
+	font-family: "arial";
+}
 .bouton a {
     display:block;
     width:23%;
