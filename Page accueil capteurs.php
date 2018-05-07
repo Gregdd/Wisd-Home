@@ -200,4 +200,7 @@
     </article>
 
 </body>
-
+<footer>
+	<?php include 'Footer.php';?>
+</footer>
+</html>
