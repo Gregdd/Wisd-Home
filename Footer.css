@@ -21,6 +21,10 @@ footer{
 	list-style:none;
 }
 
+.couleur{
+	color: white;
+}
+
 body{
 	margin: 0;
 	font-family: "arial";
