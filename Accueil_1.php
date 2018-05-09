@@ -17,9 +17,9 @@
     </div>
     <div class="texte">
     	<image Domotique="Domotique.jpg" />
-    	<p>Bienvenue sur Wisd'Home</p>
+    	<h2>Bienvenue sur Wisd'Home</h2>
     	<p><a class = lien href="Connexion.php">Commencer</a></p>
-    	<p>Qui sommes-nous ?</p>
+    	<h3>Qui sommes-nous ?</h3>
     	<p class="txt"> GRAND TEXTE SUR L'ENTREPRISE</p>
     	<?php echo "Ceci est du <strong>texte</strong>"; ?>
 	</div>
