@@ -4,13 +4,12 @@ header{
     color :white;
     padding-left:1%;
     padding-top: 1%;
-    padding-bottom:5%;
+    padding-bottom: 2%;
 }
 .logo{
     display: block;
     border: none;
-    width: 0; /* largeur à spécifier */
-    height: 65px; /* longueur à spécifier */
+    width: 100px; /* largeur à spécifier */
     cursor: pointer;
 }
 
