@@ -1,19 +1,32 @@
 h1{
 	text-align: center;
-	color: red;
+	color: #1b3c02;
 }
-h2{
+
+.Abonnement2{
+	border: 5px black solid;
 	text-align: center;
-	text-decoration: underline;
-	color: blue;
+	margin: 45%;
+	padding: 0.5%;
 }
-a[title=abonnement]{
-	border: 6px black solid;
+
+body{
+	margin: 0;
+	font-family: "arial";
 }
-#conteneur{
+
+#Barriere{
 	display: flex;
-	justify-content: space-around;
-	margin: auto;
-
+	justify-content: center;
 }
 
+fieldset{
+	margin: 50px;
+	padding: 10%;
+	
+}
+
+.formulaire_contact{
+	margin: 50px;
+	padding: 1px;
+}
