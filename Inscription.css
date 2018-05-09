@@ -1,19 +1,25 @@
-body{
-	margin: 0;
-	font-family: "arial";
-}
-.inscription{
+div{
     margin-left : 5%;
-    padding-bottom : 10%;
 }
 .gauche{
     display : inline-block;
     vertical-align: top;
     margin-right : 20%;
-    margin-left : 20%;
+    margin-left : 15%;
+
 }
 .droite{
     display : inline-block;
     vertical-align: top;
     margin-left : auto;
+}
+
+body{
+	margin: 0;
+	font-family: "arial";
+}
+
+h1{
+	color: #1b3c02;
+	font-family : "courrier new";
 }
