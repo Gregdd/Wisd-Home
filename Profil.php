@@ -60,12 +60,7 @@
     </br>
     <a href="Abonnement.php" title="Abonnement" target="_blank" class="Abonnement2">Abonnement</a>
     </br></br>
-    <fieldset class="formulaire_contact">
-        <legend>Contact</legend>
-        <br /><input type="text" name="objet" id="objet" placeholder="Objet" size="35"> <br /> <br/>
-        <textarea id="message" cols="100" rows="20"> >"Message pour l'administrateur..." </textarea> <br/>
-        <input type="submit" value="Envoyer"/>
-    </fieldset>
+
 
 </body>
 
