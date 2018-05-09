@@ -9,8 +9,8 @@ img{
 }
 
 footer{
-	background-color: #000080;
-	padding-top : 25px;
+    background-color: #5b9630;
+    padding-top : 25px;
 	padding-bottom: 25px;
 	margin-top: 25px;
 	margin-bottom: 0px;
@@ -25,14 +25,15 @@ footer{
 	color: white;
 }
 
+body{
+	margin: 0;
+	font-family: "arial";
+}
+
 #element1{
 	margin-left: 2%;
 }
 
 #element3{
 	margin-right: 2%;
-}
-
-element3 ul li {
-	color: white;
 }
