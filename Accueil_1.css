@@ -6,8 +6,7 @@ body{
 .lien{
     padding:10px;
     margin-left: 5%;
-    border: solid;
-    border-radius: 10px;
+    border-radius: 0;
     background-color:#5b9630;
 }
 
