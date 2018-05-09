@@ -9,11 +9,12 @@ img{
 }
 
 footer{
-    background-color: #000080;
-    padding-top : 25px;
+	background-color: #000080;
+	padding-top : 25px;
 	padding-bottom: 25px;
 	margin-top: 25px;
 	margin-bottom: 0px;
+	color: white;
     
 }
 
