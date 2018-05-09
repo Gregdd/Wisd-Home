@@ -15,11 +15,11 @@
         <div class="bouton">
             <a href="My%20Home.php">My home</a>
 
-            <a href="Consommation.php">Consommation</a>
+            <a href="Consommation">Consommation</a>
 
-            <a href="Profil.php">Mon Profil</a>
+            <a href="Mon%20Profil.php">Mon profil</a>
 
-            <a href="Page%20accueil%20capteurs.php">Capteurs</a>
+            <a href="Capteurs">Capteurs</a>
         </div>
         
     </main>
