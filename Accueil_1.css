@@ -1,6 +1,11 @@
-body{
+.bienvenue{
     font-family:"Arial";
     margin :0;
+    text-align: center;
+}
+
+.présentation{
+
 }
 
 .lien{
