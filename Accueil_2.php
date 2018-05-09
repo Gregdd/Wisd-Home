@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="ISO-8859-1" />
     <title>Wisd'Home - Page d'accueil</title>
     <link rel="stylesheet" href="Accueil_2.css" />
 </head>
@@ -13,13 +13,12 @@
     <main>
         
         <div class="bouton">
-            <a href="My%20Home.php">My home</a>
+            <a href="Page_accueil_capteurs.php">My home</a>
 
-            <a href="Consommation">Consommation</a>
+            <a href="Ma_consommation.php">Ma consommation</a>
 
-            <a href="Mon%20Profil.php">Mon profil</a>
+            <a href="Creer_ma_maison.php">Gerer ma maison</a>
 
-            <a href="Capteurs">Capteurs</a>
         </div>
         
     </main>
