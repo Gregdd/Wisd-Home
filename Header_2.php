@@ -11,14 +11,12 @@
     </ol>
 
     <div class=logo>
-        <a href="Accueil_2.php"><img src="logo.png" id="logo_Header2" width="200" alt="Wisd'Home"/></a>
+        <a href="Accueil_2.php"><img src="images/logo2.png" id="logo_Header2" width="200" alt="Wisd'Home"/></a>
     </div>
 
     <ul class = ul2>
         <li class = li2><a class = a2 href="Accueil_2.php">Accueil</a></li>
         <li class = li2><a class = a2 href="Profil.php">Mon profil</a></li>
-        <li class = li2><a class = a2 href="Page_accueil_capteurs.php">Gerer ma maison </a></li>
-        <li class = li2><a class = a2 href="Ma_consommation.php">Ma consommation </a></li>
         <li class = li2><a class = a2 href="Messagerie.php">Nous contacter </a></li>
 
     </ul>
