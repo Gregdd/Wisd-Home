@@ -1,18 +1,18 @@
 header{
     text-align: left;
-    background-color:#000080;
+    background-color:#5b9630; /*012d02 - 025204 - 048b08 - 5b9630 - 6eb639*/
     color:white;
     padding-left:3%;
     padding-top: 1%;
-    padding-bottom:1%;
+    padding-bottom:5%;
 }
 .ulHeader1{
     display: flex;
     margin: 5px;
-    padding : 0;
+    padding : 2%;
     float :right;
     margin-top: 2.5%;
-    margin-right : 5%;
+    margin-right : 3%;
 
 }
 .header1{
@@ -29,3 +29,20 @@ header{
     padding: 10px;
 }
 
+body{
+	margin: 0;
+	font-family: "arial";
+}
+
+#logo{
+	width: 100px;
+}
+
+.wisdhome{
+	font-family: "arial";
+	font-size: 50px;
+	cursor: pointer;
+	text-decoration : none;
+    color : white;
+    font-style: italic;
+}
