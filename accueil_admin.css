@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    font-family: "arial";
+}
+.bouton a {
+    display:block;
+    width:23%;
+    line-height:50px;
+    text-align:center;
+    vertical-align:middle;
+    background:black;
+    color:white;
+    text-decoration:none;
+    margin: 10%;
+    padding: 10px;
+    margin : 5px;
+    border :  solid black;
+    height: 100%;
+}
+
+.bouton{
+    display: flex;
+    margin: 10%;
+}

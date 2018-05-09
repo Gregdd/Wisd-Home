@@ -1,0 +1,32 @@
+header{
+    text-align: left;
+    background-color:#5b9630;
+    color :white;
+    padding-left:1%;
+    padding-top: 1%;
+    padding-bottom:5%;
+}
+.logo{
+    display: block;
+    border: none;
+    width: 0; /* largeur à spécifier */
+    height: 65px; /* longueur à spécifier */
+    cursor: pointer;
+}
+
+
+.ol2{
+    float: right;
+    list-style: none;
+    margin: 10px;
+    font-size: 20px;
+    color : white;
+}
+.li2{
+    padding-bottom : 2%;
+}
+.a2 {
+    list-style: none;
+    color : white;
+    text-decoration: none;
+}
