@@ -10,8 +10,8 @@
         <li class = li2><a class = a2 href="Accueil_1.php">Déconnexion</a></li>
     </ol>
 
-    <div class=logo>
-        <a href="accueil_admin.php"><img src="logo.png" width="200" alt="Wisd'Home"/></a>
+    <div>
+        <a href="accueil_admin.php"><img src="logo.png" class=logo /></a>
     </div>
 
 
