@@ -11,7 +11,7 @@
     </ol>
 
     <div class=logo>
-        <a href="accueil_admin.php"><img src="images/logo.jpg" width="200" alt="Wisd'Home"/></a>
+        <a href="accueil_admin.php"><img src="logo.png" width="200" alt="Wisd'Home"/></a>
     </div>
 
 
