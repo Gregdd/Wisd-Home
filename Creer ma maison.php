@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Wisd'Home - Page d'accueil</title>
     <link rel="stylesheet" href="Style_créer_maison.css" />
-    <script src="jquery-3.2.1.js"></script>
+    <script src="FonctionsJS.js"></script>
 
 </head>
 
