@@ -14,14 +14,6 @@
 
 <main>
 
-    <ul>
-        <li><a href = "Accueil_2.php">Accueil</a></li>
-        <li><a href = "My%20Home.php">My Home</a></li>
-        <li> Consommation </li>
-        <li> Capteurs </li>
-        <li><a href = "Mon%20Profil.php">Mon Profil</a></li>
-    </ul>
-
     <div>
     <form method="get" action="Home.php">
         <label>Nombre de pièces : </label>
