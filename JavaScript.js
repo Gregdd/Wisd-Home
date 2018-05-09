@@ -11,3 +11,33 @@ var Add = function(){
 
 };
 add.addEventListener('click',Add);
+
+//var suppr = document.getElementById('Supprimer');
+
+var suppr = document.getElementById('parent');
+var enf = document.getElementById('capteur');
+
+var Suppr = function(){
+    suppr.remove(enf);
+
+    // Ici, on clone un élément existant :
+    //var paragraph1 = suppr.parentNode.delete;
+// Et attention, l'élément est cloné, mais pas « inséré » tant que l'on n'a pas appelé appendChild() :
+    //paragraph1.removeChild();
+
+};
+suppr.addEventListener('click',Suppr);
+
+
+
+/*var capteur = suppr.parentNode;
+suppr.onclick.remove(capteur);
+
+link.parentNode.parentNode.removeChild(previous);
+
+var link = document.getElementById('Supprimer').parentNode;
+var suppr = document.getElementById('Supprimer');
+suppr.onclick.remove(suppr.parentNode);
+*/
+
+
