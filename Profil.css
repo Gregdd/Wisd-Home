@@ -4,10 +4,11 @@ h1{
 }
 
 .Abonnement2{
-	border: 5px black solid;
-	text-align: center;
-	margin: 45%;
-	padding: 0.5%;
+    list-style:none;
+    padding:10px;
+    margin-left: 5%;
+    border: solid;
+    border-radius: 10px;
 }
 
 body{
