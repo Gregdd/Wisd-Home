@@ -1,6 +1,6 @@
 header{
     text-align: left;
-    background-color:#77B5FE;
+    background-color: #5b9630;
     color :white;
     padding-left:1%;
     padding-top: 1%;
@@ -10,7 +10,7 @@ header{
     display: block;
     border: none;
     width: 0; /* largeur à spécifier */
-    height: 65px; /* longueur à spécifier */
+    height: 60px; /* longueur à spécifier */
     cursor: pointer;
 }
 .ul2 {
@@ -24,14 +24,14 @@ header{
 }
 .ul2 .li2 .a2 {
     display: block;
-    background-color: #000080;
+    background-color: #5b9630;
     padding: 8px 30px;
     text-decoration: none;
     color : white;
     border-color: #000000;
 }
 .ul2 .li2 .a2:hover {
-    background-color: #000000;
+    background-color: #1b3c02;
     color: white;
 }
 .ol2{
@@ -48,4 +48,8 @@ header{
     list-style: none;
     color : white;
     text-decoration: none;
+}
+
+#logo_Header2{
+	width: 100px;
 }
