@@ -13,7 +13,7 @@
 <main>
 <div id="Presentation">
 	<div class="photo">
-    	<img src="images/logo2.png" id="logo2" />
+    	<img src="logo.png" id="logo2" />
     </div>
     <div class="texte">
     	<image Domotique="Domotique.jpg" />
