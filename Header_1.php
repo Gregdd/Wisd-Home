@@ -11,8 +11,8 @@
     <li class="header1"><a class = "white" href="Inscription.php">Inscription</a></li>
     <li class="header1"><a class = "white" href="Connexion.php">Connexion</a></li>
 </ul>
-<h1>Wisd'home</h1>
-<image Logo="logo.jpg" />
+
+<a class="wisdhome" href="Accueil_1.php">Wisd'Home</a>
     
 </header>
 
