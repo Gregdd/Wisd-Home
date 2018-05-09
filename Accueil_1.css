@@ -4,8 +4,11 @@ body{
 }
 
 .lien{
-    text-decoration : none;
-    color : black;
+    padding:10px;
+    margin-left: 5%;
+    border: solid;
+    border-radius: 10px;
+    background-color: blue;
 }
 
 #logo2{
