@@ -20,8 +20,8 @@
 		</div>
 		<div id="element3">
 			<ul>
-				<li class="footer"><a href="Mention_legales.php">Mention legales</a></li>
-				<li class="footer"><a href="Conditions_d'utilisations.php">Conditions d'utilisations</a></li>
+				<li class="footer"><a class="couleur" href="Mention_legales.php">Mention legales</a></li>
+				<li class="footer"><a class="couleur" href="Conditions_d'utilisations.php">Conditions d'utilisations</a></li>
 			</ul>
 		</div>
 	</div>
