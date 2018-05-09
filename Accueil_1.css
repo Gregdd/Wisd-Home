@@ -7,3 +7,21 @@ body{
     text-decoration : none;
     color : black;
 }
+
+#logo2{
+	width: 200px;
+}
+
+#Presentation{
+	display: flex;
+	padding-top: 6%;
+	padding-bottom: 4%;
+}
+
+.texte{
+	margin-left: 10%;
+}
+
+.photo{
+	margin-left: 3%;
+}
