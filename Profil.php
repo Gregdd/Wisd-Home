@@ -58,7 +58,7 @@
     </form>
 </div>
     </br>
-    <a href="Abonnement.php" title="Abonnement" target="_blank" class="Abonnement2">Abonnement</a>
+    <a href="Abonnement.php" title="Abonnement" target="_blank">Abonnement</a>
     </br></br>
 
 
