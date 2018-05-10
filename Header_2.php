@@ -7,7 +7,7 @@
 
     <ol class = ol2>
         <li class = li2>Nom Prénom</li>
-        <li class = li2><a class = a2 href="Accueil_1.php">Deconnexion</a></li>
+        <li class = li2><a class = a2 href="Déconnexion.php">Deconnexion</a></li>
     </ol>
 
     <div class=logo>
