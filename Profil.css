@@ -2,27 +2,31 @@ h1{
 	text-align: center;
 	color: #1b3c02;
 }
-
-.Abonnement2{
-    list-style:none;
-    padding:10px;
-    margin-left: 5%;
-    border: solid;
-    border-radius: 10px;
+h2{
+	text-align: center;
+	text-decoration: underline;
+	color: blue;
 }
 
-body{
-	margin: 0;
-	font-family: "arial";
+a[title=abonnement]{
+	border: 6px black solid;
+	padding: 20% 20% 20% 20%
 }
 
-#Barriere{
+#conteneur{
 	display: flex;
-	justify-content: center;
-}
+	justify-content: space-around;
+	margin: auto;
 
+}
 fieldset{
-	margin: 50px;
-	padding: 10%;
+	padding-right: 10%;
+	margin: 2% 10% 0% 10%;
 	
+}
+legend{
+	font-size: 120%;
+	font-weight: bold;
+	font-family: Impact, Times, "Times New Roman", serif;
+	color: DimGrey;
 }
