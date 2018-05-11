@@ -16,7 +16,7 @@ if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
                 $_SESSION['nom'] = $ligne["Nom"];
                 $_SESSION['prenom'] = $ligne["Prenom"];
                 $_SESSION['status']="Active";
-                header ('Location: Acceuil_2.php');
+                header ('Location: Accueil_2.php');
                 exit();
             }
             else //Si les login et mdp ne match pas, on l'indique
