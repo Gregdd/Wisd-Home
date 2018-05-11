@@ -12,17 +12,25 @@
 
 <main>
 <div id="Presentation">
+
 	<div class="photo">
     	<img src="logo.png" id="logo2" />
     </div>
+
     <div class="texte">
-    	<image Domotique="Domotique.jpg" />
-    	<h2>Bienvenue sur Wisd'Home</h2>
-    	<p><a class = lien href="Connexion.php">Commencer</a></p>
-    	<h3>Qui sommes-nous ?</h3>
-    	<p class="txt"> GRAND TEXTE SUR L'ENTREPRISE</p>
-    	<?php echo "Ceci est du <strong>texte</strong>"; ?>
+		<h2>Bienvenue sur Wisd'Home </h2>
+		<a class = lien href="Connexion.php">Commencer</a><br/>
+		<h3>Qui sommes-nous ?</h3>
+		<p>
+			Wisd'Home est une entreprise de Domotique fondée en 2018.<br/>
+			Ses différents domaines sont :
+		</p>
+		<div class = cercle><div class =txt>Informatique</div></div>
+		<div class = cercle><div class =txt>Signaux</div></div>
+		<div class = cercle><div class =txt>Electronique</div></div>
+		<div class = cercle><div class =txt>Télécom</div></div>
 	</div>
+
 </div>
 </main>
     
@@ -31,3 +39,4 @@
 </body>
 
 </html>
+
