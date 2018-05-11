@@ -5,7 +5,7 @@
     <meta charset="utf-8"/>
     <title>Connexion</title>
     <link rel="stylesheet" href="Footer.css">
-    <link rel="stylesheet" href="Connexion.css"/>
+    <link rel="stylesheet" href="connexion_git.css"/>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
         <fieldset>
             <legend>Connexion</legend>
 
-            <form method="post" action="traitement_connexion.php">
+            <form method="post" action="connexion_post.php">
                 <br/>
                 <label for="ID">Identifiant :</label>
                 <input type="text" name="ID" id="ID" size="30" placeholder="Ex : Dupont Marc" maxlength="30" /><br/><br/>
@@ -28,7 +28,7 @@
                 <input type="submit" value="Connexion"><br/><br/>
             </form>
 
-            <a href="MDP_perdu.php" title="Mot de passe oublié" target="_blank">Mot de passe oublié ?</a>
+            <a href="mdp_perdu.php" title="Mot de passe oublié" target="_blank">Mot de passe oublié </a>
 
         </fieldset>
     </div>
