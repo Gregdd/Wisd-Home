@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Wisd'Home - Page d'accueil</title>
-    <link rel="stylesheet" href="Style_créer_maison.css" />
+    <link rel="stylesheet" href="Style_creer_maison.css" />
     <script src="FonctionsJS.js"></script>
 
 </head>
@@ -14,49 +14,40 @@
 
 <main>
 
-    <div>
-    <form method="get" action="Home.php">
-        <label>Nombre de pièces : </label>
-        <label ><input  type ="number" min="1" max="7" placeholder="1"/></label>
+    <form method="post" action="creer_ma_maison_post.php">
+        <h3>Ajouter une pièce :</h3> <br/>
+        <label for="nompiece">Nom de la piece : <input  type ="text" name="nompiece"></label><br/><br/>
+        <h3>Ajouter un capteur :</h3> <br/>
+        <label for="typecapteur">Type de capteur :
+            <select name="typecapteur">
+                <option></option>
+                <option>Type de capteur</option>
+                <option>Humidité</option>
+                <option>Température</option>
+                <option>Présence</option>
+                <option>Fumée</option>
+                <option>CO2</option>
+                <option>Luminosité</option>
+                <option>Caméra</option>
+            </select>
+        </label> <br/><br/>
+        <h3>Ajouter un actionneur :</h3> <br/>
+        <label for="typeactionneur">Type d'actionneur :
+            <select name="typeactionneur">
+                <option></option>
+                <option>Type d'actionneur</option>
+                <option>Volets</option>
+                <option>Porte</option>
+                <option>Lumiere</option>
+                <option>Temperature</option>
+            </select>
+        </label><br/><br/>
 
-    </form><br/><br/>
-
-
-    <form method="get" action="Pièce.php">
-        <label >Nom de la pièce : </label>
-        <label><input type="text"></label><br>
-
-        <br/><br/>
-
-        <span class="bouton" id ="ajouter" >Ajouter un capteur</span><br/><br/>
-
-        <span id = "capteur"><br/> Capteur "n" :
-            <label>
-                <select>
-                    <option>Type de capteur</option>
-                    <option>Humidité</option>
-                    <option>Température</option>
-                    <option>Présence</option>
-                    <option>Fumée</option>
-                    <option>CO2</option>
-                    <option>Luminosité</option>
-                    <option>Caméra</option>
-                </select>
-            </label>
-            <span id ="Supprimer">Supprimer</span>
-            <br/>
-        </span>
-
-        <script type="text/javascript" src="JavaScript.js"></script>
+        <input type="submit" value="Ajouter"><br/><br/>
 
     </form>
 
-    <form>
-        <br/>
-        <input type="submit" value="Enregistrer la pièce"/>
-    </form>
 
-</div>
 
 </main>
 
