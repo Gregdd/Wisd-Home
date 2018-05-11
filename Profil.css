@@ -8,7 +8,7 @@ h2{
 	color: blue;
 }
 
-a[title=abonnement]{
+.a[title=abonnement]{
 	border: 6px black solid;
 	padding: 20% 20% 20% 20%
 }
@@ -30,8 +30,8 @@ legend{
 	font-family: Impact, Times, "Times New Roman", serif;
 	color: DimGrey;
 }
-
-#Profil {
+#profil{
 	background-color: white;
-	color: black;
+	height: 100px;
+	color : #5b9630;
 }
