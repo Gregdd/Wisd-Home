@@ -15,9 +15,10 @@
     </div>
 
     <ul class = ul2>
-        <li class = li2><a class = a2 href="Accueil_2.php">Accueil</a></li>
         <li class = li2><a class = a2 href="Profil.php">Mon profil</a></li>
         <li class = li2><a class = a2 href="Messagerie.php">Nous contacter </a></li>
+        <li class = li2><a class = a2 href="Page_accueil_capteurs.php">My Home</a></li>
+        <li class = li2><a class = a2 href="Consommation.php">Ma consommation</a></li>
 
     </ul>
 </header>
