@@ -25,9 +25,9 @@ try
 
 
 <body>
-<header>
-    <?php include 'Header_2.php';?>
-</header>
+
+<?php include 'Header_2.php';?>
+
 
 <article>
     <h2>Choix de la pièce</h2>
@@ -197,7 +197,7 @@ try
 </article>
 
 </body>
-<footer>
-    <?php include 'Footer.php';?>
-</footer>
+
+<?php include 'Footer.php';?>
+
 </html>
