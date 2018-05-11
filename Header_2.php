@@ -15,10 +15,10 @@
     </div>
 
     <ul class = ul2>
-        <li class = "li2 id1"><a class = a2 href="Profil.php">Mon profil</a></li>
-        <li class = "li2 id2"><a class = a2 href="Page_accueil_capteurs.php">My Home</a></li>
-        <li class = "li2 id3"><a class = a2 href="Consommation.php">Ma consommation</a></li>
-        <li class = "li2 id4"><a class = a2 href="Messagerie.php">Nous contacter </a></li>
+        <li class = "li2><a class = "a2 id1" href="Profil.php">Mon profil</a></li>
+        <li class = "li2><a class = "a2 id2" href="Page_accueil_capteurs.php">My Home</a></li>
+        <li class = "li2><a class = "a2 id3" href="Consommation.php">Ma consommation</a></li>
+        <li class = "li2><a class = "a2 id4" href="Messagerie.php">Nous contacter </a></li>
 
     </ul>
 </header>
