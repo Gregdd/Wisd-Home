@@ -1,16 +1,11 @@
-.body
+body{
     font-family:"Arial";
     margin :0;
-
 }
 
-#lien{
-    padding:10px;
-    margin-left: 5%;
-    border-radius: 0;
-    background-color:#5b9630;
-    color: white;
-    border-radius: 10px;
+.lien{
+    text-decoration : none;
+    color : black;
 }
 
 #logo2{
@@ -21,21 +16,32 @@
 	display: flex;
 	padding-top: 6%;
 	padding-bottom: 4%;
+
 }
 
 .texte{
 	margin-left: 10%;
+	width:80%;
+
 }
 
 .photo{
 	margin-left: 3%;
-}
 
-h2{
-	font-size: 24px;
+}
+.cercle{
+	background-color: #32CD32;
+	width : 104px;
+	height: 104px;
+	-webkit-border-radius: 52px;
+	-moz-border-radius: 52px;
+	border-radius: 52px;
+	margin-left: 3%;
+	display : inline-block;
+}
+.txt{
+	position : relative;
+	top : 40%;
 	text-align: center;
-}
-
-h3{
-	font-size: 20px;
+	font-size: 15px;
 }
