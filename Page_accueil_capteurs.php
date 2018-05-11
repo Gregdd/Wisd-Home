@@ -1,11 +1,22 @@
 <!DOCTYPE html>
+<?php
+
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'root');
+}catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
+?>
+
 <html>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
     <title>Catalogue</title>
     <link rel="stylesheet" type="text/css" href="Page_acceuil_capteur.css">
-    <link rel="stylesheet" type="text/css" href="style_tableau.css">
+    <link rel="stylesheet" type="text/css" href="styletableau.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="icon" type="image/png" href="Image/icon.png" />
 
@@ -15,41 +26,27 @@
 
 <body>
 <header>
-        <?php include 'Header_2.php';?>
+    <?php include 'Header_2.php';?>
 </header>
 
 <article>
     <h2>Choix de la pièce</h2>
+    <?php
 
-
-
-
-    <ul>
-        <li class="carre">
+    $req = $bdd->query('SELECT nom, superficie FROM pieces');
+    echo '<ul>';
+    while ($piece = $req->fetch())
+    {
+        echo '<li class="carre">
             <a href="">
-                <p class="titre">Salon</p></a>
-        </li>
+                <p class="titre"> '.$piece['nom'].' </p></a>
+        </li> ';
+    }
+    echo '</ul>';
 
-        <li class="carre">
-            <a href="">
-                <p class="titre">Piece 1</p></a>
-        </li>
+    $req->closeCursor();
 
-        <li class="carre">
-            <a href="">
-                <p class="titre">Piece 2</p></a>
-        </li>
-        <li class="carre">
-            <a href="">
-                <p class="titre">Piece 3</p></a>
-        </li>
-        <li class="carre">
-            <a href="">
-                <p class="titre">Piece 4</p></a>
-        </li>
-    </ul>
-
-
+    ?>
 
 </article>
 <article>
@@ -66,7 +63,7 @@
 
             <div id="modal-wrapper" class="modal">
 
-                <form class="modal-content animate" action="/action_page.php">
+                <form class="modal-content animate" >
 
                     <div class="imgcontainer">
                         <img src="Image/goutte.png" alt="Avatar" class="avatar">
@@ -86,6 +83,68 @@
 
 
 
+        </li>
+
+
+        <li class="carre">
+            <a href="">
+                <img src="Image/camera.png" alt="Camera" title="Caméra" class="pics" style="width:30%"/><br/>
+                <p class="titre">Camera</p></a>
+        </li>
+
+        <li class="carre">
+            <a href="">
+                <img src="Image/temp.png" style="width:30%" alt="Température" title="Température" class="pics"/><br/>
+                <p class="titre">Température</p></a>
+        </li>
+
+        <li class="carre">
+            <a href="">
+                <img src="Image/mouvement.png" style="width:30%" alt="Capteur de mouvement" title="Capteur de mouvement" class="pics"/><br/>
+                <p class="titre">Capteur de mouvement</p></a>
+        </li>
+    </ul>
+
+    <ul>
+
+        <li class="carre">
+            <a href="">
+                <img src="Image/luminosite.png" style="width:30%" alt="Luminosite" title="Luminosité" class="pics"/><br/>
+                <p class="titre">Luminosité</p></a>
+        </li>
+
+        <li class="carre">
+            <a href="">
+                <img src="Image/feu.png" style="width:30%" alt="Capteur de fumee" title="Capteur de fumée" class="pics"/><br/>
+                <p class="titre">Capteur de fumée</p></a>
+        </li>
+
+        <li class="carre">
+            <a href="">
+                <img src="Image/consoeau.png" style="width:30%" alt="Capteur de consommation d'eau" title="Capteur de consommation d'eau" class="pics"/><br>
+                <p class="titre">Capteur de consomation d'eau</p></a>
+        </li>
+
+        <li class="carre">
+            <a href="">
+                <img src="Image/consoelec.png" style="width:30%"  alt="Capteur de consommation d'électricité" title="Capteur d'électricité" class="pics"/><br>
+                <p class="titre">Capteur de consomation d'électricité</p></a>
+        </li>
+    </ul>
+
+</article>
+
+</br>
+
+<article>
+
+    <h2> Actionneurs </h2><hr>
+    <ul>
+
+        <li class="carre" >
+            <a href="">
+                <center><img src="Image/goutte.png" alt="Humidité" title="Humidité" class="pics" style="width:30%"/></center><br/>
+                <p class="titre">Humidité</p></a>
         </li>
 
 
@@ -137,70 +196,8 @@
 
 </article>
 
-</br>
-
-    <article>
-
-        <h2> Actionneurs </h2><hr>
-        <ul>
-
-            <li class="carre" >
-                <a href="">
-                    <center><img src="Image/goutte.png" alt="Humidité" title="Humidité" class="pics" style="width:30%"/></center><br/>
-                    <p class="titre">Humidité</p></a>
-            </li>
-
-
-            <li class="carre">
-                <a href="">
-                    <img src="Image/camera.png" alt="Camera" title="Caméra" class="pics" style="width:30%"/><br/>
-                    <p class="titre">Camera</p></a>
-            </li>
-
-            <li class="carre">
-                <a href="">
-                    <img src="Image/temp.png" style="width:30%" alt="Température" title="Température" class="pics"/><br/>
-                    <p class="titre">Température</p></a>
-            </li>
-
-            <li class="carre">
-                <a href="">
-                    <img src="Image/mouvement.png" style="width:30%"  alt="Capteur de mouvement" title="Capteur de mouvement" class="pics"/><br/>
-                    <p class="titre">Capteur de mouvement</p></a>
-            </li>
-        </ul>
-
-        <ul>
-
-            <li class="carre">
-                <a href="">
-                    <img src="Image/luminosite.png" style="width:30%"  alt="Luminosite" title="Luminosité" class="pics"/><br/>
-                    <p class="titre">Luminosité</p></a>
-            </li>
-
-            <li class="carre">
-                <a href="">
-                    <img src="Image/feu.png" style="width:30%"  alt="Capteur de fumee" title="Capteur de fumée" class="pics"/><br/>
-                    <p class="titre">Capteur de fumée</p></a>
-            </li>
-
-            <li class="carre">
-                <a href="">
-                    <img src="Image/consoeau.png" style="width:30%" alt="Capteur de consommation d'eau" title="Capteur de consommation d'eau" class="pics"/><br>
-                    <p class="titre">Capteur de consomation d'eau</p></a>
-            </li>
-
-            <li class="carre">
-                <a href="">
-                    <img src="Image/consoelec.png" style="width:30%"  alt="Capteur de consommation d'électricité" title="Capteur d'électricité" class="pics"/><br>
-                    <p class="titre">Capteur de consomation d'électricité</p></a>
-            </li>
-        </ul>
-
-    </article>
-
 </body>
 <footer>
-	<?php include 'Footer.php';?>
+    <?php include 'Footer.php';?>
 </footer>
 </html>
