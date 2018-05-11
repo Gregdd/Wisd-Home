@@ -9,9 +9,9 @@
     <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
 </head>
 
-<header>
+
     <?php include 'Header_2.php';?>
-</header>
+
 
 <body>
 <h1>Mon profil</h1>
@@ -57,15 +57,13 @@
     </div>
     </form>
 </div>
-    </br>
-    <a href="Abonnement.php" title="Abonnement" target="_blank">Abonnement</a>
-    </br></br>
+    <br/>
+    <a class = a href="Abonnement.php" title="Abonnement" target="_blank">Abonnement</a>
+    <br/><br/>
 
 
 </body>
 
-<footer>
-	<?php include 'Footer.php';?>
-</footer>
+<?php include 'Footer.php';?>
 
 </html>
