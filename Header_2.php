@@ -2,11 +2,11 @@
 <html>
 <meta charset="utf-8" />
 <link rel="stylesheet" href="Header_2.css" />
-
+<?php session_start();?>
 <header>
 
     <ol class = ol2>
-        <li class = li2>Nom Prénom</li>
+        <li class = li2><?php echo $_SESSION['prenom'].' '. $_SESSION['nom']?></li>
         <li class = li2><a class = a2 href="Déconnexion.php">Deconnexion</a></li>
     </ol>
 
