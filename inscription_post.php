@@ -10,7 +10,7 @@ try
 
 
 // Vérification de la validité des informations
-if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['identifiant']) && !empty($_POST['mail']) && !empty($_POST['codepost'])&& !empty($_POST['ville']) && !empty($_POST['pass']) && !empty($_POST['pass2'])) {
+if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['identifiant']) && !empty($_POST['mail']) && !empty($_POST['codepost'])&& !empty($_POST['ville']) && !empty($_POST['pass']) && !empty($_POST['pass2'] && !empty($_POST['date']))) {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $identifiant = $_POST['identifiant'];
@@ -19,6 +19,7 @@ if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['identifi
     $mail = $_POST['mail'];
     $codepost = $_POST['codepost'];
     $ville = $_POST['ville'];
+    $date = $_POST['date'];
 
 
 
