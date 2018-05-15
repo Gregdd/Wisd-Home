@@ -25,8 +25,8 @@
             <input type="text" name="prenom" id="prenom"><br><br>
             <label for="identifiant">Identifiant : </label><br>
             <input type="text" name="identifiant" id="identifiant"><br><br>
-            <label for="bday">Date de naissance : </label><br/>
-            <input type="date" name="bday" id="bday">
+            <label for="bday">Date de naissance : </label><br>
+            <input type="date" name="bday" id="bday"><br<
             <label for="mail">Email : </label><br>
             <input type="text" name="mail" id="mail"><br><br>
             <label for="codepost">Code postal : </label><br>
