@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Inscription.css"/>
     <title>Inscription</title>
+    <link rel="text/javascript" href="vérifications.js"/>
+    <link rel="text/javascript" href="FonctionsJS.js"/>
 </head>
 
 <body>
@@ -37,7 +39,7 @@
             <label for="pass">Mot de passe : </label><br>
             <input type="password" name="pass" id="pass"><br><br>
             <label for="pas2">Confirmation du mot de passe : </label><br>
-            <input type="password" name="pass2"><br><br>
+            <input type="password" name="pass2" id="pas2"><br><br>
             <label>Question secrète :</label><br>
             <select>
                 <option>Quelle est votre ville de naissance?</option>
@@ -47,7 +49,8 @@
             <label>Réponse : </label><br>
             <input type="text"><br><br>
             <label>Accepter les conditions d'utilisation : </label>
-            <input type="checkbox" required><br><br>
+            <input type="checkbox" id = check required><br><br>
+            
             <input type="submit"><br>
         </section>
     </form>
@@ -55,7 +58,8 @@
 </div>
 
 <?php include 'Footer.php';?>
-
+<script src="vérifications.js"></script>
 </body>
 
 </html>
+
