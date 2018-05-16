@@ -18,18 +18,12 @@
     <fieldset>
         <legend>Contact</legend>
         <br /><input type="text" name="objet" id="objet" placeholder="Objet" size="35"> <br /> <br/>
-        <textarea id="message" cols="100" rows="20"> >"Message pour l'administrateur..." </textarea> <br/>
+        <textarea id="message" cols="100" rows="20" placeholder=">Message pour l'administrateur."> </textarea> <br/>
         <input type="submit" value="Envoyer"/>
         </form>
     </fieldset>
 
-<?php
-	$(document).ready(function() {
-   $("#message").click(function() {
-      $("p.info").remove();
-   });
-});
-?>
+
 
 </main>
 
