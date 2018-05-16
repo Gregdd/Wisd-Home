@@ -54,8 +54,7 @@
 
 </div>
 <br/>
-<a class = a href="Abonnement.php" title="Abonnement" target="_blank">Abonnement</a>
-<br/><br/>
+<br/>
 
 <?php include 'Footer.php';?>
 </body>
