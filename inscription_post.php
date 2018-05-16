@@ -1,4 +1,3 @@
-
 <?php
 
 try
@@ -21,35 +20,22 @@ if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['identifi
     $codepost = $_POST['codepost'];
     $ville = $_POST['ville'];
 
-    if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-        if ($pass == $pass2) {
-            $req = $bdd->prepare('INSERT INTO utilisateur(pseudo, Mot_de_passe, Nom ,Prenom , mail ) VALUES(:identifiant, :pass, :nom, :prenom, :mail)');
-            $req->execute(array(
-                'identifiant' => $identifiant,
-                'pass' => $pass,
-                'nom' => $nom,
-                'prenom' => $prenom,
-                'mail' => $mail));
-            $erreur = "Votre compte a bien été créé ! <a href=\"Connexion.php\">Me connecter</a>";
-            header ('Location:connexion.php');
 
 
-        } else {
-            $erreur = "Vos mots de passes ne correspondent pas !";
-            header ('Location:inscription.php');
-
-        }
-    } else {
-        $erreur = "Votre adresse mail n'est pas valide !";
-        header ('Location:inscription.php');
-
-    }
 }
-//modif
 
 
+// Insertion
+    $req = $bdd->prepare('INSERT INTO utilisateur(pseudo, Mot_de_passe, Nom ,Prenom , mail ) VALUES(:identifiant, :pass, :nom, :prenom, :mail)');
+    $req->execute(array(
+        'identifiant' => $identifiant,
+        'pass' => $pass,
+        'nom' => $nom,
+        'prenom' => $prenom,
+        'mail' => $mail));
 
+
+header ('Location:connexion_git.php');
 
 ?>
-
 
