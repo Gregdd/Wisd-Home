@@ -1,7 +1,7 @@
 <?php
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=wisd\'home', 'root', 'root');
+    $bdd = new PDO('mysql:host=localhost;dbname=wisd\'home', 'root', 'monmotdepasse');
 }catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
