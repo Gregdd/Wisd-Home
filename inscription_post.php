@@ -30,18 +30,18 @@ if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['identifi
                 'nom' => $nom,
                 'prenom' => $prenom,
                 'mail' => $mail));
-            $erreur = "Votre compte a bien été créé ! <a href=\"connexion_git.php\">Me connecter</a>";
-            header ('Location:connexion_git.php');
+            $erreur = "Votre compte a bien été créé ! <a href=\"Connexion.php\">Me connecter</a>";
+            header ('Location:connexion.php');
 
 
         } else {
             $erreur = "Vos mots de passes ne correspondent pas !";
-            header ('Location:inscription_git.php');
+            header ('Location:inscription.php');
 
         }
     } else {
         $erreur = "Votre adresse mail n'est pas valide !";
-        header ('Location:inscription_git.php');
+        header ('Location:inscription.php');
 
     }
 }
