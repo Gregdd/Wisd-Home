@@ -1,3 +1,5 @@
+<?php session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -17,6 +19,7 @@
 
     <fieldset>
         <legend>Contact</legend>
+        <form method="post" action="messages.php">
         <br /><input type="text" name="objet" id="objet" placeholder="Objet" size="35"> <br /> <br/>
         <textarea id="message" cols="100" rows="20" placeholder=">Message pour l'administrateur."> </textarea> <br/>
         <input type="submit" value="Envoyer"/>
