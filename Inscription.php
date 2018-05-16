@@ -53,7 +53,7 @@
             <input type="submit"  value="Je m'inscris "><br>
         </section>
     </form>
-
+//modif
     <?php
 
     echo '<font color="red">'.$erreur."</font>";
