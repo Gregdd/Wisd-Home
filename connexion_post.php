@@ -1,7 +1,7 @@
 <?php
 $error_message='';
-$bdd = new PDO("mysql:host=localhost;dbname=wisdhome", "charset=utf8","root","monmotdepasse");
-$entrees=$bdd->query("SELECT * FROM utilisateur"); //on se place dans la table admiistrateur de la BDD
+$bdd = new PDO("mysql:host=localhost; dbname=wisdhome; charset=utf8","root","monmotdepasse");
+$entrees=$bdd->query("SELECT * FROM utilisateur");
 if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
 {
     $post_username = $_POST['ID']; //On associe la valeur entrée à $post_username
@@ -15,13 +15,18 @@ if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
                 session_start(); //on démarre la session
                 $_SESSION['nom'] = $ligne["Nom"];
                 $_SESSION['prenom'] = $ligne["Prenom"];
-                $_SESSION['Date_naissance'] = $ligne["Date_naissance"];
+                $_SESSION['date_naissance'] = $ligne["date_naissance"];
                 $_SESSION['mail'] = $ligne["mail"];
                 $_SESSION['Ville'] = $ligne["Ville"];
                 $_SESSION['Code_postal'] = $ligne["Code_postal"];
                 $_SESSION['Adresse'] = $ligne["Adresse"];
                 $_SESSION['status']="Active";
-                header ('Location: Accueil_2.php');
+
+                if($ligne['Type_utilisateur'] === 'Administrateur') //Connexion administrateur
+                    header ('Location: Accueil_admin.php');
+                else{
+                    header ('Location : Accueil_2.php');
+                }
                 exit();
             }
             else //Si les login et mdp ne match pas, on l'indique
