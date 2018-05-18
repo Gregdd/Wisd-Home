@@ -1,6 +1,6 @@
 <?php
 $error_message='';
-$bdd = new PDO("mysql:host=localhost; dbname=TABLE; charset=utf8","root","root");
+$bdd = new PDO("mysql:host=localhost; dbname='wisdhome'; charset=utf8","root","monmotdepasse");
 $entrees=$bdd->query("SELECT * FROM utilisateur"); //on se place dans la table admiistrateur de la BDD
 if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
 {
@@ -15,6 +15,10 @@ if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
                 session_start(); //on démarre la session
                 $_SESSION['nom'] = $ligne["Nom"];
                 $_SESSION['prenom'] = $ligne["Prenom"];
+                $_SESSION['Date_naissance'] = $ligne["Date_naissance"];
+                $_SESSION['mail'] = $ligne["mail"];
+                $_SESSION['Ville'] = $ligne["Ville"];
+                $_SESSION['Code_postal'] = $ligne["Code_postal"];
                 $_SESSION['status']="Active";
                 header ('Location: Accueil_2.php');
                 exit();
