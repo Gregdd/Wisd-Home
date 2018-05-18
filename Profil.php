@@ -32,7 +32,7 @@
                     <br/><br />
                     <label for="code postal"> Code postal : </label> <?php echo $_SESSION['Code_postal'];?> 
                     <br/><br />
-                    <a href="modif_profil.php" title="Modifier" target="_blank">Modifier profil</a><br/>
+                    <a href="modif_profil.php" class= Modifier target="_blank">Modifier profil</a><br/>
                 </p>
             </fieldset>
         </div>
