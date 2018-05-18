@@ -14,8 +14,8 @@ if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['identifi
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $identifiant = $_POST['identifiant'];
-    $pass = $_POST['pass'];
-    $pass2 = $_POST['pass2'];
+    $pass = sha1($_POST['pass']);
+    $pass2 = sha1($_POST['pass2']);
     $mail = $_POST['mail'];
     $codepost = $_POST['codepost'];
     $ville = $_POST['ville'];
