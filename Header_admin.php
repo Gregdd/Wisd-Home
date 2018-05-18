@@ -2,11 +2,11 @@
 <html>
 
 <link rel="stylesheet" href="Header_admin.css" />
-
+<?php session_start(); ?>
 <header>
 
     <ol class = ol2>
-        <li class = li2>Nom Prénom</li>
+        <li class = li2><?php echo $_SESSION['nom'].' '.$_SESSION['prenom']?></li>
         <li class = li2><a class = a2 href="Accueil_1.php">Déconnexion</a></li>
     </ol>
 
