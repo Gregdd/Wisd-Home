@@ -19,7 +19,7 @@
 
     <form action="inscription_post.php" method="post">
         <section class = "gauche">
-            <br><label for="nom">Nom : </label><br>
+            <label for="nom">Nom : </label><br>
             <input type="text" name="nom" id="nom"><br><br>
             <label for="prenom">Prenom : </label><br>
             <input type="text" name="prenom" id="prenom"><br><br>
