@@ -21,15 +21,15 @@
                     <br /><br />
                     <label for="prenom"> Prénom : </label> <?php echo $_SESSION['prenom'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
                     <br /><br />
-                    <label> Date de naissance :</label> <?php echo $_SESSION['anniversaire'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
+                    <label> Date de naissance :</label> <?php echo $_SESSION['Date_naissance'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
                     <br /><br />
                     <label for="mail"> Adresse mail : </label> <?php echo $_SESSION['mail'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
                     <br/><br />
-                    <label for="adresse"> Adresse : </label> <?php echo $_SESSION['rue'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
+                    <label for="adresse"> Adresse : </label> <?php echo $_SESSION['Adresse'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
                     <br/><br />
-                    <label for="ville"> Ville : </label> <?php echo $_SESSION['ville'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
+                    <label for="ville"> Ville : </label> <?php echo $_SESSION['Ville'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
                     <br/><br />
-                    <label for="code postal"> Code postal : </label> <?php echo $_SESSION['code postal'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
+                    <label for="code postal"> Code postal : </label> <?php echo $_SESSION['Code_postal'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
                     <br/><br />
                 </p>
             </fieldset>
