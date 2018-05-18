@@ -1,7 +1,7 @@
 <?php
 $error_message='';
-$bdd = new PDO("mysql:host=localhost; dbname=wisdhome", "charset=utf8","root","monmotdepasse");
-$entrees=$bdd->query("SELECT * FROM utilisateur"); //on se place dans la table admiistrateur de la BDD
+$bdd = new PDO("mysql:host=localhost; dbname=wisdhome; charset=utf8","root","monmotdepasse");
+$entrees=$bdd->query("SELECT * FROM Connexion"); //on se place dans la table admiistrateur de la BDD
 if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
 {
     $post_username = $_POST['ID']; //On associe la valeur entrée à $post_username
@@ -21,17 +21,19 @@ if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
                 $_SESSION['Code_postal'] = $ligne["Code_postal"];
                 $_SESSION['Adresse'] = $ligne["Adresse"];
                 $_SESSION['status']="Active";
-                header ('Location: Accueil_2.php');
+                header ('Location: http://localhost/APP_Site/Accueil_2.php');
                 exit();
             }
             else //Si les login et mdp ne match pas, on l'indique
             {
                 $error_message='Erreur de nom d\'utilisateur ou de mot de passe';
+                echo $error_message;
             }
         }
         else //Si les login et mdp ne match pas, on l'indique
         {
             $error_message='Erreur de nom d\'utilisateur ou de mot de passe';
+            echo $error_message;
         }
     }
 }
