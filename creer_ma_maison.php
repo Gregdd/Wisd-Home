@@ -2,7 +2,7 @@
 <?php
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'root');
+    $bdd = new PDO('mysql:host=localhost;dbname=wisdhome', 'root', 'root');
 }catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
@@ -22,15 +22,14 @@ try
 <body>
 
 <?php include 'Header_2.php';?>
-
-<main>
-
+<section class="gauche">
     <form method="post" action="creer_ma_maison_post.php">
         <h3>Ajouter une pièce :</h3> <br/>
         <label for="nompiece">Nom de la piece : <input  type ="text" name="nompiece"></label><br/><br/>
         <input type="submit" value="Ajouter"><br/><br/>
-
     </form>
+
+
 
     <form method="post" action="creer_ma_maison_post.php">
 
@@ -71,8 +70,8 @@ try
 
     </form>
 
-    <form method="post" action="creer_ma_maison_post.php">
 
+    <form method="post" action="creer_ma_maison_post.php">
         <h3>Ajouter un actionneur :</h3> <br/>
         <label for="pieceactio">Piece :
             <select name="pieceactio">
@@ -83,7 +82,7 @@ try
                 while ($donnees = $reponse->fetch())
                 {
                     ?>
-                    <option value="<?php echo $donnees['id']; ?>"> <?php echo $donnees['nom']; ?></option>
+                    <option value="<?php echo $donnees['idpiece']; ?>"> <?php echo $donnees['nom']; ?></option>
                     <?php
                 }
 
@@ -93,20 +92,116 @@ try
         <label for="typeactionneur">Type d'actionneur :
             <select name="typeactionneur">
                 <option></option>
-                <option>Volets</option>
-                <option>Porte</option>
-                <option>Lumiere</option>
-                <option>Temperature</option>
+                <option value="volets">Volets</option>
+                <option value="porte">Porte</option>
+                <option value="lumiere">Lumiere</option>
+                <option value="temperature">Temperature</option>
             </select>
         </label><br/><br/>
 
         <input type="submit" value="Ajouter"><br/><br/>
+    </form>
 
+</section>
+
+<section class="droite">
+    <form method="post" action="creer_ma_maison_post.php">
+        <h3>Supprimer une pièce :</h3> <br/>
+        <label for="nompiece1">Piece :
+            <select name="nompiece1">
+                <?php
+
+                $reponse = $bdd->query('SELECT * FROM pieces');
+
+                while ($donnees = $reponse->fetch())
+                {
+                    ?>
+                    <option value="<?php echo $donnees['idpiece']; ?>"> <?php echo $donnees['nom']; ?></option>
+                    <?php
+                }
+
+                ?>
+
+            </select>
+        </label>
+        <input type="submit" value="Supprimer"><br/><br/>
     </form>
 
 
 
-</main>
+    <form method="post" action="creer_ma_maison_post.php">
+        <h3>Supprimer un capteur :</h3>
+        <label for="piececapt1">Piece :
+            <select name="piececapt1">
+                <?php
+
+                $reponse = $bdd->query('SELECT * FROM pieces');
+
+                while ($donnees = $reponse->fetch())
+                {
+                    ?>
+                    <option value="<?php echo $donnees['idpiece']; ?>"> <?php echo $donnees['nom']; ?></option>
+                    <?php
+                }
+
+                ?>
+
+            </select>
+        </label>
+
+
+        <label for="typecapteur1">Type de capteur :
+            <select name="typecapteur1">
+                <option></option>
+                <option value="humidite">Humidité</option>
+                <option value="temperature">Température</option>
+                <option value="presence">Présence</option>
+                <option value="fumee">Fumée</option>
+                <option value="co2">CO2</option>
+                <option value="luminosite"> Luminosité</option>
+                <option value="camera">Caméra</option>
+            </select>
+        </label> <br/><br/>
+
+        <input type="submit" value="Supprimer" > <br/><br/>
+    </form>
+
+
+    <form method="post" action="creer_ma_maison_post.php">
+
+        <h3>Supprimer un actionneur :</h3> <br/>
+        <label for="pieceactio1">Piece :
+            <select name="pieceactio1">
+                <?php
+
+                $reponse = $bdd->query('SELECT * FROM pieces');
+
+                while ($donnees = $reponse->fetch())
+                {
+                    ?>
+                    <option value="<?php echo $donnees['idpiece']; ?>"> <?php echo $donnees['nom']; ?></option>
+                    <?php
+                }
+
+                ?>
+            </select>
+        </label>
+        <label for="typeactionneur1">Type d'actionneur :
+            <select name="typeactionneur1">
+                <option></option>
+                <option value="volets">Volets</option>
+                <option value="porte">Porte</option>
+                <option value="lumiere">Lumiere</option>
+                <option value="temperature">Temperature</option>
+            </select>
+        </label><br/><br/>
+
+        <input type="submit" value="Supprimer"><br/><br/>
+    </form>
+
+</section>
+
+
 
 <?php include 'Footer.php';?>
 
