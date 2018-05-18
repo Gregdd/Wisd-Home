@@ -3,7 +3,7 @@
 
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'root');
+    $bdd = new PDO('mysql:host=localhost;dbname=wisdhome', 'root', 'root');
 }catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
@@ -22,6 +22,10 @@ try
 
 </head>
 <body>
+<header>
+    <?php include 'Header_2.php';?>
+</header>
+
 
 <article>
 
@@ -87,17 +91,27 @@ try
 <article>
 
     <h2> Actionneurs </h2><hr>
-    <ul>
+    <?php
 
-        <li class="carre" >
+    $id = $_GET["ideal"];
+
+    $req = $bdd->query("SELECT typeactionneur FROM actionneurpiece WHERE idpiece='$id' ");
+    echo '<ul>';
+    while ($actionneur = $req->fetch())
+    {
+        echo '<li class="carre">
             <a href="">
-                <center><img src="Image/goutte.png" alt="Humidité" title="Humidité" class="pics" style="width:30%"/></center><br/>
-                <p class="titre">Humidité</p></a>
-        </li>
+            <center><img src="" class="pics" style="width:20px"/></center><br/>
+                <p class="titre">'.$actionneur['typeactionneur'].'</p></a>
+        </li> ';
+    }
+    echo '</ul>';
+
+    $req->closeCursor();
+
+    ?>
 
 
-
-    </ul>
 
 
 
@@ -131,5 +145,8 @@ try
     }
 </script>
 
+<footer>
+    <?php include 'Footer.php';?>
+</footer>
 </body>
 </html>
