@@ -19,6 +19,7 @@ if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
                 $_SESSION['mail'] = $ligne["mail"];
                 $_SESSION['Ville'] = $ligne["Ville"];
                 $_SESSION['Code_postal'] = $ligne["Code_postal"];
+                $_SESSION['Adresse'] = $ligne["Adresse"];
                 $_SESSION['status']="Active";
                 header ('Location: Accueil_2.php');
                 exit();
