@@ -15,6 +15,10 @@ if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
                 session_start(); //on démarre la session
                 $_SESSION['nom'] = $ligne["Nom"];
                 $_SESSION['prenom'] = $ligne["Prenom"];
+                $_SESSION['Date_naissance'] = $ligne["Date_naissance"];
+                $_SESSION['mail'] = $ligne["mail"];
+                $_SESSION['Ville'] = $ligne["Ville"];
+                $_SESSION['Code_postal'] = $ligne["Code_postal"];
                 $_SESSION['status']="Active";
                 header ('Location: Accueil_2.php');
                 exit();
