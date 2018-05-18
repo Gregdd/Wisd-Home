@@ -17,19 +17,19 @@
             <fieldset>
                 <legend>Votre identité</legend>
                 <p>Informations générales <br/><br/>
-                    <label for="nom"> Nom : </label> <?php echo $_SESSION['nom'];?>
+                    <label for="nom"> Nom : </label> <?php echo $_SESSION['nom'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
                     <br /><br />
-                    <label for="prenom"> Prénom : </label> <?php echo $_SESSION['prenom'];?>
+                    <label for="prenom"> Prénom : </label> <?php echo $_SESSION['prenom'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
                     <br /><br />
-                    <label> Date de naissance :</label> <?php echo $_SESSION['anniversaire'];?>
+                    <label> Date de naissance :</label> <?php echo $_SESSION['anniversaire'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
                     <br /><br />
-                    <label for="mail"> Adresse mail : </label> <?php echo $_SESSION['mail'];?>
+                    <label for="mail"> Adresse mail : </label> <?php echo $_SESSION['mail'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
                     <br/><br />
-                    <label for="adresse"> Adresse : </label> <?php echo $_SESSION['rue'];?>
+                    <label for="adresse"> Adresse : </label> <?php echo $_SESSION['rue'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
                     <br/><br />
-                    <label for="ville"> Ville : </label> <?php echo $_SESSION['ville'];?>
+                    <label for="ville"> Ville : </label> <?php echo $_SESSION['ville'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
                     <br/><br />
-                    <label for="code postal"> Code postal : </label> <?php echo $_SESSION['code postal'];?>
+                    <label for="code postal"> Code postal : </label> <?php echo $_SESSION['code postal'];?> <a href="modif_données.php" title="Modifier" target="_blank">Modifier</a>
                     <br/><br />
                 </p>
             </fieldset>
