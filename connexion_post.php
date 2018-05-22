@@ -1,6 +1,6 @@
 <?php
 $error_message='';
-$bdd = new PDO("mysql:host=localhost; dbname=wisdhome; charset=utf8","root","monmotdepasse");
+$bdd = new PDO("mysql:host=localhost; dbname=wisdhome; charset=utf8","root","root");
 $entrees=$bdd->query("SELECT * FROM utilisateur");
 if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
 {
