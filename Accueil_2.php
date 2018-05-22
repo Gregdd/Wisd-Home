@@ -13,7 +13,7 @@
     <main>
         
         <div class="bouton">
-            <a href="Page_accueil_capteurs.php">My home</a>
+            <a href="Page_acceuil_capteurs.php">My home</a>
 
             <a href="Ma_consommation.php">Ma consommation</a>
 

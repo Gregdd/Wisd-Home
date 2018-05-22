@@ -14,7 +14,7 @@ try
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
     <title>Catalogue</title>
-    <link rel="stylesheet" type="text/css" href="Page_accueil_capteur.css">
+    <link rel="stylesheet" type="text/css" href="Page_acceuil_capteur.css">
     <link rel="stylesheet" type="text/css" href="style_tableau.css">
     <link rel="stylesheet" type="text/css" href="popupbox.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
