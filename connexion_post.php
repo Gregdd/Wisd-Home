@@ -5,7 +5,7 @@ $entrees=$bdd->query("SELECT * FROM utilisateur");
 if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
 {
     $post_username = $_POST['ID']; //On associe la valeur entrée à $post_username
-    $post_password = $_POST['password'];
+    $post_password = sha1($_POST['password']);
     while ($ligne = $entrees -> fetch())
     {
         if($post_username==$ligne["pseudo"] ) //Si l'identifiant correspond
