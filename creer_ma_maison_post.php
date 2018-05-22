@@ -40,7 +40,7 @@ if($pseudoINbdd == 0){
     $req = $bdd->prepare('INSERT INTO pieces(nom ) VALUES(:nompiece)');
     $req->execute(array(
         'nompiece' => $nompiece));
-    header ('Location:Page_acceuil_capteur.php');
+    header ('Location:Page_acceuil_capteurs.php');
 
 
 
@@ -64,7 +64,7 @@ if ((!empty($_POST['nompiece1'])) ) {
     $nompiece1 = $_POST['nompiece1'];
     $reqsupp = $bdd->query("DELETE FROM pieces WHERE nom = '".$_POST['nompiece1']."'");
 
-    header ('Location:Page_acceuil_capteur.php');
+    header ('Location:Page_acceuil_capteurs.php');
 
 
 }
@@ -73,7 +73,7 @@ if((!empty($_POST['piececapt1'] AND !empty($_POST['typecapteur1'])))){
     $typecapteur1 = $_POST['typecapteur1'];
     $reqsupp = $bdd->query("DELETE FROM capteurpiece WHERE idpiece = '".$_POST['piececapt1']."' AND typecapteur= '".$_POST['typecapteur1']."' ");
 
-    header ('Location:Page_acceuil_capteur.php');
+    header ('Location:Page_acceuil_capteurs.php');
 
 
 }
@@ -82,7 +82,7 @@ if((!empty($_POST['pieceactio1'] AND !empty($_POST['typeactionneur1'])))){
     $typeactionneur1 = $_POST['typeactionneur1'];
     $reqsupp = $bdd->query("DELETE FROM actionneurpiece WHERE idpiece = '".$_POST['pieceactio1']."' AND typecapteur= '".$_POST['typeactionneur1']."' ");
 
-    header ('Location:Page_acceuil_capteur.php');
+    header ('Location:Page_acceuil_capteurs.php');
 
 }
 
