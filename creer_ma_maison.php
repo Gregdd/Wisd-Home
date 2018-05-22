@@ -116,7 +116,7 @@ try
                 while ($donnees = $reponse->fetch())
                 {
                     ?>
-                    <option value="<?php echo $donnees['idpiece']; ?>"> <?php echo $donnees['nom']; ?></option>
+                    <option value="<?php echo $donnees['nom']; ?>"> <?php echo $donnees['nom']; ?></option>
                     <?php
                 }
 
@@ -126,7 +126,6 @@ try
         </label>
         <input type="submit" value="Supprimer"><br/><br/>
     </form>
-
 
 
     <form method="post" action="creer_ma_maison_post.php">
