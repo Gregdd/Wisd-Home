@@ -3,7 +3,7 @@
 
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'root');
+    $bdd = new PDO('mysql:host=localhost;dbname=wisdhome', 'root', 'monmotdepasse');
 }catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
@@ -26,10 +26,10 @@ try
 
 
 <body>
-<header>
-    <?php include 'Header_2.php';?>
-</header>
 
+<?php include 'Header_2.php';?>
+
+<main>
 <article>
     <h2>Choix de la pièce</h2>
     <?php
@@ -50,9 +50,9 @@ try
     ?>
 
 </article>
+</main>
 
-<footer>
-    <?php include 'Footer.php';?>
-</footer>
+<?php include 'Footer.php';?>
+
 
 </html>
