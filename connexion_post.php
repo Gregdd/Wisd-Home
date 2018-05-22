@@ -1,7 +1,7 @@
 <?php
 $error_message='';
-$bdd = new PDO("mysql:host=localhost; dbname=wisdhome; charset=utf8","root","monmotdepasse");
-$entrees=$bdd->query("SELECT * FROM utilisateur");
+$bdd = new PDO('mysql:host=localhost;dbname=wisd\'home', 'root', 'root');
+$entrees=$bdd->query("SELECT * FROM Connexion"); //on se place dans la table admiistrateur de la BDD
 if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
 {
     $post_username = $_POST['ID']; //On associe la valeur entrée à $post_username
@@ -15,28 +15,31 @@ if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
                 session_start(); //on démarre la session
                 $_SESSION['nom'] = $ligne["Nom"];
                 $_SESSION['prenom'] = $ligne["Prenom"];
-                $_SESSION['date_naissance'] = $ligne["date_naissance"];
+                $_SESSION['Date_naissance'] = $ligne["Date_naissance"];
                 $_SESSION['mail'] = $ligne["mail"];
                 $_SESSION['Ville'] = $ligne["Ville"];
                 $_SESSION['Code_postal'] = $ligne["Code_postal"];
                 $_SESSION['Adresse'] = $ligne["Adresse"];
                 $_SESSION['status']="Active";
-
-                if($ligne['Type_utilisateur'] === 'Administrateur') //Connexion administrateur
-                    header ('Location: Accueil_admin.php');
-                else{
-                    header ('Location : Accueil_2.php');
+                
+                if($ligne['Type_utilisateur'] == 'client'){
+                header ('Location: http://localhost/APP_Site/Accueil_2.php');
+                }
+                else {
+                    header('Location: http://localhost/APP_Site/Accueil_admin.php');
                 }
                 exit();
             }
             else //Si les login et mdp ne match pas, on l'indique
             {
                 $error_message='Erreur de nom d\'utilisateur ou de mot de passe';
+                echo $error_message;
             }
         }
         else //Si les login et mdp ne match pas, on l'indique
         {
             $error_message='Erreur de nom d\'utilisateur ou de mot de passe';
+            echo $error_message;
         }
     }
 }
