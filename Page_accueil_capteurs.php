@@ -3,7 +3,7 @@
 
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=test', 'root', 'root');
+    $bdd = new PDO('mysql:host=localhost;dbname=wisdhome', 'root', 'root');
 }catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
@@ -40,7 +40,7 @@ try
     {
         echo '<li class="carre">
             <a href="Page_acceuil_piece.php?ideal='.$piece['idpiece'].'>
-                <p class="titre"> '.$piece['nom'].' </p></a>
+            <p class="titre"> '.$piece['nom'].' </p></a>
         </li> ';
     }
     echo '</ul>';
