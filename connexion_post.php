@@ -21,6 +21,7 @@ if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
                 $_SESSION['Code_postal'] = $ligne["Code_postal"];
                 $_SESSION['Adresse'] = $ligne["Adresse"];
                 $_SESSION['status']="Active";
+                $_SESSION['Type_utilisateur']=$ligne["Type_utilisateur"];
 
                 if($ligne['Type_utilisateur'] === 'Administrateur') //Connexion administrateur
                     header ('Location: Accueil_admin.php');

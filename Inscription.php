@@ -33,7 +33,7 @@
             <input type="text" name="mail" id="mail"><br><br>
             <label for="codepost">Code postal : </label><br>
             <label for="Adresse">Adresse : </label><br>
-			<input type="text" name="adresse" id="adresse"><br><br>
+            <input type="text" name="adresse" id="adresse"><br><br>
             <input type="text" name="codepost" id="codepost"><br><br>
             <label for="ville">Ville : </label><br>
             <input type="text" name="ville" id="ville"><br><br>
@@ -56,7 +56,7 @@
             <input type="text"><br><br>
             <label>Accepter les conditions d'utilisation : </label>
             <input type="checkbox" id = check required><br><br>
-            
+
             <input type="submit"><br>
         </section>
     </form>

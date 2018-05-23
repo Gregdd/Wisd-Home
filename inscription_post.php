@@ -41,7 +41,9 @@ if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['identifi
 
 
 header ('Location:connexion_git.php');
-        }}}
+        }
+    }
+}
 //modif salim
 
 ?>
