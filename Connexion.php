@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8"/>
     <title>Connexion</title>
-    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="connexion.css"/>
 </head>
 
