@@ -7,6 +7,8 @@
     <title>Inscription</title>
     <link rel="text/javascript" href="vérifications.js"/>
     <link rel="text/javascript" href="FonctionsJS.js"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -17,7 +19,7 @@
     <h1>Inscription</h1><br/>
 
 
-    <form action="inscription_post.php" method="post">
+    <form name="formulaire" onsubmit="return Test()" action="inscription_post.php" method="post">
         <section class = "gauche">
             <label for="nom">Nom : </label><br>
             <input type="text" name="nom" id="nom"><br><br>
@@ -42,7 +44,7 @@
         <section class = "droite">
             <label for="pass">Mot de passe : </label><br>
             <input type="password" name="pass" id="pass"><br><br>
-            <label for="pas2">Confirmation du mot de passe : </label><br>
+            <label for="pass2">Confirmation du mot de passe : </label><br>
             <input type="password" name="pass2" id="pas2"><br><br>
             <label>Question secrète :</label><br>
             <select>
@@ -58,6 +60,20 @@
             <input type="submit"><br>
         </section>
     </form>
+
+    <script>
+        function Test(){
+            var pass=formulaire.pass.value;
+            var pass2=formulaire.pass2.value;
+            if (pass!=pass2){
+                alert(" Les deux mots de passes ne correspondent pas !");
+                return false;
+                formulaire.pass.focus();
+            }
+
+        }
+    </script>
+
 
 </div>
 
