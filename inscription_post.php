@@ -1,49 +1,53 @@
 <?php
-$error_message='';
-$bdd = new PDO("mysql:host=localhost; dbname=wisdhome; charset=utf8","root","monmotdepasse");
-$entrees=$bdd->query("SELECT * FROM utilisateur");
-if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
+try
 {
-    $post_username = $_POST['ID']; //On associe la valeur entrée à $post_username
-    $post_password = ($_POST['password']);
-    while ($ligne = $entrees -> fetch())
-    {
-        if($post_username==$ligne["pseudo"] ) //Si l'identifiant correspond
-        {
-            if($post_password==$ligne["Mot_de_passe"] || password_verify($post_password, $ligne["Mot_de_passe"])) //Si le mdp correspond
-            {
-                session_start(); //on démarre la session
-                $_SESSION['nom'] = $ligne["Nom"];
-                $_SESSION['prenom'] = $ligne["Prenom"];
-                $_SESSION['Date_naissance'] = $ligne["Date_naissance"];
-                $_SESSION['mail'] = $ligne["mail"];
-                $_SESSION['Ville'] = $ligne["Ville"];
-                $_SESSION['Code_postal'] = $ligne["Code_postal"];
-                $_SESSION['Adresse'] = $ligne["Adresse"];
-                $_SESSION['status']="Active";
-
-                if ($ligne['Type_utilisateur'] == 'Administrateur'){
-                    header ( 'Location: Accueil_admin.php');
-                    exit();
-                }
-                header ('Location: Accueil_2.php');
-                exit();
-            }
-            else //Si les login et mdp ne match pas, on l'indique
-            {
-                $error_message='Erreur de nom d\'utilisateur ou de mot de passe';
-                echo $error_message;
-            }
+    $bdd = new PDO('mysql:host=localhost;dbname=wisd\'home', 'root', 'root');
+}catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
+// Vérification de la validité des informations
+if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['identifiant']) && !empty($_POST['mail']) && !empty($_POST['codepost'])&& !empty($_POST['ville']) && !empty($_POST['pass']) && !empty($_POST['pass2']&& !empty($_POST['Reponse']) && !empty($_POST['question']) && !empty($_POST['bday']) && !empty($_POST['adresse']) )) {
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $identifiant = $_POST['identifiant'];
+    $pass = $_POST['pass'];
+    $pass2 = $_POST['pass2'];
+    $mail = $_POST['mail'];
+    $Code_postal = $_POST['codepost'];
+    $Ville = $_POST['ville'];
+    $Reponse = $_POST['Reponse'];
+    $question = $_POST['question'];
+    $bday = $_POST['bday'];
+    $Adresse = $_POST["adresse"];
+    if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+        if ($pass == $pass2) {
+            $req = $bdd->prepare('INSERT INTO utilisateur(pseudo, Mot_de_passe, Nom ,Prenom , mail, Code_postal, Ville, Reponse, question, Date_naissance, Adresse) VALUES(:identifiant, :pass, :nom, :prenom, :mail, :Code_postal, :Ville, :Reponse, :question, :bday, :adresse)');
+            $req->execute(array(
+                'identifiant' => $identifiant,
+                'pass' => $pass,
+                'nom' => $nom,
+                'prenom' => $prenom,
+                'mail' => $mail,
+                'Code_postal' => $Code_postal,
+                'Ville' => $Ville,
+                'Reponse' => $Reponse,
+                'question' => $question,
+                'bday' => $bday,
+                'adresse' => $Adresse));
+            $erreur = "Votre compte a bien été créé ! <a href=\"Connexion.php\">Me connecter</a>";
+            header ('Location:Connexion.php');
+        } else {
+            $erreur = "Vos mots de passes ne correspondent pas !";
+            header ('Location:inscription.php');
         }
-        else //Si les login et mdp ne match pas, on l'indique
-        {
-            $error_message='Erreur de nom d\'utilisateur ou de mot de passe';
-            echo $error_message;
-        }
+    } else {
+        $erreur = "Votre adresse mail n'est pas valide !";
+        header ('Location:inscription.php');
     }
 }
-if (false == empty($error_message))
-{
-    $error_message="<div class=\"alert alert-danger\" role=\"alert\">$error_message</div>";
-}
+// Insertion
+//header ('Location:connexion.php');
 ?>
+
+
