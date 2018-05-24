@@ -38,15 +38,17 @@ try
     echo '<ul>';
     while ($capteur = $req->fetch())
     {
-        $capteur['typecapteur']= &$type;
-        $image = $bdd->query("SELECT url_img FROM capteur WHERE typecapteur =$type");
-        //$req = $bdd->query("SELECT url_img FROM capteur WHERE capteurtype = '.$capteur['typecapteur'].'z ");
+        $type = &$capteur['typecapteur'];
+        //var_dump($type);
+        $req1 = $bdd->prepare("SELECT url_img FROM capteur WHERE capteurtype =?");
+        $req1 -> execute(array($type));
+        $image = $req1->fetch();
+        $url_img = $image["url_img"];
+        //var_dump();
         echo '<li class="carre">
-            <a href="">
-            <center><img src=".$image." class="pics" style="width:20px"/></center><br/>
-            <img src="Image/mouvement.png" style="width:"  title='.$capteur['typecapteur'].' class="pics"/><br/>
+            <p style="color: black" class="titre">'.$capteur['typecapteur'].'</p>
+            <img src='.$url_img.' style="width:"  title='.$capteur['typecapteur'].' class="pics"/><br/>
 
-                <p class="titre">'.$capteur['typecapteur'].'</p></a>
         </li> ';
     }
     echo '</ul>';
@@ -73,14 +75,17 @@ try
     echo '<ul>';
     while ($actionneur = $req->fetch())
     {
-        echo '<li class="carre">
-            <a href="">
-            <center><img src="" class="pics" style="width:20px"/></center><br/>
-                <p class="titre">'.$actionneur['typeactionneur'].'</p></a>
-                
+        $type = &$actionneur['typeactionneur'];
+        $req1 = $bdd->prepare("SELECT url_img FROM actionneur WHERE actionneurtype =?");
+        $req1 -> execute(array($type));
+        $image = $req1->fetch();
+        $url_img = $image["url_img"];
+        //var_dump();
+        echo '<a class="carre">
+            <a href="Page_acceuil_piece_actionneur.php?ideal1='.$actionneur.'>
+            <p style="color: black" class="titre">'.$actionneur['typeactionneur'].'</p></a>
+            <img src='.$url_img.' style="width:"  title='.$actionneur['typeactionneur'].' class="pics"/><br/>
 
-                
-              
         </li> ';
     }
     echo '</ul>';
@@ -88,7 +93,6 @@ try
     $req->closeCursor();
 
     ?>
-
 
 
 

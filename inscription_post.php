@@ -25,7 +25,7 @@ if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['identifi
     $Adresse = $_POST["adresse"];
     if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
         if ($pass == $pass2) {
-            $req = $bdd->prepare('INSERT INTO connexion(pseudo, Mot_de_passe, Nom ,Prenom , mail, Code_postal, Ville, Reponse, question, Date_naissance, Adresse) VALUES(:identifiant, :pass, :nom, :prenom, :mail, :Code_postal, :Ville, :Reponse, :question, :bday, :adresse)');
+            $req = $bdd->prepare('INSERT INTO utilisateur(pseudo, Mot_de_passe, Nom ,Prenom , mail, Code_postal, Ville, Reponse, question, Date_naissance, Adresse) VALUES(:identifiant, :pass, :nom, :prenom, :mail, :Code_postal, :Ville, :Reponse, :question, :bday, :adresse)');
             $req->execute(array(
                 'identifiant' => $identifiant,
                 'pass' => $pass,
