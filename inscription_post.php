@@ -1,21 +1,18 @@
 <?php
-
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=wisdhome', 'root', 'root');
+    $bdd = new PDO('mysql:host=localhost;dbname=wisd\'home', 'root', 'root');
 }catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
 }
-
-
 // Vérification de la validité des informations
 if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['identifiant']) && !empty($_POST['mail']) && !empty($_POST['codepost'])&& !empty($_POST['ville']) && !empty($_POST['pass']) && !empty($_POST['pass2']&& !empty($_POST['Reponse']) && !empty($_POST['question']) && !empty($_POST['bday']) && !empty($_POST['adresse']) )) {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $identifiant = $_POST['identifiant'];
-    $pass = sha1($_POST['pass']);
-    $pass2 = sha1($_POST['pass2']);
+    $pass = $_POST['pass'];
+    $pass2 = $_POST['pass2'];
     $mail = $_POST['mail'];
     $Code_postal = $_POST['codepost'];
     $Ville = $_POST['ville'];
@@ -38,13 +35,19 @@ if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['identifi
                 'question' => $question,
                 'bday' => $bday,
                 'adresse' => $Adresse));
-
-
-header ('Location:connexion_git.php');
+            $erreur = "Votre compte a bien été créé ! <a href=\"Connexion.php\">Me connecter</a>";
+            header ('Location:Connexion.php');
+        } else {
+            $erreur = "Vos mots de passes ne correspondent pas !";
+            header ('Location:inscription.php');
         }
+    } else {
+        $erreur = "Votre adresse mail n'est pas valide !";
+        header ('Location:inscription.php');
     }
 }
-//modif salim
-
+// Insertion
+//header ('Location:connexion.php');
 ?>
+
 

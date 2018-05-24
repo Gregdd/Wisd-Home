@@ -39,7 +39,7 @@ try
     while ($piece = $req->fetch())
     {
         echo '<li class="carre">
-            <a href="Page_acceuil_piece.php?ideal='.$piece['idpiece'].'>
+            <a href="Page_accueil_piece.php?ideal='.$piece['idpiece'].'>
             <p class="titre"> '.$piece['nom'].' </p></a>
         </li> ';
     }
