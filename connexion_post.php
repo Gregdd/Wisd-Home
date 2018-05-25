@@ -15,11 +15,12 @@ if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
                 session_start(); //on démarre la session
                 $_SESSION['nom'] = $ligne["Nom"];
                 $_SESSION['prenom'] = $ligne["Prenom"];
-                $_SESSION['Date_naissance'] = $ligne["Date_naissance"];
+                $_SESSION['bday'] = $ligne["bday"];
                 $_SESSION['mail'] = $ligne["mail"];
                 $_SESSION['Ville'] = $ligne["Ville"];
                 $_SESSION['Code_postal'] = $ligne["Code_postal"];
                 $_SESSION['Adresse'] = $ligne["Adresse"];
+                $_SESSION['ID']= $post_username;
                 $_SESSION['status']="Active";
 
                 if ($ligne['Type_utilisateur'] == 'Administrateur'){
