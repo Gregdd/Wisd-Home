@@ -7,18 +7,16 @@
 
 <body>
 
-<?php include 'Header_admin.php';?>
-
-<main>
+<?php include 'Header_admin2.php';?>
 
     <h1>Rechercher un client :</h1>
-    <form action="rechercher_post.php" method="post">
+    <form method="post" action="recherche_post.php">
         <label for="nom">Nom : </label>
         <input type="text" name="nom" id="nom"><br><br>
         <label for="nom">Identifiant : </label>
         <input type="text" name="pseudo" id="pseudo"><br><br>
         <input type="submit" value ="Rechercher"><br>
-</main>
+     </form>
 
 <?php include 'Footer.php';?>
 
