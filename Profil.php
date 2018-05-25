@@ -38,22 +38,6 @@
         </div>
 
 
-        <div class="Colonne2">
-            <fieldset>
-                <legend>Informations sur votre compte</legend>
-                <p> <span class="soustitre">Modifier mot de passe : </span><br/><br/>
-                    <label for="amdp"> Ancien mot de passe : </label>
-                    <input type="password" name="amdp" id="amdp" placeholder="*******" size="25"> <br /><br />
-                    <label for="nmdp"> Nouveau mot de passe : </label>
-                    <input type="password" name="amdp" id="amdp" placeholder="*******" size="25" minlength="8"/> <br /><br />
-                    <label for="cmdp"> Confirmer mot de passe : </label>
-                    <input type="password" name="cmdp" id="cmdp" placeholder="*******" size="25" minlength="8" required/> <br /><br />
-                    <input type="submit" value="Valider"/><br/><br />
-
-                </p>
-            </fieldset>
-        </div>
-
 </div>
 <br/>
 <br/>
