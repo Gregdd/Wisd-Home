@@ -10,7 +10,9 @@
 </head>
 <body>
 <header><?php include 'Header_2.php';?></header>
-<div class="Colonne2">
+
+<form method="post" action="mdp_actu.php">
+ <div class="Colonne2">
 <fieldset>
 <legend>Informations sur votre compte</legend>
 <p> <span class="soustitre">Modifier mot de passe : </span><br/><br/>
