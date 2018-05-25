@@ -30,6 +30,7 @@
 				'newnom' => $newnom,
 				'ID' => $userid
 		));
+		$_SESSION['nom']=$newnom;
 	}
 	if(isset($_POST['prenom'])){
 		$newprenom = $_POST['prenom'];
@@ -39,18 +40,21 @@
 				'ID' => $userid
 				
 		));
+		$_SESSION['prenom']= $newprenom;
 	}
 	if(isset($_POST['bday'])){
 		$newbday = $_POST['bday'];
 		$req = $bdd->prepare('UPDATE connexion SET Date_naissance=:newbday WHERE pseudo =:ID');
 		$req->execute(array('newbday' => $newbday,
 				'ID' => $userid));
+		$_SESSION['bday']= $newbday;
 	}
 	if(isset($_POST['mail'])){
 		$newmail = $_POST['mail'];
 		$req = $bdd->prepare('UPDATE connexion SET mail=:newmail WHERE pseudo =:ID');
 		$req->execute(array('newmail' => $newmail,
 				'ID' => $userid));
+		$_SESSION['mail']= $newmail;
 	}
 	if(isset($_POST['adresse'])){
 		$newadresse = $_POST['adresse'];
@@ -59,6 +63,7 @@
 				'newadresse' => $newadresse,
 				'ID' => $userid
 		));
+		$_SESSION['adresse']= $newadresse;
 	}
 	if(isset($_POST['code_postal'])){
 		$newpostal = $_POST['code_postal'];
@@ -67,6 +72,7 @@
 				'newpostal' => $newpostal,
 				'ID' => $userid
 		));
+		$_SESSION['Code_Postal']= $newpostal;
 	}
 	if(isset($_POST['ville'])){
 		$newville = $_POST['ville'];
@@ -75,6 +81,7 @@
 				'newville' => $newville,
 				'ID' => $userid
 		));
+		$_SESSION['ville']= $newville;
 	}
 	?>
 	<p>Informations mises à jour <br/> <a href = "Profil.php" title="Mon profil"> Cliquez pour revenir au profil </a>
