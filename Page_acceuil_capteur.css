@@ -13,12 +13,7 @@ body{
     text-decoration: none;
     color:black;
 }
-hr{
-    width:100%;
-    position:relative;
-    right:10px;
-    border-color: black;
-}
+
 article{
     background-color: #3F5378;
     width:98%;
@@ -26,7 +21,8 @@ article{
     padding-left: 20px;
     padding-top: 5px;
     padding-right: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
+    margin-top: 20px;
     margin-left: 10px;
     color: white;
     overflow: auto;
@@ -42,39 +38,8 @@ a4:hover{
     color:black;
 }
 
-.black{
-  color: black;
 
-}
-.select{
-    color :black;
-}
 
-.tableau{color: black;}
-
-td{
-    background-color: #f2f2f2;
-    color: black;
-}
-
-.com_en_cours{
-  background-color: #3F5378;
-  border: 3px solid #3F5378;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-}
-
-.com_en_cours .a4:hover{
-    text-decoration: none;
-    color:purple;
-}
-
-.com_en_cours .a4{
-  text-decoration: none;
-  color: black;
-  font-size: 25px;
-}
 .ul4{
   display: flex;
 }
@@ -93,7 +58,16 @@ td{
     right:25px;
 }
 
-#Capteurs {
+.colors{
+	color: black;
+}
+
+div{
+	text-align : center;
+	margin-top : 10px;
+}
+
+#Capteurs{
 	background-color: white;
 	height: 100px;
 	color : black;
