@@ -28,6 +28,11 @@ try
     <?php include 'Header_2.php';?>
 </header>
 
+<div>
+	<a class="colors" href="creer_ma_maison.php"><input type="submit" value="Modifier"/></a>
+</div>
+
+    
 <article>
     <h2>Choix de la pièce</h2>
     <?php
