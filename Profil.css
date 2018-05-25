@@ -8,11 +8,6 @@ h2{
 	color: blue;
 }
 
-.a[title=abonnement]{
-	border: 6px black solid;
-	padding: 20% 20% 20% 20%
-}
-
 #conteneur{
 	display: flex;
 	justify-content: space-around;
@@ -34,4 +29,12 @@ legend{
 	background-color: white;
 	height: 100px;
 	color : black;
+}
+
+.soustitre{
+	text-decoration: underline;
+	font-style: italic;
+}
+a[title=Modifier]{
+	text-align: right;
 }
