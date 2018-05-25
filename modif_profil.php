@@ -19,20 +19,20 @@
     <form method="post" action="Profil_actu.php">
     <div class="Colonne1">
         <fieldset>
-            <legend>Votre identité</legend>
-            <p> <span class="soustitre">Informations générales </span><br/><br/>
+            <legend>Votre identitÃ©</legend>
+            <p> <span class="soustitre">Informations gÃ©nÃ©rales </span><br/><br/>
                 <label for="nom"> Nom : </label>
                 <input type="text" name="nom" id="nom" placeholder="Nom" size="25"> <br /><br />
-                <label for="prenom"> Prénom : </label>
+                <label for="prenom"> PrÃ©nom : </label>
                 <input type="text" name="prenom" id="prenom" placeholder="Prenom" size="25"/> <br /><br />
                 <label for="birth"> Date de naissance ?</label>
-                <input type="date" name="birth" id="birth"/> <br /><br />
+                <input type="date" name="bday" id="birth"/> <br /><br />
                 <label for="mail"> Adresse mail : </label>
                 <input type="email" name="mail" id="mail" placeholder="moncompte@gmail.com" size="30" /> <br/><br />
                 <label for="adresse"> Adresse : </label>
                 <input type="text" name="adresse" id="prenom" placeholder="28 Rue Notre Dame des Champs" size="35"/> <br/><br />
-                <label for="code postal"> Code postal : </label>
-                <input type="text" name="postal" id="code postal" placeholder="75006" size="10" /> <br/><br />
+                <label for="code_postal"> Code postal : </label>
+                <input type="text" name="code_postal" id="code_postal" placeholder="75006" size="10" /> <br/><br />
                 <label for="ville"> Ville : </label>
                 <input type="text" name="ville" id="ville" placeholder="Paris" size="20" /> <br/><br />
                 <input type="submit" value="Valider"/><br/><br />
