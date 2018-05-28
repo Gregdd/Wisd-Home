@@ -16,21 +16,18 @@
 <?php include 'Header_2.php';?>
    
 <main>
-
     <fieldset>
         <legend>Contact</legend>
-        <form method="post" action="messages.php">
+        <form method="post" action="Messages.php">
         <br /><input type="text" name="objet" id="objet" placeholder="Objet" size="35"> <br /> <br/>
-        <textarea id="message" cols="100" rows="20" placeholder=">Message pour l'administrateur."> </textarea> <br/>
+        <textarea id="message" name="message" cols="100" rows="20" placeholder=">Message pour l'administrateur."> </textarea> <br/>
         <input type="submit" value="Envoyer"/>
         </form>
     </fieldset>
-
-
-
 </main>
 
+<footer>
 <?php include 'Footer.php';?>
-	
+</footer>	
 </body>
 </html>
