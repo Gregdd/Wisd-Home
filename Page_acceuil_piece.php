@@ -26,6 +26,9 @@ try
     <?php include 'Header_2.php';?>
 </header>
 
+<div>
+	<a class="colors" href="creer_ma_maison.php"><input type="submit" value="Modifier"/></a>
+</div>
 
 <article>
 

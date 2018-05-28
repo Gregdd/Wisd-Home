@@ -17,10 +17,11 @@
     <ul class = ul2>
         <li class = li2><a class = a2 id = Profil href="Profil.php">Mon profil</a></li>
         <li class = li2><a class = a2 id = Capteurs href="Page_accueil_capteurs.php">My Home</a></li>
+        <li class = li2><a class = a2 id = Capteurs2 href="creer_ma_maison.php">Gérer ma maison</a></li>
         <li class = li2><a class = a2 id = Conso href="Consommation.php">Ma consommation</a></li>
         <li class = li2><a class = a2 id = Messagerie href="Messagerie.php">Nous contacter </a></li>
-
     </ul>
+    
 </header>
 
 </html>

@@ -13,8 +13,8 @@
 
     <h1>Résultat de la recherche : </h1>
     <p>
-        Nom : <?php echo $_SESSION['client']['nom']; ?>
-        Prénom : <?php echo $_SESSION['client']['prenom']; ?>
+        Nom : <?php  echo $_SESSION['client']['nom']; ?> <br/>
+        Prénom : <?php echo $_SESSION['client']; ?>
     </p>
 
 </main>
