@@ -14,8 +14,14 @@ catch(Exception $e)
 }
 
 if(!empty($objet) && !empty($message)){
-	$req = $bdd->prepare('INSERT INTO messagerie(Objet, ID, Message, Date) VALUES(Objet = ?, ID= ?; Message = ?, Date = ?');
-	$req->execute(array($objet, $id, $message, $date));
+	$req = $bdd->prepare('INSERT INTO messagerie(Objet, ID, Message, Date) VALUES(:Objet, :ID; :Message, :Date)');
+	$req->execute(array(
+			'Objet'=> $objet,
+			'ID' => $id,
+			'Message' => $message,
+			'Date' => $date
+			
+	));
 }
 
 echo  "Message envoyé";
