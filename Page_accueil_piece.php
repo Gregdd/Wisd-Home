@@ -8,7 +8,7 @@ include 'database.php';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
     <title>Catalogue</title>
-    <link rel="stylesheet" type="text/css" href="Page_acceuil_capteur.css">
+    <link rel="stylesheet" type="text/css" href="Page_accueil_capteur.css">
     <link rel="stylesheet" type="text/css" href="style_tableau.css">
     <link rel="stylesheet" type="text/css" href="popupbox.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -16,9 +16,9 @@ include 'database.php';
 
 </head>
 <body>
-<header>
-    <?php include 'Header_2.php';?>
-</header>
+
+<?php include 'Header_2.php';?>
+
 
 <div>
 	<a class="colors" href="creer_ma_maison.php"><input type="submit" value="Modifier"/></a>
@@ -52,10 +52,6 @@ include 'database.php';
 
     ?>
 
-
-
-
-
 </article>
 
 
@@ -74,9 +70,7 @@ include 'database.php';
             <a href="">
             <center><img src="" class="pics" style="width:20px"/></center><br/>
                 <p class="titre">'.$actionneur['typeactionneur'].'</p></a>
-                
-
-                
+                           
               
         </li> ';
     }
@@ -86,16 +80,9 @@ include 'database.php';
 
     ?>
 
-
-
-
-
 </article>
 
+<?php include 'Footer.php';?>
 
-
-<footer>
-    <?php include 'Footer.php';?>
-</footer>
 </body>
 </html>
