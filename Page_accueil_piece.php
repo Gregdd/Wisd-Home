@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <?php
 
-include 'database.php';
-
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=wisdhome', 'root', 'root');
+}catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
+?>
 <html>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
     <title>Catalogue</title>
-    <link rel="stylesheet" type="text/css" href="Page_accueil_capteur.css">
-    <link rel="stylesheet" type="text/css" href="style_tableau.css">
+    <link rel="stylesheet" type="text/css" href="Page_acceuil_capteur.css">
+    <link rel="stylesheet" type="text/css" href="styletableau.css">
     <link rel="stylesheet" type="text/css" href="popupbox.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="icon" type="image/png" href="Image/icon.png" />
 
 </head>
 <body>
+<header>
+    <?php include 'Header_2.php';?>
+</header>
 
-<?php include 'Header_2.php';?>
-
-
-<div>
-	<a class="colors" href="creer_ma_maison.php"><input type="submit" value="Modifier"/></a>
-</div>
 
 <article>
 
@@ -35,15 +38,17 @@ include 'database.php';
     echo '<ul>';
     while ($capteur = $req->fetch())
     {
-        $capteur['typecapteur']= &$type;
-        $image = $bdd->query("SELECT url_img FROM capteur WHERE typecapteur =$type");
-        //$req = $bdd->query("SELECT url_img FROM capteur WHERE capteurtype = '.$capteur['typecapteur'].'z ");
+        $type = &$capteur['typecapteur'];
+        //var_dump($type);
+        $req1 = $bdd->prepare("SELECT url_img FROM capteur WHERE capteurtype =?");
+        $req1 -> execute(array($type));
+        $image = $req1->fetch();
+        $url_img = $image["url_img"];
+        //var_dump();
         echo '<li class="carre">
-            <a href="">
-            <center><img src=".$image." class="pics" style="width:20px"/></center><br/>
-            <img src="Image/mouvement.png" style="width:"  title='.$capteur['typecapteur'].' class="pics"/><br/>
+            <p style="color: black" class="titre">'.$capteur['typecapteur'].'</p>
+            <img src='.$url_img.' style="width:"  title='.$capteur['typecapteur'].' class="pics"/><br/>
 
-                <p class="titre">'.$capteur['typecapteur'].'</p></a>
         </li> ';
     }
     echo '</ul>';
@@ -51,6 +56,10 @@ include 'database.php';
     $req->closeCursor();
 
     ?>
+
+
+
+
 
 </article>
 
@@ -62,16 +71,21 @@ include 'database.php';
 
     $id = $_GET["ideal"];
 
-    $req = $bdd->query("SELECT typeactionneur FROM actionneurpiece WHERE idpiece='$id' ");
+    $req = $bdd->query("SELECT typeactionneur,ID FROM actionneurpiece WHERE idpiece='$id' ");
     echo '<ul>';
     while ($actionneur = $req->fetch())
     {
-        echo '<li class="carre">
-            <a href="">
-            <center><img src="" class="pics" style="width:20px"/></center><br/>
-                <p class="titre">'.$actionneur['typeactionneur'].'</p></a>
-                           
-              
+        $type = &$actionneur['typeactionneur'];
+        $req1 = $bdd->prepare("SELECT url_img FROM actionneur WHERE actionneurtype =?");
+        $req1 -> execute(array($type));
+        $image = $req1->fetch();
+        $url_img = $image["url_img"];
+        //var_dump();
+        echo '<a class="carre">
+            <a href="Page_acceuil_piece_actionneur.php?ideal1='.$actionneur['ID'].'>
+            <p style="color: black" class="titre">'.$actionneur['typeactionneur'].'</p></a>
+            <img src='.$url_img.' style="width:"  title='.$actionneur['typeactionneur'].' class="pics"/><br/>
+
         </li> ';
     }
     echo '</ul>';
@@ -80,9 +94,16 @@ include 'database.php';
 
     ?>
 
+
+
+
+
 </article>
 
-<?php include 'Footer.php';?>
 
+
+<footer>
+    <?php include 'Footer.php';?>
+</footer>
 </body>
 </html>
