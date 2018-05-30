@@ -1,0 +1,30 @@
+body
+{
+	margin: 0;
+	font-family: "arial";
+}
+
+
+fieldset
+{
+	text-align: center;
+	width: 45%;
+	height: 10%;
+	margin: auto;
+  margin-top: 4%;
+	margin-bottom: 4%;
+}
+
+
+main
+{
+	margin: 5%
+}
+
+
+#enveloppe
+{
+	margin-left: 44%;
+	width: 135px;
+}
+
