@@ -7,11 +7,17 @@ catch(Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
 
+session_start();
 
 if (!empty($_POST['nom'])){
     $nom = $_POST['nom'];
-    $_SESSION['client'] =$bdd->query("SELECT * FROM utilisateur WHERE nom LIKE '$nom'");
+    $req=$bdd->query("SELECT * FROM utilisateur WHERE Nom='$nom'");
+    $clientnom = $req->fetch();
+    $_SESSION['client']['Nom']=$clientnom['Nom'];
+    $req->closeCursor();
+
     header('Location: Resultat.php');
+
     exit();
 }
 
