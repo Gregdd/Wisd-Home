@@ -1,11 +1,7 @@
 <?php
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=wisd\'home', 'root', 'root');
-}catch(Exception $e)
-{
-    die('Erreur : '.$e->getMessage());
-}
+
+include 'database.php';
+
 // Vérification de la validité des informations
 if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['identifiant']) && !empty($_POST['mail']) && !empty($_POST['codepost'])&& !empty($_POST['ville']) && !empty($_POST['pass']) && !empty($_POST['pass2']&& !empty($_POST['Reponse']) && !empty($_POST['question']) && !empty($_POST['bday']) && !empty($_POST['adresse']) )) {
     $nom = $_POST['nom'];
