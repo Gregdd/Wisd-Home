@@ -3,17 +3,22 @@ body{
     font-size: 100px;
 }
 
-.pics{
+img{
     float:left;
     width:30%;
     position:relative;
     left:40px;
 }
-.a4{
+a{
     text-decoration: none;
     color:black;
 }
-
+hr{
+    width:100%;
+    position:relative;
+    right:10px;
+    border-color: black;
+}
 article{
     background-color: #3F5378;
     width:98%;
@@ -21,8 +26,7 @@ article{
     padding-left: 20px;
     padding-top: 5px;
     padding-right: 30px;
-    margin-bottom: 50px;
-    margin-top: 20px;
+    margin-bottom: 10px;
     margin-left: 10px;
     color: white;
     overflow: auto;
@@ -33,42 +37,111 @@ article{
 /*attention au hover qui par défaut
 est bleu et souligné*/
 
-a4:hover{
+a:hover{
     text-decoration: none;
     color:black;
 }
 
+.black{
+    color: black;
 
-
-.ul4{
-  display: flex;
+}
+.select{
+    color :black;
 }
 
+.tableau{color: black;}
+
+td{
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.com_en_cours{
+    background-color: #3F5378;
+    border: 3px solid #3F5378;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.com_en_cours a:hover{
+    text-decoration: none;
+    color:purple;
+}
+
+.com_en_cours a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+ul{
+    display: flex;
+}
+li{
+    text-align:center;
+}
 .carre{
-  border-radius: 5px;
-  list-style: none;
-  background-color: white;
-  padding:70px;
-  margin-right: 10px;
-  text-align:center;
+    border-radius: 5px;
+    list-style: none;
+    background-color: white;
+    padding:70px;
+    margin-right: 10px;
 }
 .titre{
     position:relative;
     top:50px;
     right:25px;
 }
-
-.colors{
-	color: black;
+.active {
+    background-color: #4CAF50;
 }
 
-div{
-	text-align : center;
-	margin-top : 10px;
+/*bouton on/off */
+.onoffswitch {
+    position: relative; width: 94px;
+    top: 1px;
+    left: 600px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
-
-#Capteurs{
-	background-color: white;
-	height: 100px;
-	color : black;
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 27px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 28px; padding: 0; line-height: 28px;
+    font-size: 22px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 8px;
+    background-color: #34A7C1; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 8px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 44px; margin: -8px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 62px;
+    border: 2px solid #999999; border-radius: 27px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0;
 }

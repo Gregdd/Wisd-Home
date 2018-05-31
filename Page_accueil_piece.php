@@ -14,8 +14,8 @@ try
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
     <title>Catalogue</title>
-    <link rel="stylesheet" type="text/css" href="Page_acceuil_capteur.css">
-    <link rel="stylesheet" type="text/css" href="styletableau.css">
+    <link rel="stylesheet" type="text/css" href="Page_accueil_capteur.css">
+    <link rel="stylesheet" type="text/css" href="style_tableau.css">
     <link rel="stylesheet" type="text/css" href="popupbox.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="icon" type="image/png" href="Image/logo.png" />
@@ -44,7 +44,7 @@ try
         $image = $req1->fetch();
         $url_img = $image["url_img"];
         echo '<li  class="carre">
-            <a   href="Page_acceuil_piece_capteur.php?ideal2='.$capteur['ID'].'><p  class="titre">'.$capteur['typecapteur'].'</p></a>
+            <a   href="Page_accueil_piece_capteur.php?ideal2='.$capteur['ID'].'><p  class="titre">'.$capteur['typecapteur'].'</p></a>
              <img src='.$image["url_img"].' style="width:"  title='.$capteur['typeactionneur'].' class="pics"/><br/>
 
         </li> ';
