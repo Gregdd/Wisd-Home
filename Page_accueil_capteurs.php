@@ -19,7 +19,7 @@ try
     <link rel="stylesheet" type="text/css" href="styletableau.css">
     <link rel="stylesheet" type="text/css" href="popupbox.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="icon" type="image/png" href="Image/icon.png" />
+    <link rel="icon" type="image/png" href="Image/logo.png" />
 
 </head>
 
@@ -38,8 +38,8 @@ try
     echo '<ul>';
     while ($piece = $req->fetch())
     {
-        echo '<li class="carre">
-            <a href="Page_acceuil_piece.php?ideal='.$piece['idpiece'].'>
+        echo '<li  class="carre">
+            <a style="font-size: large" href="Page_acceuil_piece.php?ideal='.$piece['idpiece'].'>
             <p class="titre"> '.$piece['nom'].' </p></a>
         </li> ';
     }
