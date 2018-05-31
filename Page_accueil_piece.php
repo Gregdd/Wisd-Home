@@ -18,7 +18,7 @@ try
     <link rel="stylesheet" type="text/css" href="styletableau.css">
     <link rel="stylesheet" type="text/css" href="popupbox.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="icon" type="image/png" href="Image/icon.png" />
+    <link rel="icon" type="image/png" href="Image/logo.png" />
 
 </head>
 <body>
@@ -34,20 +34,18 @@ try
 
     $id = $_GET["ideal"];
 
-    $req = $bdd->query("SELECT typecapteur FROM capteurpiece WHERE idpiece='$id'  ");
+    $req = $bdd->query("SELECT typecapteur,ID FROM capteurpiece WHERE idpiece='$id'  ");
     echo '<ul>';
     while ($capteur = $req->fetch())
     {
         $type = &$capteur['typecapteur'];
-        //var_dump($type);
         $req1 = $bdd->prepare("SELECT url_img FROM capteur WHERE capteurtype =?");
         $req1 -> execute(array($type));
         $image = $req1->fetch();
         $url_img = $image["url_img"];
-        //var_dump();
-        echo '<li class="carre">
-            <p style="color: black" class="titre">'.$capteur['typecapteur'].'</p>
-            <img src='.$url_img.' style="width:"  title='.$capteur['typecapteur'].' class="pics"/><br/>
+        echo '<li  class="carre">
+            <a   href="Page_acceuil_piece_capteur.php?ideal2='.$capteur['ID'].'><p  class="titre">'.$capteur['typecapteur'].'</p></a>
+             <img src='.$image["url_img"].' style="width:"  title='.$capteur['typeactionneur'].' class="pics"/><br/>
 
         </li> ';
     }
@@ -71,26 +69,24 @@ try
 
     $id = $_GET["ideal"];
 
-    $req = $bdd->query("SELECT typeactionneur,ID FROM actionneurpiece WHERE idpiece='$id' ");
+    $req2 = $bdd->query("SELECT typeactionneur,ID FROM actionneurpiece WHERE idpiece='$id' ");
     echo '<ul>';
-    while ($actionneur = $req->fetch())
+    while ($actionneur = $req2->fetch())
     {
         $type = &$actionneur['typeactionneur'];
         $req1 = $bdd->prepare("SELECT url_img FROM actionneur WHERE actionneurtype =?");
         $req1 -> execute(array($type));
-        $image = $req1->fetch();
-        $url_img = $image["url_img"];
-        //var_dump();
-        echo '<a class="carre">
-            <a href="Page_acceuil_piece_actionneur.php?ideal1='.$actionneur['ID'].'>
-            <p style="color: black" class="titre">'.$actionneur['typeactionneur'].'</p></a>
-            <img src='.$url_img.' style="width:"  title='.$actionneur['typeactionneur'].' class="pics"/><br/>
+        $image1 = $req1->fetch();
+        $url_img = $image1["url_img"];
+        echo '<li class="carre">
+            <a href="Page_acceuil_piece_actionneur.php?ideal1='.$actionneur['ID'].'><p  class="titre">'.$actionneur['typeactionneur'].'</p></a>
+             <img src='.$image1["url_img"].' style="width:"  title='.$actionneur['typeactionneur'].' class="pics"/><br/>
 
         </li> ';
     }
     echo '</ul>';
 
-    $req->closeCursor();
+    $req2->closeCursor();
 
     ?>
 
