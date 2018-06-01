@@ -8,12 +8,12 @@ $date = date("Y-m-d H:i:s");
 include 'database.php';
 
 if(!empty($objet) && !empty($message)){
-	$req = $bdd->prepare('INSERT INTO messagerie(Objet, ID, Message, Date) VALUES(:objet, :iD; :message, :date)');
+	$req = $bdd->prepare('INSERT INTO Messagerie(Objet, ID, Message, Date_Message) VALUES(:objet, :iD; :message, :date_envoi)');
 	$req->execute(array(
 			'objet'=> $objet,
 			'iD' => $id,
 			'message' => $message,
-			'date' => $date		
+			'date_envoi' => $date		
 	));
 }
 
