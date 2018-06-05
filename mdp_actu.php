@@ -2,14 +2,8 @@
 ?>
 
 <?php
-try
-{
-	$bdd = new PDO('mysql:host=localhost;port=8889;dbname=wisdhome;charset=utf8','root','root',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); #mettre le port 8889
-}
-catch(Exception $e)
-{
-	die('Erreur : ' . $e->getMessage());
-}
+
+include 'database.php';
 
 $userid = $_SESSION['ID'];
 
