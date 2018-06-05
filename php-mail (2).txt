@@ -20,11 +20,18 @@ function mailSend(){
 
 ';
         mail($_POST['mail'], "Changement de mot de passe", $message, $header);
-        $reponse = 'le mail a été envoyé !';
+        $reponse = 'le mail a ï¿½tï¿½ envoyï¿½ !';
     }
 
     return $reponse;
 }
 
 
-apres il suffit d'appeler la fontion et la mail va senvoyer 
+apres il suffit d'appeler la fontion et la mail va senvoyer
+
+$headers.= "From: mon site <monsite@supersite.com>" . "\r";
+$headers.= "Cc: ".$mail_cc."\r\n";
+$headers.= 'MIME-Version: 1.0' . "\r\n";
+$headers.= "Content-type: text/html; ";
+$headers.= "charset=utf-8\r\n";
+$send_mail_detinataire = mail($mail_site, $sujet, $message, $headers);

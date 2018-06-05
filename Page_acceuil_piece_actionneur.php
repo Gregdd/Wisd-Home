@@ -61,6 +61,8 @@ try
         $reqval1 -> execute(array($_POST['valeursouhaitee'], $id1));
         $reqval1->closeCursor();
         header('location:Page_acceuil_actionneur.php');
+
+
     }
 
 
@@ -76,7 +78,7 @@ try
 
         <h3 style=" display: inline-block; margin-right: 100px"><?php echo"$val1 " ;echo"    "; echo"($unit1)"?></h3>
 
-        <form name="formulaire" onsubmit="return Test()" method="post" action="" style="display: inline-block">
+        <form name="formulaire" onsubmit="return Test()" method="post" action="Page_acceuil_piece_actionneur.php?ideal1=<?= $actionneur['ID']; ?>" style="display: inline-block">
             <input style=" color:black; margin-right: 100px ; background-color: #5b9630" type="text" name="valeursouhaitee" placeholder="Valeur souhaitée" />
             <input style="background-color: #4CAF50" type="submit" value="envoyer">
         </form>
