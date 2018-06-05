@@ -10,8 +10,7 @@ legend{
 	}
 fieldset{
 	padding-bottom: 15px;
-	padding-right: 10%;
-	margin: 2% 10% 0% 10%;
+	margin: 2% 5% 0% 10%;
 }
 	
 
@@ -19,4 +18,7 @@ fieldset{
 	background-color: white;
 	height: 100px;
 	color : black;
+}
+form{
+	text-align: center;
 }

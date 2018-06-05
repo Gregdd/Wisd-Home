@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,14 +11,14 @@
 <?php include 'Header_admin.php';?>
 
 <main>
-    <?php
-    session_start();
-?>
+
+
 
     <h1>Résultat de la recherche : </h1>
     <p>
         Nom : <?php  echo $_SESSION['client']['Nom']; ?> <br/>
-        Prénom : <?php echo $_SESSION['client']['Prenom']; ?>
+        Prénom : <?php echo $_SESSION['client']['Prenom']; ?> <br/>
+        Id : <?php echo $_SESSION['client']['ID']; ?>
     </p>
 
 </main>

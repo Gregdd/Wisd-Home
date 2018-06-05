@@ -27,7 +27,7 @@
                 <input type="submit" value="Connexion"><br/><br/>
             </form>
 
-            <a href="mdp_perdu.php" title="Mot de passe oublié" target="_blank">Mot de passe oublié </a>
+            <a href="mdp_oublie.php" title="Mot de passe oublié" target="_blank">Mot de passe oublié </a>
 
         </fieldset>
     </div>
