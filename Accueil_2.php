@@ -8,9 +8,9 @@
 </head>
 
 <body>
-<header>
+
 <?php include 'Header_2.php';?>
-</header>
+
 
   
         <h1>Bienvenue <?php echo $_SESSION['prenom']?> !</h1>
