@@ -13,23 +13,6 @@
 
 <body>
 
-<?php include 'Header_1.php';?>
-
-<div>
-    <h1>Inscription</h1><br/>
-
-
-    <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="Inscription.css"/>
-    <title>Inscription</title>
-    <link rel="text/javascript" href="FonctionsJS.js"/>
-</head>
-
-<body>
 
 <?php include 'Header_1.php';?>
 
@@ -102,11 +85,4 @@
     </script>
 
 
-</div>
-
-<?php include 'Footer.php';?>
-<script src="vérifications.js"></script>
-</body>
-
-</html>
 
