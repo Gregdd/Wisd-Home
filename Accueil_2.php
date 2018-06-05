@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php session_start();?>
+
 <html>
 <head>
     <meta charset="ISO-8859-1" />
