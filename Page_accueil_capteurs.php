@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <?php
 
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=wisdhome', 'root', 'root');
-}catch(Exception $e)
-{
-    die('Erreur : '.$e->getMessage());
-}
+include 'database.php';
 ?>
 
 <html>
