@@ -30,7 +30,7 @@ try
 </header>
 
 <article>
-    <h2>Choix de la pièce</h2>
+    <span> <h2 style="display: inline-block"> Choix   piece    </h2>  <a href="Creer_ma_maison.php" ><img style="display: inline ; position: relative; left:250px ; top 20px" src="Image/boutonplus.png"> </a><hr> </span>
     <?php
 
     $req = $bdd->query('SELECT idpiece,nom, superficie FROM pieces');

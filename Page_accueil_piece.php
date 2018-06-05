@@ -64,7 +64,7 @@ try
 
 <article>
 
-    <h2> Actionneurs </h2><hr>
+    <span> <h2 style="display: inline-block"> Actionneurs   </h2>  <a href="Creer_ma_maison.php" ><img style="display: inline ; position: relative; left:250px ; top 20px" src="Image/boutonplus.png"> </a><hr> </span>
     <?php
 
     $id = $_GET["ideal"];
