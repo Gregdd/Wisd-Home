@@ -13,9 +13,11 @@ try
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Refresh" content="3">
     <title>Catalogue</title>
-    <link rel="stylesheet" type="text/css" href="Page_accueil_capteur.css">
-    <link rel="stylesheet" type="text/css" href="style_tableau.css">
+    <link rel="stylesheet" type="text/css" href="Page_acceuil_capteur.css">
+    <link rel="stylesheet" type="text/css" href="styletableau.css">
+    <link rel="stylesheet" type="text/css" href="popupbox.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="icon" type="image/png" href="Image/logo.png" />
 
@@ -60,14 +62,11 @@ try
         $reqval1 = $bdd->prepare('UPDATE  actionneurpiece SET valeur= ?  WHERE ID = ?');
         $reqval1 -> execute(array($_POST['valeursouhaitee'], $id1));
         $reqval1->closeCursor();
-        header('location:Page_acceuil_actionneur.php');
-
 
     }
 
-
-
     ?>
+
 
     <h2 style="text-align: center">  Actionneur: <?php echo"$type1"?><?php echo "<br>"?>     Pièce: <?php echo"$nom1"?> </h2><hr>
     <br>
@@ -78,9 +77,10 @@ try
 
         <h3 style=" display: inline-block; margin-right: 100px"><?php echo"$val1 " ;echo"    "; echo"($unit1)"?></h3>
 
-        <form name="formulaire" onsubmit="return Test()" method="post" action="Page_acceuil_piece_actionneur.php?ideal1=<?= $actionneur['ID']; ?>" style="display: inline-block">
+        <form id ="myform"name="formulaire" onsubmit="return Test()" method="post" action="Page_acceuil_piece_actionneur.php?ideal1=4 " >
             <input style=" color:black; margin-right: 100px ; background-color: #5b9630" type="text" name="valeursouhaitee" placeholder="Valeur souhaitée" />
-            <input style="background-color: #4CAF50" type="submit" value="envoyer">
+            <input style="background-color: #4CAF50" id ="sub" type="submit" value="envoyer">
+            <a href="javascript: window.refresh();">actualiser</a>
         </form>
     </div>
 
