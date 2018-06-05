@@ -19,11 +19,11 @@
         <div class="etatCapt">
         <h2>Etat des capteurs :</h2>
         	<form action="etat_capteurs.php" method="post">
-        		<label for="temp">Temprérature de la maison : </label><?php echo $_POST["température"]?> <br/>
-        		<label for="humid">Humidité : </label><?php echo $_POST["humidité"]?><br/>
-        		<label for="lumino">Nombre de capteurs luminosité activé(s) :</label><?php echo $_POST["nombreLuminosité"]?><br/>
-        		<label for="camera">Caméra :</label><?php echo $_POST["etatCamera"]?><br/>
-        		<label for="presence">Détecteur de présence :</label><?php echo $_POST["etatPresence"]?><br/>
+        		<label for="temp">Temprérature de la maison : </label><br/>
+        		<label for="humid">Humidité : </label><br/>
+        		<label for="lumino">Nombre de capteurs luminosité activé(s) :</label><br/>
+                <label for="camera">Caméra :</label><br/>
+        		<label for="presence">Détecteur de présence :</label><br/>
         	</form>
         </div>
         
