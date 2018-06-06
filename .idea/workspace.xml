@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ff2df6b-ad1f-4da0-8f96-409f9dd085d4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Accueil_2_bis.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mdp_post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Accueil_2.php" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil_2.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Creer_ma_maison.php" beforeDir="false" afterPath="$PROJECT_DIR$/Creer_ma_maison.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/Inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mdp_oublie.php" beforeDir="false" afterPath="$PROJECT_DIR$/Mdp_oublie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Page_acceuil_piece_actionneur.php" beforeDir="false" afterPath="$PROJECT_DIR$/Page_acceuil_piece_actionneur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Page_accueil_capteurs.php" beforeDir="false" afterPath="$PROJECT_DIR$/Page_accueil_capteurs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Page_accueil_piece.php" beforeDir="false" afterPath="$PROJECT_DIR$/Page_accueil_piece.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Page_accueil_piece_capteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/Page_accueil_piece_capteur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creer_ma_maison_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/creer_ma_maison_post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mdp_actu.php" beforeDir="false" afterPath="$PROJECT_DIR$/mdp_actu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modif_mdp.php" beforeDir="false" afterPath="$PROJECT_DIR$/modif_mdp.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,22 +61,22 @@
       <file leaf-file-name="Accueil_2_bis.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Accueil_2_bis.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="375">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="creer_ma_maison.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="creer_ma_maison.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/creer_ma_maison.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2790">
-              <caret line="186" column="16" lean-forward="true" selection-start-line="186" selection-start-column="16" selection-end-line="186" selection-end-column="16" />
+            <state relative-caret-position="135">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="creer_ma_maison_post.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="creer_ma_maison_post.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/creer_ma_maison_post.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -240,7 +227,7 @@
       <workItem from="1527469016007" duration="2271000" />
       <workItem from="1527508951936" duration="4403000" />
       <workItem from="1527685164709" duration="15340000" />
-      <workItem from="1528270106996" duration="162000" />
+      <workItem from="1528270106996" duration="400000" />
     </task>
     <task id="LOCAL-00001" summary="modif salim 16/05 9:30">
       <created>1526455817600</created>
@@ -536,14 +523,22 @@
       <option name="project" value="LOCAL" />
       <updated>1528183564828</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;creer_ma_maison.php">
+      <created>1528270617558</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1528270617558</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47800000" />
+    <option name="totallyTimeSpent" value="48038000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="55" width="1100" height="733" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -834,15 +829,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Accueil_2_bis.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/creer_ma_maison.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2790">
-          <caret line="186" column="16" lean-forward="true" selection-start-line="186" selection-start-column="16" selection-end-line="186" selection-end-column="16" />
+        <state relative-caret-position="375">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
@@ -850,6 +838,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/creer_ma_maison.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
