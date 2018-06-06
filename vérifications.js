@@ -1,36 +1,11 @@
 
-/*<?php
-    try
-    {
-        $bdd = new PDO("mysql:host=localhost; dbname=wisdhome; charset=utf8","root","monmotdepasse");
+function Test(){
+    var pass=formulaire.pass.value;
+    var pass2=formulaire.pass2.value;
+    if (pass!==pass2){
+        alert(" Les deux mots de passes ne correspondent pas !");
+        return false;
+        formulaire.pass.focus();
     }
-    catch(Exception $e)
-    {
-        die('Erreur : '.$e->getMessage());
-    }
-    $id = $bdd->query(SELECT * From utilisateur WHERE id = identifiant);
-?>*/
-
-
-
-var submit = document.getElementById('check');
-
-function compareMDP() {
-    var identifiant = getElementById('identifiant');
-    var mdp1 = document.getElementById('pass').value,
-        mdp2 = document.getElementById('pas2').value;
-
-    /*for(var id in $id ){
-        if (identifiant === id){
-            alert("Cet identifiant est déjà pris");
-        }
-    }*/
-    if (mdp1 !== mdp2) { // Si les deux champs contiennent quelque chose
-        alert("Les mots de passe ne correspondent pas");
-        submit.checked=false;
-    }
-
-
 }
 
-submit.addEventListener('click',compareMDP);

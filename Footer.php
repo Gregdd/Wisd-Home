@@ -7,7 +7,7 @@
 </head>
 
 <footer>
-	<div id="Conteneur">
+	<div id="Conteneur2">
 		<div id="element1">
 			DOMISEP<br/>
 			28 rue Notre Dame des Champs<br/>
