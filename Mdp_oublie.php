@@ -17,7 +17,7 @@
     <fieldset>
       <legend>Modification du mot de passe</legend><br/>
       <p>Nous allons vous envoyer un mail pour que vous puissiez récupérer votre compte en changeant votre mot de passe.</p><br/>
-      <form method="post" action="Mdp_oublie-post.php">
+      <form method="post" action="mdp_post.php">
         <label for="mail">Veuillez entrer votre adresse mail :</label><br/><br/>
         <div id="failmail">Adresse mail invalide !</div><br/>
         <input type="text" id="mail" name="mail"/><br/><br/>

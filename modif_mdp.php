@@ -16,8 +16,6 @@
 <fieldset>
 <legend>Informations sur votre compte</legend>
 <p> <span class="soustitre">Modifier mot de passe : </span><br/><br/>
-<label for="amdp"> Ancien mot de passe : </label>
-<input type="password" name="amdp" id="amdp" placeholder="*******" size="25"> <br /><br />
 <label for="nmdp"> Nouveau mot de passe : </label>
 <input type="password" name="nmdp" id="nmdp" placeholder="*******" size="25" minlength="8"/> <br /><br />
 <label for="cmdp"> Confirmer mot de passe : </label>
