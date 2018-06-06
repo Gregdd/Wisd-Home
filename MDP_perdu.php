@@ -16,7 +16,7 @@
     <fieldset>
         <legend>Modification du mot de passe</legend>
 
-        <form method="post" action="traitement.php">
+        <form method="post" action="MDP_perdu-post.php">
             <br/>
             <label for="Identifiant">Identifiant :</label><br/>
             <input type="text" name="Identifiant" id="Identifiant" size="30" placeholder="Ex : Dupont Marc" maxlength="30" /><br/><br/>
