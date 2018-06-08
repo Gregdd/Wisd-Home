@@ -1,14 +1,14 @@
-<?php session_start();?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="resultat.css" />
+    <link rel="stylesheet" href="css/resultat.css" />
 </head>
 
 <body>
-<?php include('Access_denied.php');?>
-<?php include 'Header_admin.php';?>
+
+<?php include 'Header_admin2.php';?>
 
 <main>
 
@@ -18,7 +18,7 @@
     <p>
         Nom : <?php  echo $_SESSION['client']['Nom']; ?> <br/>
         Prénom : <?php echo $_SESSION['client']['Prenom']; ?> <br/>
-        Id : <?php echo $_SESSION['client']['ID']; ?>
+        Pseudo : <?php echo $_SESSION['client']['pseudo']; ?>
     </p>
 
 </main>
