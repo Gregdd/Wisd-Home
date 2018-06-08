@@ -29,6 +29,7 @@ function rechercheByNOM($nom){
     $_SESSION['client']['Prenom']=$client['Prenom'];
     $_SESSION['client']['pseudo']=$client['pseudo'];
     $req->closeCursor();
+
 };
 
 function rechercheByPSEUDO($pseudo){
@@ -43,7 +44,6 @@ function rechercheByPSEUDO($pseudo){
 function getInfoCapteur(){
     include '../CONTROLEUR/database.php';
     $entrees=$bdd->query("SELECT capteurNom, stock FROM capteur");
-    $entrees->closeCursor();
     return $entrees;
 }
 
@@ -57,7 +57,5 @@ function addCapteur($nom,$unit,$stock){
 function connexion($pseudo){
     include '../CONTROLEUR/database.php';
     $entrees=$bdd->query("SELECT * FROM utilisateur WHERE pseudo LIKE '$pseudo'");
-    $entrees->closeCursor();
     return $entrees;
-
 }
