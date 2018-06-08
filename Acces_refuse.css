@@ -1,7 +1,9 @@
-<?php
-
-if(!isset($_SESSION['ID'])){
-    include('Acces_refuse.php');
-    exit();
+fieldset
+{
+	text-align: center;
+	height: 10%;
+  width: 40%;
+	margin-left: 30%;
+  margin-top: 10%;
+  margin-bottom: 6%;
 }
-?>
