@@ -1,14 +1,16 @@
 <?php
 
-include 'database.php';
+include '../CONTROLEUR/database.php';
+include '../MODELE/fonctionSQL.php';
+
 
 $type = $_POST['type'];
 $unite = $_POST['unite'];
+$stock = $_POST['stock'];
 
-$sql = $bdd->prepare('INSERT INTO capteur(capteurNom, unit) VALUES (:nom, :unite)');
-$sql->execute(array('nom'=>$type, 'unite'=>$unite )) ;
+addCapteur($type,$unite,$stock);
 
-$sql->closeCursor();
-header('Location: new_capteur.php');
+header('Location: ../VUE/ADMIN/new_capteur.php');
 
 ?>
+
