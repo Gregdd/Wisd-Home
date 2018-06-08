@@ -20,6 +20,7 @@ include 'database.php';
 
 <body>
 <header>
+    <?php include('Access_denied.php');?>
     <?php include 'Header_2.php';?>
 </header>
 
