@@ -2,13 +2,13 @@
 
 <html>
 <head>
-    <meta charset="ISO-8859-1" />
+    <meta charset="utf-8" />
     <title>Wisd'Home - Page d'accueil</title>
-    <link rel="stylesheet" href="Accueil_2_bis.css" />
+    <link rel="stylesheet" href="../VUE/css/Accueil_2_bis.css" />
 </head>
 
 <body>
-<?php include('Access_denied.php');?>
+
 <?php include 'Header_2.php';?>
 
 
