@@ -21,6 +21,7 @@
             <br/>
             <label for="pseudo">Identifiant :</label><br/>
             <input type="text" name="pseudo" id="pseudo" size="30" placeholder="Ex : Dupont Marc" maxlength="30" /><br/><br/>
+            <input type="submit">
         </form>
 
     </fieldset>
