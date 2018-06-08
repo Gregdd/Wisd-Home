@@ -17,7 +17,7 @@ h1{
 }
 
 #Conteneur{
-	display: none;
+	display: nowrap;
 	color: black;
 	display: flex;
 	justify-content: space-between;
