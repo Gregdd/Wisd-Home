@@ -4,12 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <title>Mon profil</title>
-    <link rel="stylesheet" href="Profil.css" />
+    <link rel="stylesheet" href="css/Profil.css" />
 
 </head>
 
 <body>
-<?php include('Access_denied.php');?>
 <?php include 'Header_2.php';?>
 
 <h1>Mon profil</h1>
