@@ -75,6 +75,8 @@
 		));
 		$_SESSION['Ville']= $newville;
 	}
+	header('Location: Profil.php');
+	exit();
 	?>
 
 	<fieldset>
