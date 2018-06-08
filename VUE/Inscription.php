@@ -3,21 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="Inscription.css"/>
+    <link rel="stylesheet" href="/Wisd-Home-master/VUE/css/Inscription.css"/>
     <title>Inscription</title>
-    <link rel="text/javascript" href="FonctionsJS.js"/>
+    <link rel="text/javascript" href="/Wisd-Home-master/CONTROLEUR/FonctionsJS.js"/>
 
 </head>
 
 <body>
 
-<?php include 'Header_1.php';?>
+<?php include '/VUE/Header_1.php';?>
 
 <div>
     <h1>Inscription</h1><br/>
 
 
-    <form name="formulaire" onsubmit="return Test()" action="inscription_post2.php" method="post">
+    <form name="formulaire" onsubmit="return Test()" action="/Wisd-Home-master/CONTROLEUR/inscription_post2.php" method="post">
         <section class = "gauche">
             <label for="nom">Nom : </label><br>
             <input type="text" name="nom" id="nom" required><br><br>
@@ -63,10 +63,10 @@
 
 </div>
 
-<?php include 'Footer.php';?>
+<?php include '/VUE/Footer.php';?>
 
 </body>
 
 </html>
 
-<script src="vérifications.js"></script>
+<script src="/Wisd-Home-master/CONTROLEUR/vérifications.js"></script>
