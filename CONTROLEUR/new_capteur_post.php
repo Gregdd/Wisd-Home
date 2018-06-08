@@ -1,6 +1,6 @@
 <?php
 
-include '../CONTROLEUR/database.php';
+include 'database.php';
 include '../MODELE/fonctionSQL.php';
 
 
@@ -10,7 +10,6 @@ $stock = $_POST['stock'];
 
 addCapteur($type,$unite,$stock);
 
-header('Location: ../VUE/ADMIN/new_capteur.php');
+header('Location: ../VUE/new_capteur.php');
 
 ?>
-
