@@ -1,17 +1,25 @@
 <?php
 $error_message='';
 include 'database.php';
+include '../MODELE/fonctionSQL.php';
 
-$entrees=$bdd->query("SELECT * FROM utilisateur");
-if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
+
+if(!empty($_POST)) //Si le champ d'entrée n'est pas vide
 {
-    $post_username = $_POST['ID']; //On associe la valeur entrée à $post_username
-    $post_password = ($_POST['password']);
-    while ($ligne = $entrees -> fetch())
+    $pseudo = $_POST['ID']; 
+    $password = $_POST['password'];
+    
+    $entrees = connexion($pseudo);
+
+    if (empty($entrees)){
+        $error_message='ce pseudo n\'existe pas.';
+    }
+    else
     {
-        if($post_username==$ligne["pseudo"] ) //Si l'identifiant correspond
+    
+        while ($ligne = $entrees -> fetch())
         {
-            if($post_password==$ligne["Mot_de_passe"] || password_verify($post_password, $ligne["Mot_de_passe"])) //Si le mdp correspond
+            if($password==$ligne["Mot_de_passe"] || password_verify($password, $ligne["Mot_de_passe"])) //Si le mdp correspond
             {
                 session_start(); //on démarre la session
                 $_SESSION['nom'] = $ligne["Nom"];
@@ -21,30 +29,26 @@ if(false==empty($_POST)) //Si le champ d'entrée n'est pas vide
                 $_SESSION['Ville'] = $ligne["Ville"];
                 $_SESSION['Code_postal'] = $ligne["Code_postal"];
                 $_SESSION['Adresse'] = $ligne["Adresse"];
-                $_SESSION['ID']= $post_username;
+                $_SESSION['ID']= $pseudo;
                 $_SESSION['status']="Active";
 
                 if ($ligne['Type_utilisateur'] == 'Administrateur'){
-                    header ( 'Location: Accueil_admin.php');
+                    header ( 'Location: http://localhost/Wisd-Home-master/VUE/ADMIN/Accueil_admin.php');
                     exit();
                 }
-                header ('Location: Accueil_2.php');
+                header ('Location:C:\wamp\www\PHP\Wisd-Home-master\VUE\CLIENT\Accueil_2.php');
                 exit();
             }
             else //Si les login et mdp ne match pas, on l'indique
             {
                 $error_message='Erreur de nom d\'utilisateur ou de mot de passe';
-                echo $error_message;
             }
-        }
-        else //Si les login et mdp ne match pas, on l'indique
-        {
-            $error_message='Erreur de nom d\'utilisateur ou de mot de passe';
-            echo $error_message;
+
         }
     }
+
 }
-if (false == empty($error_message))
+if (!empty($error_message))
 {
     $error_message="<div class=\"alert alert-danger\" role=\"alert\">$error_message</div>";
 }
