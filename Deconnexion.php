@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (isset ($_COOKIE['identifiant']))
+if (isset ($_SESSION['identifiant']))
 {
     setcookie('identifiant', '', -1);
 }
