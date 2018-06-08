@@ -1,11 +1,9 @@
 <?php
 session_start();
-
-if (isset ($_SESSION['identifiant']))
+if (isset ($_SESSION['pseudo']))
 {
-    setcookie('identifiant', '', -1);
+    setcookie('pseudo', '', -1);
 }
 session_destroy();
 echo '<p>Vous êtes à présent déconnecté <br />';
-
 ?>
