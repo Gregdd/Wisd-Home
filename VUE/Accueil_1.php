@@ -3,23 +3,23 @@
 <head>
     <meta charset="utf-8" />
     <title>Wisd'Home - Page d'accueil</title>
-    <link rel="stylesheet" href="Accueil_1.css"/>
+    <link rel="stylesheet" href="/Wisd-Home-master/VUE/css/Accueil_1.css"/>
 </head>
 
 <body>
 
-<?php include 'Header_1.php'; ?>
+<?php include '/VUE/Header_1.php'; ?>
 
 <main>
 <div id="Presentation">
 
 	<div class="photo">
-    	<img src="logo.png" id="logo2" />
+    	<img src="/Wisd-Home-master/VUE/img/logo.png" id="logo2" />
     </div>
 
     <div class="texte">
 		<h2>Bienvenue sur Wisd'Home </h2>
-		<a class = lien href="Connexion.php">Commencer</a><br/>
+		<a class = lien href="/Wisd-Home-master/VUE/Connexion.php">Commencer</a><br/>
 		<h3>Qui sommes-nous ?</h3>
 		<p>
 			Wisd'Home est une entreprise de Domotique fondée en 2018.<br/>
@@ -34,7 +34,7 @@
 </div>
 </main>
     
-<?php include 'Footer.php';?>
+<?php include '/VUE/Footer.php';?>
     
 </body>
 
