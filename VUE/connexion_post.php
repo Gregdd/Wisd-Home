@@ -8,7 +8,7 @@ if(!empty($_POST)) //Si le champ d'entrée n'est pas vide
 {
     $pseudo = $_POST['ID']; 
     $password = $_POST['password'];
-    
+
     $entrees = connexion($pseudo);
 
     if (empty($entrees)){
@@ -16,15 +16,17 @@ if(!empty($_POST)) //Si le champ d'entrée n'est pas vide
     }
     else
     {
-    
+
         while ($ligne = $entrees -> fetch())
         {
             if($password==$ligne["Mot_de_passe"] || password_verify($password, $ligne["Mot_de_passe"])) //Si le mdp correspond
             {
+
                 session_start(); //on démarre la session
                 $_SESSION['nom'] = $ligne["Nom"];
                 $_SESSION['prenom'] = $ligne["Prenom"];
-                $_SESSION['bday'] = $ligne["bday"];
+                $_SESSION['pseudo'] = $pseudo;
+                $_SESSION['bday'] = $ligne["Date_naissance"];
                 $_SESSION['mail'] = $ligne["mail"];
                 $_SESSION['Ville'] = $ligne["Ville"];
                 $_SESSION['Code_postal'] = $ligne["Code_postal"];
@@ -33,10 +35,10 @@ if(!empty($_POST)) //Si le champ d'entrée n'est pas vide
                 $_SESSION['status']="Active";
 
                 if ($ligne['Type_utilisateur'] == 'Administrateur'){
-                    header ( 'Location: http://localhost/Wisd-Home-master/VUE/ADMIN/Accueil_admin.php');
+                   include_once ('../VUE/Accueil_admin.php');
                     exit();
                 }
-                header ('Location:C:\wamp\www\PHP\Wisd-Home-master\VUE\CLIENT\Accueil_2.php');
+                include ('../VUE/Accueil_2.php');
                 exit();
             }
             else //Si les login et mdp ne match pas, on l'indique
