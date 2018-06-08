@@ -2,7 +2,6 @@
 ?>
 
 <?php
-
 include 'database.php';
 
 $userid = $_SESSION['ID'];
