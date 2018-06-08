@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<?php include('Access_denied.php');?>
 <?php include 'Header_2.php';?>
 
 <h1>Mon profil</h1>
