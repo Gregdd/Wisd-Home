@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 
 function inscription($pseudo,$pass,$nom,$prenom,$mail,$adresse,$ville,$code_post,$bday,$reponse,$question){
     include '../CONTROLEUR/database.php';
