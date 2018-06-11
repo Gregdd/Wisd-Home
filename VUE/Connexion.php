@@ -1,3 +1,7 @@
+<?php 
+setcookie('ID','chacha', time() + 365*24*3600, NULL, NULL, false, true);
+setcookie('password','123456', time() + 365*24*3600, NULL, NULL, false, true);
+?>
 <!DOCTYPE html>
 <html>
 
