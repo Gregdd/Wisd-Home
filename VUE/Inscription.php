@@ -63,7 +63,7 @@
 
 </div>
 
-<?php include '/VUE/Footer.php';?>
+<?php include '../VUE/Footer.php';?>
 
 </body>
 
