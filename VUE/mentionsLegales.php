@@ -9,7 +9,7 @@
 
 <?php
 if (isset($_SESSION['Nom'])){
-include 'Header_2.php';}
+<?php include '../VUE/Header_2.php';?>
 else include 'Header_1.php'?>
 
 <main style = "margin : 3%;">
