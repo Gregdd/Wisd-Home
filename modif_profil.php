@@ -64,6 +64,6 @@
 
 </body>
 
-<?php include 'Footer.php';?>
+<?php include '../VUE/Footer.php';?>
 
 </html>
