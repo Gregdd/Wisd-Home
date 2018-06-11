@@ -9,7 +9,7 @@
     <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
 </head>
 <?php include('Access_denied.php');?>
-<?php include 'Header_2.php';?>
+<?php include '../VUE/Header_2.php';?>
 <?php
 
 	include 'database.php';
