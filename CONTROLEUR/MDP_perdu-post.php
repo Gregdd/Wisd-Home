@@ -13,7 +13,7 @@ if(!empty($_POST['reponse'])){
     $rep=$_POST['reponse'];
     if($rep==$reponse[0] AND $_POST['pass']==$_POST['confirm_pass']){
         $newpass = $_POST['pass'];
-        majMdp($newpass,$pseudo);
+        majProfil('Mot_de_passe',$newpass,$pseudo);
         include('../VUE/Connexion.php');
     }
     else{
