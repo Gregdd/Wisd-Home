@@ -12,7 +12,7 @@
 	
 <body>
 <?php include('Access_denied.php');?>
-<?php include 'Header_2.php';?>
+<?php include '../VUE/Header_2.php';?>
    
 <main>
     <fieldset>
