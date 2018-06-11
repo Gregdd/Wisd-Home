@@ -1,0 +1,51 @@
+<?php
+
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=wisdhome', 'root', 'root');
+}catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
+
+$ch = curl_init();
+curl_setopt(
+    $ch,
+    CURLOPT_URL,
+    "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=0G8A&TRAME=$l1");
+curl_setopt($ch, CURLOPT_HEADER, FALSE);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+
+//$trame = $data_tab[1];
+$l1=array(1098321301333300007220180605093453);
+$l=array(1,'0G8A',2,$typeactionneur,$numactionneur,$valeurenvoye,$numtrame,10, 2018 , 06 ,06 ,13,00,00);
+$typeactionneur=1;
+$numactionneur=10;
+$valeurenvoye=111;
+$numtrame=01;
+$checksum=1;
+
+// décodage avec sscanf
+//list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) = $l1;
+/*echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
+echo"<br>";
+echo"numero de capteur :";
+echo $n;
+echo "<br>";
+echo "valeur actuelle : ";
+echo $v;
+*/
+
+
+/*if ( $r = 1) {
+    $req = $bdd->prepare('UPDATE  capteurpiece SET valeur=? , date= current_date , heure=CURRENT_TIME  WHERE ID = ?');
+    $req->execute(array($v, 10));
+    $req->closeCursor();
+}
+*/
+
+
+
+?>
+
+
