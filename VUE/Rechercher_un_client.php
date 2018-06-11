@@ -18,6 +18,7 @@
         <label for="pseudo">Identifiant : </label>
         <input type="text" name="pseudo"><br><br>
         <input type="submit" value ="Rechercher"><br>
+    </form>
 </main>
 
 <?php include 'Footer.php';?>
