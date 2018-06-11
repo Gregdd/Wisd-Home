@@ -59,3 +59,30 @@ function connexion($pseudo){
     $entrees=$bdd->query("SELECT * FROM utilisateur WHERE pseudo LIKE '$pseudo'");
     return $entrees;
 }
+
+function getReponse($pseudo)
+{
+    include '../CONTROLEUR/database.php';
+    $reponse = $bdd->prepare('SELECT Reponse FROM utilisateur WHERE pseudo=?');
+    $reponse->execute(array($pseudo));
+    $reponse = $reponse->fetch();
+    return $reponse;
+}
+
+function getQuestion($pseudo){
+    include '../CONTROLEUR/database.php';
+    $question = $bdd->prepare('SELECT question FROM utilisateur WHERE pseudo=?');
+    $question->execute(array($pseudo));
+    $question=$question->fetch();
+    $question=$question[0];
+    return $question;
+}
+
+function majMdp($newpass,$pseudo){
+    include '../CONTROLEUR/database.php';
+    $req= $bdd -> prepare('UPDATE utilisateur SET Mot_de_passe =:newmdp WHERE pseudo = :pseudo');
+    $req->execute(array(
+        'newmdp' => $newpass,
+        'pseudo' => $pseudo
+    ));
+}
