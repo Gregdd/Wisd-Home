@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <title>Modification du mot de passe</title>
-<link rel="stylesheet" href="Mdp_oublie.css"/>
+<link rel="stylesheet" href="Mdp_oublie-post.css"/>
 <script type="text/javascript" src="Mdp_oublie.js"></script>
 </head>
 
