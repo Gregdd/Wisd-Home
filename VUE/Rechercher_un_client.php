@@ -7,7 +7,7 @@
 
 <body>
 
-<?php include 'Header_admin2.php';?>
+<?php include '../VUE/Header_admin2.php';?>
 
 <main>
 
