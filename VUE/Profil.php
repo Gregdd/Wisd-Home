@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<?php include 'Header_2.php';?>
+<?php include '../VUE/Header_2.php';?>
 
 <h1>Mon profil</h1>
 <div id="Barriere">
