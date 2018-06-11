@@ -11,7 +11,7 @@
 
 <body>
 
-<?php include '/VUE/Header_1.php';?>
+<?php include '../VUE/Header_1.php';?>
 
 <div>
     <h1>Inscription</h1><br/>
