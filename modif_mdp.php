@@ -10,7 +10,7 @@
 </head>
 <body>
 <header> 
-<?php include 'Header_2.php';?>
+<?php include '../VUE/Header_2.php';?>
 <?php include('Access_denied.php');?>
 </header>
 <h1>Mot de passe</h1>
