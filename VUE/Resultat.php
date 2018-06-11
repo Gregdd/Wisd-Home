@@ -23,7 +23,7 @@
 
 </main>
 
-<?php include 'Footer.php';?>
+<?php include '../VUE/Footer.php';?>
 
 </body>
 
