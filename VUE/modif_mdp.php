@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8" />
 <title>Mon profil</title>
-<link rel="stylesheet" href="Profil.css" />
+<link rel="stylesheet" href="css/Profil.css" />
 
 </head>
 <body>
@@ -14,7 +14,7 @@
 <?php include('Access_denied.php');?>
 </header>
 <h1>Mot de passe</h1>
-<form method="post" action="mdp_actu.php">
+<form method="post" action="../CONTROLEUR/mdp_actu.php">
  <div class="Colonne2">
 <fieldset>
 <legend>Informations sur votre compte</legend>
