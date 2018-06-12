@@ -8,6 +8,7 @@
 <body>
 
 <?php include 'Header_admin2.php';?>
+<?php include '../CONTROLEUR/Access_denied.php:?>
 
 <main>
     <span>Capteurs en stock : </span><br/><br/>
