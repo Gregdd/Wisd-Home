@@ -9,6 +9,7 @@
 <body>
 
 <?php include '../VUE/Header_1.php'; ?>
+<?php include '../CONTROLEUR/Access_denied.php:?>
 
 <fieldset>
 <p>Vous êtes à présent déconnecté</p>
