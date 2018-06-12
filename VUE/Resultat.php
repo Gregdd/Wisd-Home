@@ -9,6 +9,7 @@
 <body>
 
 <?php include '../VUE/Header_admin2.php';?>
+<?php include '../CONTROLEUR/Access_denied.php:?>
 
 <main>
 
