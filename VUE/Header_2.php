@@ -2,10 +2,7 @@
 <html>
 <meta charset="utf-8" />
 <link rel="stylesheet" href="/Wisd-Home-master/VUE/css/Header_2.css" />
-<?php
-if (!isset($_SESSION['nom'])){
-    session_start();
-};?>
+<?php session_start();?>
 <header>
 
     <ol class = ol2>
