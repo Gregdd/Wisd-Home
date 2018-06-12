@@ -10,7 +10,7 @@
 
 <body>
 <?php include '../VUE/Header_2.php';?>
-<?php include '../VUE/Acces_refuse.php';?>
+<?php include '../CONTROLEUR/Access_denied.php:?>
 
 <h1>Mon profil</h1>
 <div id="Barriere">
