@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Modifier profil</title>
     <link rel="stylesheet" href="Profil.css" />
-    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="../CONTROLEUR/FonctionJS.js"></script>
     <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
 </head>
 
@@ -16,7 +16,7 @@
 <body>
 <h1>Mon profil</h1>
 <div id="Barriere">
-    <form method="post" action="Profil_actu.php">
+    <form method="post" action="../CONTROLEUR/Profil_actu.php">
     <div class="Colonne1">
         <fieldset>
             <legend>Votre identitÃ©</legend>
@@ -40,7 +40,7 @@
         </fieldset>
     </div>
     </form>
-    <form method="post" action="mdp_actu.php">
+    <form method="post" action="../CONTROLEUR/mdp_actu.php">
     <div class="Colonne2">
         <fieldset>
             <legend>Informations sur votre compte</legend>
