@@ -11,7 +11,7 @@
 <body>
 <header> 
 <?php include '../VUE/Header_2.php';?>
-<?php include('Access_denied.php');?>
+<?php include '../CONTROLEUR/Access_denied.php:?>
 </header>
 <h1>Mot de passe</h1>
 <form method="post" action="../CONTROLEUR/mdp_actu.php">
