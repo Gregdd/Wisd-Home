@@ -34,11 +34,11 @@ if(!empty($_POST)) //Si le champ d'entrée n'est pas vide
                 $_SESSION['ID']= $pseudo;
                 $_SESSION['status']="Active";
 
-                if ($ligne['Type_utilisateur'] == 'Administrateur'){
-                   include_once ('../VUE/Accueil_admin.php');
+               if ($ligne['Type_utilisateur'] == 'Administrateur'){
+                   header ('Location: ../VUE/Accueil_admin.php');
                     exit();
                 }
-                include ('../VUE/Accueil_2.php');
+                header ('Location: ../VUE/Accueil_2.php');
                 exit();
             }
             else //Si les login et mdp ne match pas, on l'indique
