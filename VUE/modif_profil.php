@@ -10,7 +10,7 @@
 </head>
 
 <?php include '../VUE/Header_2.php';?>
-<?php include '../CONTROLEUR/Access_denied.php:?>
+<?php include '../CONTROLEUR/Access_denied.php';?>
 
 
 <body>
