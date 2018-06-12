@@ -78,11 +78,16 @@ function getQuestion($pseudo){
     return $question;
 }
 
-function majMdp($newpass,$pseudo){
+function getMdp($pseudo){
+    $req = $bdd->prepare('SELECT Mot_de_passe FROM utilisateur WHERE pseudo = ?') or die(print_r($bdd->errorInfo()));
+    $req->execute(array($pseudo));
+    $mdp = $req->fetch();
+    return $mdp;
+}
+
+function majProfil($colonne,$new,$pseudo){
     include '../CONTROLEUR/database.php';
-    $req= $bdd -> prepare('UPDATE utilisateur SET Mot_de_passe =:newmdp WHERE pseudo = :pseudo');
-    $req->execute(array(
-        'newmdp' => $newpass,
-        'pseudo' => $pseudo
-    ));
+    $sql = 'UPDATE utilisateur SET '.$colonne.' = \''.$new.'\' WHERE pseudo LIKE \''.$pseudo.'\'';
+    $req = $bdd->prepare($sql);
+    $req->execute();
 }
