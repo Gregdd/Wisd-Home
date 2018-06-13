@@ -1,6 +1,5 @@
 <?php
 
-
 function inscription($pseudo,$pass,$nom,$prenom,$mail,$adresse,$ville,$code_post,$bday,$reponse,$question){
     include '../CONTROLEUR/database.php';
     $sql = $bdd->prepare('INSERT INTO utilisateur (pseudo, Mot_de_passe, Nom, Prenom, mail, Adresse, Ville, Code_postal, Date_naissance, Reponse, question) 
@@ -19,6 +18,12 @@ function inscription($pseudo,$pass,$nom,$prenom,$mail,$adresse,$ville,$code_post
         'question' => $question));
 
     $sql->closeCursor();
+}
+
+function connexion($pseudo){
+    include '../CONTROLEUR/database.php';
+    $entrees=$bdd->query("SELECT * FROM utilisateur WHERE pseudo LIKE '$pseudo'");
+    return $entrees;
 }
 
 function rechercheByNOM($nom){
@@ -43,21 +48,22 @@ function rechercheByPSEUDO($pseudo){
 
 function getInfoCapteur(){
     include '../CONTROLEUR/database.php';
-    $entrees=$bdd->query("SELECT capteurNom, stock FROM capteur");
+    $entrees=$bdd->query("SELECT capteurNom,stock,capteurtypeID FROM capteur");
     return $entrees;
 }
 
-function addCapteur($nom,$unit,$stock){
+function getInfoActionneur(){
+    include '../CONTROLEUR/database.php';
+    $entrees=$bdd->query("SELECT actionneurtypeID, actionneurNom FROM actionneur");
+    return $entrees;
+}
+
+function addCapteur($nom,$unit,$stock)
+{
     include '../CONTROLEUR/database.php';
     $sql = $bdd->prepare('INSERT INTO capteur(capteurNom, unit, stock) VALUES (:nom, :unite, :stock)');
-    $sql->execute(array('nom'=>$nom, 'unite'=>$unit, 'stock'=>$stock )) ;
+    $sql->execute(array('nom' => $nom, 'unite' => $unit, 'stock' => $stock));
     $sql->closeCursor();
-}
-
-function connexion($pseudo){
-    include '../CONTROLEUR/database.php';
-    $entrees=$bdd->query("SELECT * FROM utilisateur WHERE pseudo LIKE '$pseudo'");
-    return $entrees;
 }
 
 function getReponse($pseudo)
@@ -85,9 +91,47 @@ function getMdp($pseudo){
     return $mdp;
 }
 
+function getInfoPiece($id){
+    include '../CONTROLEUR/database.php';
+    $houseID = gethouseID($id);
+    $req = $bdd->prepare('SELECT id,nom,superficie FROM pieces WHERE idhouse = ?');
+    $req->execute(array($houseID[0]));
+    return $req;
+} //a modifier quand l'utilisateur pourra choisir sa maison
+
 function majProfil($colonne,$new,$pseudo){
     include '../CONTROLEUR/database.php';
     $sql = 'UPDATE utilisateur SET '.$colonne.' = \''.$new.'\' WHERE pseudo LIKE \''.$pseudo.'\'';
     $req = $bdd->prepare($sql);
     $req->execute();
+}
+
+function addPiece($nom,$superficie,$id){
+    include '../CONTROLEUR/database.php';
+    $idhouse = getHouseID($id);
+    $sql = $bdd->prepare('INSERT INTO pieces(nom, superficie, idhouse) VALUES (:nom, :superficie, :idhouse)');
+    $sql->execute(array('nom'=>$nom, 'superficie'=>$superficie, 'idhouse'=>$idhouse[0] )) ;
+    $sql->closeCursor();
+}
+
+function addCapteurPiece($idCapteur,$idPiece){
+    include '../CONTROLEUR/database.php';
+    $nomCapteur = $bdd->query("SELECT capteurNom FROM capteur WHERE capteurtypeID = $idCapteur");
+    $nomCapteur->execute();
+    var_dump($nomCapteur);
+
+    $req = $bdd->prepare('INSERT INTO capteurpiece(pieceID, capteurID, typecapteur ) VALUES(:nompiece, :idcapteur, :type )');
+    $req->execute(array(
+        'idcapteur' => $idCapteur,
+        'nompiece' => $idPiece,
+        'type' => $nomCapteur
+    ));
+}
+
+function getHouseID($id){
+    include '../CONTROLEUR/database.php';
+    $houseID = $bdd->prepare('SELECT maisonID FROM maison WHERE userID = ?');
+    $houseID->execute(array($id));
+    $houseID = $houseID->fetch();
+    return $houseID;
 }
