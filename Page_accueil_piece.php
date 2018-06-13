@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <?php
 
-include 'database.php';
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=wisdhome', 'root', 'root');
+}catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
 ?>
 <html>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
     <title>Catalogue</title>
-    <link rel="stylesheet" type="text/css" href="Page_accueil_capteur.css">
-    <link rel="stylesheet" type="text/css" href="style_tableau.css">
+    <link rel="stylesheet" type="text/css" href="Page_acceuil_capteur.css">
+    <link rel="stylesheet" type="text/css" href="styletableau.css">
     <link rel="stylesheet" type="text/css" href="popupbox.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="icon" type="image/png" href="Image/logo.png" />
@@ -17,17 +23,17 @@ include 'database.php';
 </head>
 <body>
 <header>
-    <?php include('Access_denied.php');?>
     <?php include 'Header_2.php';?>
 </header>
 
 
 <article>
 
-    <span> <h2 style="display: inline-block"> Capteurs  </h2>  <a href="Creer_ma_maison.php" ><img style="display: inline ; position: relative; left:250px ; top 20px" src="Image/boutonplus.png"> </a><hr> </span>
+    <h2> Capteurs  </h2><hr>
     <?php
 
     $id = $_GET["ideal"];
+    $_SESSION["idpiece"] = $id;
 
     $req = $bdd->query("SELECT typecapteur,ID FROM capteurpiece WHERE idpiece='$id'  ");
     echo '<ul>';
@@ -39,7 +45,7 @@ include 'database.php';
         $image = $req1->fetch();
         $url_img = $image["url_img"];
         echo '<li  class="carre">
-            <a   href="Page_accueil_piece_capteur.php?ideal2='.$capteur['ID'].'><p  class="titre">'.$capteur['typecapteur'].'</p></a>
+            <a   href="Page_acceuil_piece_capteur.php?ideal2='.$capteur['ID'].'><p  class="titre">'.$capteur['typecapteur'].'</p></a>
              <img src='.$image["url_img"].' style="width:"  title='.$capteur['typeactionneur'].' class="pics"/><br/>
 
         </li> ';
@@ -59,7 +65,7 @@ include 'database.php';
 
 <article>
 
-    <span> <h2 style="display: inline-block"> Actionneurs   </h2>  <a href="Creer_ma_maison.php" ><img style="display: inline ; position: relative; left:250px ; top 20px" src="Image/boutonplus.png"> </a><hr> </span>
+    <h2> Actionneurs </h2><hr>
     <?php
 
     $id = $_GET["ideal"];
