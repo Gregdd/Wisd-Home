@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <?php
+
 include 'database.php';
 ?>
 <html>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
-    <title>Catalogue</title>
-    <link rel="stylesheet" type="text/css" href="Page_accueil_capteur.css">
-    <link rel="stylesheet" type="text/css" href="style_tableau.css">
+    <title>Capteurs </title>
+    <meta http-equiv="Refresh" content="10">
+    <link rel="stylesheet" type="text/css" href="Page_acceuil_capteur.css">
+    <link rel="stylesheet" type="text/css" href="styletableau.css">
     <link rel="stylesheet" type="text/css" href="popupbox.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="icon" type="image/png" href="Image/logo.png" />
@@ -16,8 +18,10 @@ include 'database.php';
 </head>
 <body>
 <header>
-    <?php include('Access_denied.php');?>
     <?php include 'Header_2.php';?>
+    <?php include 'recuperer_trame.php' ; ?>
+
+
 </header>
 
 
