@@ -1,0 +1,39 @@
+body{
+    font-family: Arial;
+}
+.lien{
+    text-decoration: none;
+    color:white;
+    font-size: large;
+}
+#Capteurs{
+     background-color: white;
+     height: 68px;
+     color : black;
+ }
+main{
+    margin-top: 1%;
+    padding : 1% 6% 0 3%;
+    overflow: auto;
+}
+#ul1{
+    display: flex;
+}
+.carre{
+    border-radius: 5%;
+    list-style: none;
+    background-color: #5b9630;;
+    padding: 5%;
+    margin-right: 2%;
+}
+
+/*attention au hover qui par défaut
+est bleu et souligné*/
+
+.carre:hover{
+    background-color: #1b3c02;
+}
+.lien:hover{
+    text-decoration: none;
+    color : white;
+}
