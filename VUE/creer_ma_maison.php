@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Créer ma maison</title>
-    <link rel="stylesheet" href="css/Style_creer_maison.css"/>
+    <link rel="stylesheet" href="css/Creer_maison.css"/>
 </head>
 
 <body>
