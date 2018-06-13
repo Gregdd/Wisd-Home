@@ -31,7 +31,7 @@ if(!empty($_POST)) //Si le champ d'entrée n'est pas vide
                 $_SESSION['Ville'] = $ligne["Ville"];
                 $_SESSION['Code_postal'] = $ligne["Code_postal"];
                 $_SESSION['Adresse'] = $ligne["Adresse"];
-                $_SESSION['ID']= $pseudo;
+                $_SESSION['ID']= $ligne['ID'];
                 $_SESSION['status']="Active";
 
                if ($ligne['Type_utilisateur'] == 'Administrateur'){
