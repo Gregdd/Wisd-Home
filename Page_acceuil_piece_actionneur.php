@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <?php
 
-include 'database.php';
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=wisdhome', 'root', 'root');
+}catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
 ?>
-
 <html>
 <head>
     <meta charset="UTF-8" />
@@ -19,7 +24,6 @@ include 'database.php';
 </head>
 <body>
 <header>
-    <?php include('Access_denied.php');?>
     <?php include 'Header_2.php';?>
 </header>
 
@@ -60,6 +64,10 @@ include 'database.php';
         $reqval1->closeCursor();
 
     }
+    $_SESSION['valeurenvoyetrame']=$_POST['valeursouhaitee'];
+    $_SESSION['numeroactionneurtrame']=$id1;
+
+    include 'envoi_trame.php'
 
     ?>
 
@@ -73,11 +81,10 @@ include 'database.php';
 
         <h3 style=" display: inline-block; margin-right: 100px"><?php echo"$val1 " ;echo"    "; echo"($unit1)"?></h3>
 
-        <form id ="myform"name="formulaire" onsubmit="return Test()" method="post" action="Page_acceuil_piece_actionneur.php?ideal1=4 " >
-            <input style=" color:black; margin-right: 100px ; background-color: #5b9630" type="text" name="valeursouhaitee" placeholder="Valeur souhaitée" />
-            <input style="background-color: #4CAF50" id ="sub" type="submit" value="envoyer">
-            <a href="javascript: window.refresh();">actualiser</a>
-        </form>
+    <form id ="myform"name="formulaire" onsubmit="return Test()" method="post" action="Page_acceuil_piece_actionneur.php?ideal1=4 " >
+    <input style=" color:black; margin-right: 100px ; background-color: #5b9630" type="text" name="valeursouhaitee" placeholder="Valeur souhaitée" />
+    <input style="background-color: #4CAF50" id ="sub" type="submit" value="envoyer">
+    </form>
     </div>
 
 
