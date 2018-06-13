@@ -48,7 +48,7 @@ session_start();
 <br>
 <center>
     Supprimer une question
-    <form action="../MODELE/del_question.php" method="post">
+    <form action="../MODELE/fonctionSQL.php" method="post">
         <div class="form">
             <label><input type="number" name="ID" placeholder="ID"></label><br></span>
             <input type="submit" value="Supprimer"></div>
