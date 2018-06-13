@@ -135,3 +135,32 @@ function getHouseID($id){
     $houseID = $houseID->fetch();
     return $houseID;
 }
+
+function del_question(){
+    include '../CONTROLEUR/database.php';
+    $req = $bdd->prepare('DELETE FROM faq WHERE ID = :ID'); // on sélectionne le paramètre en fonction duquel on va supprimer le device
+$affectedLines = $req -> execute(array('ID' => $_POST['ID'])); // on effectue la suppression
+$return = $req->fetch();
+    
+header('Location: ../VUE/messagerie_back.php'); // retour à la page articles
+    
+}
+
+function post_question(){
+    include '../CONTROLEUR/database.php';
+    $req = $bdd->prepare('INSERT INTO faq (question) VALUES (?)');
+	$req -> execute(array($_POST['question']));
+    
+    header('Location: ../VUE/messagerie_back.php'); // retour à la page articles
+    
+}
+
+function post_reponse(){
+    include '../CONTROLEUR/database.php';
+$req = $bdd->prepare('UPDATE  faq SET reponse=?  WHERE ID = ?');
+$req -> execute(array($_POST['reponse'], $_POST['reponseid']));
+header('Location: ../VUE/messagerie_back_admin.php'); // retour à la page articles
+}
+    
+
+    
