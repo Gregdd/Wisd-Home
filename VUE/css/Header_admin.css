@@ -1,19 +1,41 @@
 header{
     text-align: left;
-    background-color:#5b9630;
+    background-color: #5b9630;
     color :white;
     padding-left:1%;
     padding-top: 1%;
-    padding-bottom: 2%;
+    padding-bottom:5%;
 }
 .logo{
     display: block;
     border: none;
-    width: 100px; /* largeur à spécifier */
+    width: 0; /* largeur à spécifier */
+    height: 60px; /* longueur à spécifier */
     cursor: pointer;
 }
+.ul2 {
+    list-style: none;
+    margin-top: 2%;
+    padding: 0%;
+    font-size: 20px;
+}
+.ul2 .li2 {
+    float: left;
+}
+.ul2 .li2 .a2 {
+    display: block;
+    background-color: #5b9630;
+    padding: 8px 30px;
+    text-decoration: none;
+    color : white;
+    border-color: #000000;
+}
+.ul2 .li2 .a2:hover {
+    background-color: #1b3c02;
+    color: white;
+    
 
-
+}
 .ol2{
     float: right;
     list-style: none;
@@ -21,11 +43,15 @@ header{
     font-size: 20px;
     color : white;
 }
-.li2{
+.ol2 .li2{
     padding-bottom : 2%;
 }
-.a2 {
+.ol2 .li2 .a2 {
     list-style: none;
     color : white;
     text-decoration: none;
+}
+
+#logo_Header2{
+	width: 100px;
 }
