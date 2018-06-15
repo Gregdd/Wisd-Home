@@ -25,3 +25,8 @@ span{
     font-size : larger;
 
 }
+#Stock{
+	background-color: white;
+	height: 100px;
+	color : black;
+}
