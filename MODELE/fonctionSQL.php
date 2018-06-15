@@ -2,7 +2,7 @@
 
 function inscription($pseudo,$pass,$nom,$prenom,$mail,$adresse,$ville,$code_post,$bday,$reponse,$question){
     include '../CONTROLEUR/database.php';
-    $sql = $bdd->prepare('INSERT INTO utilisateur (pseudo, Mot_de_passe, Nom, Prenom, mail, Adresse, Ville, Code_postal, Date_naissance, Reponse, question) 
+    $sql = $bdd->prepare('INSERT INTO utilisateur (pseudo, Mot_de_passe, Nom, Prenom, mail, Adresse, Ville, Code_postal, Date_naissance, Reponse, question)
                                 VALUES (:pseudo, :mdp, :nom, :prenom, :mail, :adresse, :ville, :code_post, :bday, :reponse, :question)');
     $sql->execute(array(
         'pseudo' => $pseudo,
@@ -141,18 +141,18 @@ function del_question(){
     $req = $bdd->prepare('DELETE FROM faq WHERE ID = :ID'); // on sélectionne le paramètre en fonction duquel on va supprimer le device
 $affectedLines = $req -> execute(array('ID' => $_POST['ID'])); // on effectue la suppression
 $return = $req->fetch();
-    
+
 header('Location: ../VUE/messagerie_back.php'); // retour à la page articles
-    
+
 }
 
 function post_question(){
     include '../CONTROLEUR/database.php';
     $req = $bdd->prepare('INSERT INTO faq (question) VALUES (?)');
 	$req -> execute(array($_POST['question']));
-    
+
     header('Location: ../VUE/messagerie_back.php'); // retour à la page articles
-    
+
 }
 
 function post_reponse(){
@@ -161,6 +161,12 @@ $req = $bdd->prepare('UPDATE  faq SET reponse=?  WHERE ID = ?');
 $req -> execute(array($_POST['reponse'], $_POST['reponseid']));
 header('Location: ../VUE/messagerie_back_admin.php'); // retour à la page articles
 }
-    
 
-    
+function reponseid(){
+  include '../CONTROLEUR/database.php';
+  $reponse = $bdd->query('SELECT * FROM faq');
+  while ($donnees = $reponse->fetch())
+  {
+      echo('<option value='. $donnees['ID'] . '>' . $donnees['ID'] . '</option>');
+  }
+}
