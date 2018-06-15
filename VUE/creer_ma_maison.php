@@ -26,12 +26,13 @@ include '../CONTROLEUR/affichage_cmm.php'?>
         <form method="post" action="../CONTROLEUR/creer_ma_maison_post.php">
             <label for = "pieceCapteur">Choisissiez une pièce :</label>
             <select name = "pieceCapteur">
+                <option></option>
                 <?php afficherPiece();?>
             </select><br/><br/>
             <label for = "capteur">Choissiez un type de capteur :</label>
             <select name = "capteur">
+                <option></option>
                 <?php afficherCapteur();?>
-                </label>
             </select><br/><br/>
             <input type="submit" value="Ajouter" > <br/>
         </form>
@@ -40,12 +41,13 @@ include '../CONTROLEUR/affichage_cmm.php'?>
         <form method="post" action="../CONTROLEUR/creer_ma_maison_post.php">
             <label for = "pieceActionneur">Choisissiez une pièce :</label>
             <select name = "pieceActionneur">
+                <option></option>
                 <?php afficherPiece();?>
                 </select><br/><br/>
             <label for = "actionneur">Choissiez un type d'actionneur :</label>
             <select name = "actionneur">
+                <option></option>
                 <?php afficherActionneur();?>
-                </label>
             </select><br/><br/>
             <input type="submit" value="Ajouter" > <br/>
         </form>
@@ -55,7 +57,8 @@ include '../CONTROLEUR/affichage_cmm.php'?>
         <h2>Supprimer une pièce :</h2>
         <form method="post" action="../CONTROLEUR/../CONTROLEUR/creer_ma_maison_post.php">
             <label for="piecesuppr">Piece :</label>
-                <select name="nompiece1">
+                <select name="piecesuppr">
+                    <option></option>
                     <?php afficherPiece();?>
                 </select><br/><br/>
             <input type="submit" value="Supprimer"><br/><br/>
@@ -65,11 +68,13 @@ include '../CONTROLEUR/affichage_cmm.php'?>
         <form method="post" action="../CONTROLEUR/creer_ma_maison_post.php">
             <label for="piececapteur">Piece :</label>
             <select name="piececapteur">
+                <option></option>
                 <?php afficherPiece();?>
             </select><br/><br/>
 
             <label for="capteursuppr">Type de capteur :</label>
             <select name="capteursuppr">
+                <option></option>
                 <?php afficherCapteur();?>
             </select>
              <br/><br/>
@@ -80,11 +85,13 @@ include '../CONTROLEUR/affichage_cmm.php'?>
         <form method="post" action="../CONTROLEUR/creer_ma_maison_post.php">
             <label for="pieceactionneur">Piece :</label>
             <select name="pieceactionneur">
+                <option></option>
                 <?php afficherPiece(); ?>
             </select><br/><br/>
 
-            <label for="typeactionneur1">Type d'actionneur :</label>
-            <select name="typeactionneur1">
+            <label for="actionneursuppr">Type d'actionneur :</label>
+            <select name="actionneursuppr">
+                <option></option>
                 <?php afficherActionneur();?>
             </select>
             <br/><br/>
