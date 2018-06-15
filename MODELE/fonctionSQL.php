@@ -116,15 +116,12 @@ function addPiece($nom,$superficie,$id){
 
 function addCapteurPiece($idCapteur,$idPiece){
     include '../CONTROLEUR/database.php';
-    $nomCapteur = $bdd->query("SELECT capteurNom FROM capteur WHERE capteurtypeID = $idCapteur");
-    $nomCapteur->execute();
-    var_dump($nomCapteur);
-
-    $req = $bdd->prepare('INSERT INTO capteurpiece(pieceID, capteurID, typecapteur ) VALUES(:nompiece, :idcapteur, :type )');
+    $nomCapteur = getNomCapteur($idCapteur);
+    $req = $bdd->prepare('INSERT INTO capteurpiece(idpiece, idcapteur, typecapteur ) VALUES(:nompiece, :idcapteur, :type )');
     $req->execute(array(
         'idcapteur' => $idCapteur,
         'nompiece' => $idPiece,
-        'type' => $nomCapteur
+        'type' => $nomCapteur[0]
     ));
 }
 
@@ -134,6 +131,52 @@ function getHouseID($id){
     $houseID->execute(array($id));
     $houseID = $houseID->fetch();
     return $houseID;
+}
+
+function addActionneurPiece($idActionneur,$idPiece){
+    include '../CONTROLEUR/database.php';
+    $nomActionneur = getNomActionneur($idActionneur);
+    $req = $bdd->prepare('INSERT INTO actionneurpiece(idpiece, idactionneur, typeactionneur ) VALUES(:nompiece, :idactionneur, :type )');
+    $req->execute(array(
+        'idactionneur' => $idActionneur,
+        'nompiece' => $idPiece,
+        'type' => $nomActionneur[0]
+    ));
+}
+
+function getNomActionneur($id){
+    include '../CONTROLEUR/database.php';
+    $nomActionneur = $bdd->prepare('SELECT actionneurNom FROM actionneur WHERE actionneurtypeID = ?');
+    $nomActionneur->execute(array($id));
+    $nomActionneur=$nomActionneur->fetch();
+    return $nomActionneur;
+}
+
+function getNomCapteur($id){
+    include '../CONTROLEUR/database.php';
+    $nomCapteur = $bdd->prepare('SELECT capteurNom FROM capteur WHERE capteurtypeID = ?');
+    $nomCapteur->execute(array($id));
+    $nomCapteur=$nomCapteur->fetch();
+    return $nomCapteur;
+}
+
+function deletePiece($nom){
+    include '../CONTROLEUR/database.php';
+    $req = $bdd->prepare("DELETE FROM pieces WHERE id = ?");
+    $req->execute(array($nom));
+    $supprCapteurs = $bdd->prepare('DELETE FROM capteurpiece WHERE idpiece = ?');
+    $supprCapteurs->execute(array($nom));
+    $supprActionneur = $bdd->prepare('DELETE FROM actionneurpiece WHERE idpiece = ?');
+    $supprActionneur->execute(array($nom));
+}
+
+function deleteCapteur($piece,$capteur){
+    include '../CONTROLEUR/database.php';
+    $req = $bdd->prepare("DELETE FROM capteurpiece WHERE (idpiece = :piece AND typecapteur= :capteur)");
+    $req->execute(array(
+        "piece" => $piece,
+        "capteur" => $capteur
+    ));
 }
 
 function del_question(){
