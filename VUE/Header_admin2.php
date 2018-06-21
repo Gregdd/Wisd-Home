@@ -15,10 +15,11 @@
     </div>
 
     <ul class = ul2>
-        <li class = li2><a class = a2 id = Recherche href="Rechercher_un_client.php">Rechercher un client</a></li>
-        <li class = li2><a class = a2 id = Stock href="stock.php">Stock capteurs</a></li>
-        <li class = li2><a class = a2 id = NewCapt href="new_capteur.php">Nouveau capteur</a></li>
-        <li class = li2><a class = a2 id = Messagerie href="messagerie_back_admin.php">Messagerie</a></li>
+        <li class = li2><a class = a2 id = Recherche href="../Wisd-Home-master/Rechercher_un_client.php">Rechercher un client</a></li>
+        <li class = li2><a class = a2 id = Stock href="../Wisd-Home-master/stock.php">Stock capteurs</a></li>
+        <li class = li2><a class = a2 id = NewCapt href="../Wisd-Home-master/new_capteur.php">Nouveau capteur</a></li>
+        <li class = li2><a class = a2 id = Messagerie href="../Wisd-Home-master/Messages_admin.php">Messagerie</a></li>
+        <li class = li2><a class = a2 id = Messagerie href="../Wisd-Home-master/Messagerie_back_admin.php">FAQ</a></li>
 
     </ul>
 </header>
