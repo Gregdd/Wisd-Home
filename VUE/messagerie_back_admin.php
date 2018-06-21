@@ -1,6 +1,7 @@
 <?php
 session_start();
 include '../CONTROLEUR/database.php';
+include '../VUE/Header_admin.php';
 //VUE
 ?>
 
