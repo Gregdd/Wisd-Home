@@ -1,9 +1,8 @@
 <?php
-session_start();
-include 'database.php';
+
 include '../MODELE/fonctionSQL.php';
 
-/*
+
 //insertion
 if ((!empty($_POST['newPiece']))&& (!empty($_POST['superficie']) ) ) {
     $newPiece = $_POST['newPiece'];
@@ -34,22 +33,21 @@ if (!empty($_POST['piecesuppr'])) {
     deletePiece($piecesuppr);
     header ('Location: ../VUE/creer_ma_maison.php');
 }
-*/
+
 //supprimer capteur
 if((!empty($_POST['piececapteur'] AND !empty($_POST['capteursuppr'])))) {
     $piece = $_POST['piececapteur'];
     $capteur = $_POST['capteursuppr'];
     deleteCapteur($piece, $capteur);
-    /*header ('Location: ../VUE/creer_ma_maison.php');*/
+    header ('Location: ../VUE/creer_ma_maison.php');
 }
-/*
 
-if((!empty($_POST['pieceactio1'] AND !empty($_POST['typeactionneur1'])))){
-    $pieceactio1 = $_POST['pieceactio1'];
-    $typeactionneur1 = $_POST['typeactionneur1'];
-    $reqsupp = $bdd->query("DELETE FROM actionneurpiece WHERE idpiece = '".$_POST['pieceactio1']."' AND typecapteur= '".$_POST['typeactionneur1']."' ");
-
-    header ('Location:Page_acceuil_capteurs.php');
+//supprimer actionneur
+if((!empty($_POST['pieceactionneur'] AND !empty($_POST['actionneursuppr'])))){
+    $piece = $_POST['pieceactionneur'];
+    $actionneur = $_POST['actionneursuppr'];
+    deleteActionneur($piece,$actionneur);
+    header ('Location: ../VUE/creer_ma_maison.php');
 
 }
 
