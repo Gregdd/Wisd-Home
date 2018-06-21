@@ -75,6 +75,6 @@ include '../CONTROLEUR/database.php';
 </center>
 
 <br>
-php include '../VUE/Footer.php'
+include '../VUE/Footer.php';
 </body>
 </html>
