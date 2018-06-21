@@ -1,5 +1,5 @@
 <?php
-include '../VUE/Header_admin.php';
+include '../VUE/Header_admin2.php';
 include '../CONTROLEUR/database.php';
 
 //VUE
