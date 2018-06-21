@@ -1,5 +1,5 @@
 <?php
-session_start();
+php include '../VUE/Header_2.php';
 //VUE
 ?>
 
@@ -56,5 +56,6 @@ session_start();
 </center>
 
 <br>
+php include '../VUE/Footer.php';
 </body>
 </html>

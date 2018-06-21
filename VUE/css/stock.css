@@ -1,0 +1,32 @@
+main{
+   margin : 5%;
+    text-align: center;
+}
+
+
+td{
+    border: 1px solid black;
+}
+tr{
+
+    padding : 1%;
+}
+table
+{
+    border-collapse: collapse; /* Les bordures du tableau seront collées  */
+
+    margin : auto;
+    width : 30%;
+}
+#ligne{
+    font-weight: bold;
+}
+span{
+    font-size : larger;
+
+}
+#Stock{
+	background-color: white;
+	height: 100px;
+	color : black;
+}

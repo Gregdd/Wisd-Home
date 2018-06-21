@@ -1,6 +1,7 @@
 <?php
-session_start();
+include '../VUE/Header_admin2.php';
 include '../CONTROLEUR/database.php';
+
 //VUE
 ?>
 
@@ -74,5 +75,6 @@ include '../CONTROLEUR/database.php';
 </center>
 
 <br>
+<?php include '../VUE/Footer.php';?>
 </body>
 </html>

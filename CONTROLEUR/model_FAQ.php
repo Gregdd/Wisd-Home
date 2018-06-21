@@ -4,8 +4,7 @@ include '../CONTROLEUR/database.php';
 //VUE
 ?>
 
-<!DOCTYPE html>
-<html>
+
 
 <head>
     <meta charset="UTF-8" />

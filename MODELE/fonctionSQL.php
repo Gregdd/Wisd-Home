@@ -2,7 +2,7 @@
 
 function inscription($pseudo,$pass,$nom,$prenom,$mail,$adresse,$ville,$code_post,$bday,$reponse,$question){
     include '../CONTROLEUR/database.php';
-    $sql = $bdd->prepare('INSERT INTO utilisateur (pseudo, Mot_de_passe, Nom, Prenom, mail, Adresse, Ville, Code_postal, Date_naissance, Reponse, question) 
+    $sql = $bdd->prepare('INSERT INTO utilisateur (pseudo, Mot_de_passe, Nom, Prenom, mail, Adresse, Ville, Code_postal, Date_naissance, Reponse, question)
                                 VALUES (:pseudo, :mdp, :nom, :prenom, :mail, :adresse, :ville, :code_post, :bday, :reponse, :question)');
     $sql->execute(array(
         'pseudo' => $pseudo,
@@ -116,15 +116,12 @@ function addPiece($nom,$superficie,$id){
 
 function addCapteurPiece($idCapteur,$idPiece){
     include '../CONTROLEUR/database.php';
-    $nomCapteur = $bdd->query("SELECT capteurNom FROM capteur WHERE capteurtypeID = $idCapteur");
-    $nomCapteur->execute();
-    var_dump($nomCapteur);
-
-    $req = $bdd->prepare('INSERT INTO capteurpiece(pieceID, capteurID, typecapteur ) VALUES(:nompiece, :idcapteur, :type )');
+    $nomCapteur = getNomCapteur($idCapteur);
+    $req = $bdd->prepare('INSERT INTO capteurpiece(idpiece, idcapteur, typecapteur ) VALUES(:nompiece, :idcapteur, :type )');
     $req->execute(array(
         'idcapteur' => $idCapteur,
         'nompiece' => $idPiece,
-        'type' => $nomCapteur
+        'type' => $nomCapteur[0]
     ));
 }
 
@@ -136,23 +133,80 @@ function getHouseID($id){
     return $houseID;
 }
 
+function addActionneurPiece($idActionneur,$idPiece){
+    include '../CONTROLEUR/database.php';
+    $nomActionneur = getNomActionneur($idActionneur);
+    $req = $bdd->prepare('INSERT INTO actionneurpiece(idpiece, idactionneur, typeactionneur ) VALUES(:nompiece, :idactionneur, :type )');
+    $req->execute(array(
+        'idactionneur' => $idActionneur,
+        'nompiece' => $idPiece,
+        'type' => $nomActionneur[0]
+    ));
+}
+
+function getNomActionneur($id){
+    include '../CONTROLEUR/database.php';
+    $nomActionneur = $bdd->prepare('SELECT actionneurNom FROM actionneur WHERE actionneurtypeID = ?');
+    $nomActionneur->execute(array($id));
+    $nomActionneur=$nomActionneur->fetch();
+    return $nomActionneur;
+}
+
+function getNomCapteur($id){
+    include '../CONTROLEUR/database.php';
+    $nomCapteur = $bdd->prepare('SELECT capteurNom FROM capteur WHERE capteurtypeID = ?');
+    $nomCapteur->execute(array($id));
+    $nomCapteur=$nomCapteur->fetch();
+    return $nomCapteur;
+}
+
+function deletePiece($nom){
+    include '../CONTROLEUR/database.php';
+    $req = $bdd->prepare("DELETE FROM pieces WHERE id = ?");
+    $req->execute(array($nom));
+    $supprCapteurs = $bdd->prepare('DELETE FROM capteurpiece WHERE idpiece = ?');
+    $supprCapteurs->execute(array($nom));
+    $supprActionneur = $bdd->prepare('DELETE FROM actionneurpiece WHERE idpiece = ?');
+    $supprActionneur->execute(array($nom));
+}
+
+function deleteCapteur($piece,$capteur){
+    include '../CONTROLEUR/database.php';
+    $req = $bdd->prepare('DELETE FROM capteurpiece WHERE idpiece = :piece AND idcapteur= :capteur');
+    $req->execute(array(
+        "piece" => $piece,
+        "capteur" => $capteur
+    ));
+    $req->closeCursor();
+}
+
+function deleteActionneur ($piece,$actionneur){
+    include '../CONTROLEUR/database.php';
+    $req = $bdd->prepare('DELETE FROM actionneurpiece WHERE idpiece = :piece AND idactionneur = :actionneur');
+    $req->execute(array(
+        "piece" => $piece,
+        "actionneur" => $actionneur
+    ));
+
+}
+
 function del_question(){
     include '../CONTROLEUR/database.php';
     $req = $bdd->prepare('DELETE FROM faq WHERE ID = :ID'); // on sélectionne le paramètre en fonction duquel on va supprimer le device
 $affectedLines = $req -> execute(array('ID' => $_POST['ID'])); // on effectue la suppression
 $return = $req->fetch();
-    
+
 header('Location: ../VUE/messagerie_back.php'); // retour à la page articles
-    
+
 }
 
 function post_question(){
     include '../CONTROLEUR/database.php';
     $req = $bdd->prepare('INSERT INTO faq (question) VALUES (?)');
 	$req -> execute(array($_POST['question']));
-    
+
     header('Location: ../VUE/messagerie_back.php'); // retour à la page articles
-    
+
 }
 
 function post_reponse(){
@@ -161,6 +215,12 @@ $req = $bdd->prepare('UPDATE  faq SET reponse=?  WHERE ID = ?');
 $req -> execute(array($_POST['reponse'], $_POST['reponseid']));
 header('Location: ../VUE/messagerie_back_admin.php'); // retour à la page articles
 }
-    
 
-    
+function reponseid(){
+  include '../CONTROLEUR/database.php';
+  $reponse = $bdd->query('SELECT * FROM faq');
+  while ($donnees = $reponse->fetch())
+  {
+      echo('<option value='. $donnees['ID'] . '>' . $donnees['ID'] . '</option>');
+  }
+}
