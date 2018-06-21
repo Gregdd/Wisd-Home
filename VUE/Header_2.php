@@ -19,7 +19,8 @@
         <li class = li2><a class = a2 id = Capteurs href="/Wisd-Home-master/VUE/MyHome.php">My Home</a></li>
         <li class = li2><a class = a2 id = Capteurs2 href="/Wisd-Home-master/VUE/creer_ma_maison.php">Gérer ma maison</a></li>
         <li class = li2><a class = a2 id = Conso href="/Wisd-Home-master/VUE/Consommation.php">Ma consommation</a></li>
-        <li class = li2><a class = a2 id = Messagerie href="Messagerie.php">Nous contacter </a></li>
+        <li class = li2><a class = a2 id = Messagerie href="/Wisd-Home-master/VUE/Messagerie.php">Nous contacter </a></li>
+        <li class = li2><a class = a2 id = Messagerie href="/Wisd-Home-master/VUE/Messagerie_back.php">FAQ</a></li>
     </ul>
     
 </header>
