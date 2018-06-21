@@ -1,5 +1,5 @@
 <?php
-php include '../VUE/Header_admin.php';
+php include '../VUE/Header_2.php';
 //VUE
 ?>
 
@@ -56,6 +56,6 @@ php include '../VUE/Header_admin.php';
 </center>
 
 <br>
-php include '../VUE/Header_admin.php';
+php include '../VUE/Footer.php';
 </body>
 </html>
