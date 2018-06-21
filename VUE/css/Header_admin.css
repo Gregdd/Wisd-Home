@@ -6,13 +6,7 @@ header{
     padding-top: 1%;
     padding-bottom:5%;
 }
-.logo{
-    display: block;
-    border: none;
-    width: 0; /* largeur à spécifier */
-    height: 60px; /* longueur à spécifier */
-    cursor: pointer;
-}
+
 .ul2 {
     list-style: none;
     margin-top: 2%;
@@ -33,7 +27,7 @@ header{
 .ul2 .li2 .a2:hover {
     background-color: #1b3c02;
     color: white;
-    
+    height: 52px;
 
 }
 .ol2{
@@ -51,7 +45,6 @@ header{
     color : white;
     text-decoration: none;
 }
-
 #logo_Header2{
 	width: 100px;
 }
