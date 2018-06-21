@@ -172,11 +172,22 @@ function deletePiece($nom){
 
 function deleteCapteur($piece,$capteur){
     include '../CONTROLEUR/database.php';
-    $req = $bdd->prepare("DELETE FROM capteurpiece WHERE (idpiece = :piece AND typecapteur= :capteur)");
+    $req = $bdd->prepare('DELETE FROM capteurpiece WHERE idpiece = :piece AND idcapteur= :capteur');
     $req->execute(array(
         "piece" => $piece,
         "capteur" => $capteur
     ));
+    $req->closeCursor();
+}
+
+function deleteActionneur ($piece,$actionneur){
+    include '../CONTROLEUR/database.php';
+    $req = $bdd->prepare('DELETE FROM actionneurpiece WHERE idpiece = :piece AND idactionneur = :actionneur');
+    $req->execute(array(
+        "piece" => $piece,
+        "actionneur" => $actionneur
+    ));
+
 }
 
 function del_question(){
