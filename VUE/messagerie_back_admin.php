@@ -75,5 +75,6 @@ include '../VUE/Header_admin.php';
 </center>
 
 <br>
+<?php include '../VUE/Footer.php';?>
 </body>
 </html>
