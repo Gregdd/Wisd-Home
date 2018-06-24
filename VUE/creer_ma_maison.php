@@ -55,7 +55,7 @@ include '../CONTROLEUR/affichage_cmm.php'?>
 
     <div class = "droite">
         <h2>Supprimer une pièce :</h2>
-        <form method="post" action="../CONTROLEUR/../CONTROLEUR/creer_ma_maison_post.php">
+        <form method="post" action="../CONTROLEUR/creer_ma_maison_post.php">
             <label for="piecesuppr">Piece :</label>
                 <select name="piecesuppr">
                     <option></option>
