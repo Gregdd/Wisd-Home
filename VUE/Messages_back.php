@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Messagerie</title>
-    <link rel="stylesheet" href="Messages_back.css" />
+    <link rel="stylesheet" href="css/Messages_back.css" />
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
 </head>
