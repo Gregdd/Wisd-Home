@@ -11,8 +11,8 @@
 <?php include '../VUE/Header_1.php'; ?>
 
 <fieldset>
-<p>Vous êtes à présent déconnecté</p>
-Pour revenir a l'accueil, cliquez <a href="../VUE/Accueil_1.php">ici</a>
+<legend>Vous êtes à présent déconnecté</legend>
+    <p>Pour revenir a l'accueil, cliquez <a href="../VUE/Accueil_1.php">ici</a></p>
 </fieldset>
 
 <?php include '../VUE/Footer.php';?>
