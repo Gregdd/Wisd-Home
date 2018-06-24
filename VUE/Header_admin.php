@@ -8,7 +8,7 @@
 
     <ol class = ol2>
         <li class = li2><?php echo $_SESSION['prenom'].' '.$_SESSION['nom']?></li>
-        <li class = li2><a class = a2 href="/Wisd-Home-master/CONTROLEUR/Deconnexion.php">Déconnexion</a></li>
+        <li class = li2><a class = a2 href="/Wisd-Home-master/CONTROLEUR/Deconnexion2.php">Déconnexion</a></li>
     </ol>
 
     <div class=logo>
