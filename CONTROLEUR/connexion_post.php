@@ -1,57 +1,36 @@
 <?php
-$error_message='';
+
 include 'database.php';
 include '../MODELE/fonctionSQL.php';
 
+//RECUPERATION DES DONNEES
+$nom = $_POST['nom'];
+$prenom = $_POST['prenom'];
 
-if(!empty($_POST)) //Si le champ d'entrée n'est pas vide
-{
-    $pseudo = $_POST['ID']; 
-    $password = $_POST['password'];
+$pseudo = $_POST['identifiant'];
+$pass = $_POST['pass'];
+$pass2 = $_POST['pass2'];
 
-    $entrees = connexion($pseudo);
+$mail = $_POST['mail'];
 
-    if (empty($entrees)){
-        $error_message='ce pseudo n\'existe pas.';
-    }
-    else
-    {
+$adresse = $_POST['adresse'];
+$ville = $_POST['ville'];
+$code_post = $_POST['codepost'];
 
-        while ($ligne = $entrees -> fetch())
-        {
-            if($password==$ligne["Mot_de_passe"] || password_verify($password, $ligne["Mot_de_passe"])) //Si le mdp correspond
-            {
+$question = $_POST['question'];
+$reponse = $_POST['reponse'];
 
-                session_start(); //on démarre la session
-                $_SESSION['nom'] = $ligne["Nom"];
-                $_SESSION['prenom'] = $ligne["Prenom"];
-                $_SESSION['pseudo'] = $ligne["pseudo"];
-                $_SESSION['bday'] = $ligne["Date_naissance"];
-                $_SESSION['mail'] = $ligne["mail"];
-                $_SESSION['Ville'] = $ligne["Ville"];
-                $_SESSION['Code_postal'] = $ligne["Code_postal"];
-                $_SESSION['Adresse'] = $ligne["Adresse"];
-                $_SESSION['ID']= $ligne['ID'];
-                $_SESSION['status']="Active";
+$bday = $_POST['bday'];
 
-               if ($ligne['Type_utilisateur'] == 'Administrateur'){
-                   header ('Location: ../VUE/Accueil_admin.php');
-                    exit();
-                }
-                header ('Location: ../VUE/Accueil_2.php');
-                exit();
-            }
-            else //Si les login et mdp ne match pas, on l'indique
-            {
-                $error_message='Erreur de nom d\'utilisateur ou de mot de passe';
-            }
+$salt = 'WisdHome';
+$pass_hache = sha1($_POST['identifiant'] . hash('sha256', $salt) . $_POST['pass']);
 
-        }
-    }
+if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
 
+    inscription($pseudo,$pass_hache,$nom,$prenom,$mail,$adresse,$ville,$code_post,$bday,$reponse,$question);
+
+    header('Location: ../VUE/Connexion.php');
 }
-if (!empty($error_message))
-{
-    $error_message="<div class=\"alert alert-danger\" role=\"alert\">$error_message</div>";
-}
+
+
 ?>
