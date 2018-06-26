@@ -1,6 +1,6 @@
 <?php  
 
-require 'database.php';
+require '../CONTROLEUR/database.php';
 
 $donnees = $bdd->query('SELECT month(Date) as mois, conso_eau, conso_elec from consommation ORDER BY mois ASC') or die(print_r($bdd->errorInfo()));
 //$donnees = $bdd->query($req, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
@@ -92,10 +92,13 @@ $moisFr=array(0,'Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Aoû
 
 
     </script>
-  </head>
+ </head>
   <body>
+  <?php include 'header_2.php';
+  include '../CONTROLEUR/Access_denied.php';?>
     <button id="change-chart">Change to Classic</button>
     <br><br>
-    <div id="chart_div" style="width: 800px; height: 500px;"></div>
+    <div id="chart_div" style="width: 800px; height: 500px;margin-left:20%;"></div>
+  <?php include'footer.php';?>
   </body>
 </html>
