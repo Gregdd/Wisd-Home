@@ -1,7 +1,7 @@
 <?php
 include ('../MODELE/fonctionSQL.php');
 
-$req = getInfoPiece($_SESSION['ID']);
+$req = getInfoPiece($_SESSION['pseudo']);
 
 
 while ($piece = $req->fetch())
