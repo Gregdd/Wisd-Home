@@ -1,12 +1,7 @@
 <?php
-session_start();
-include 'database.php';
 
-$objet = $_POST['objet'];
-$message = $_POST['message'];
-//$id = $_SESSION['ID'];
-$date = date("Y-m-d H:i:s");
-include 'fonctionSQL.php';
+include 'database.php';
+include '../MODELE/fonctionSQL.php';
 
 $entrees = getMessage();
 
