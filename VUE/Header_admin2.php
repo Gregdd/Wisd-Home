@@ -18,7 +18,7 @@
         <li class = li2><a class = a2 id = Recherche href="../VUE/Rechercher_un_client.php">Rechercher un client</a></li>
         <li class = li2><a class = a2 id = Stock href="../VUE/stock.php">Stock capteurs</a></li>
         <li class = li2><a class = a2 id = NewCapt href="../VUE/new_capteur.php">Nouveau capteur</a></li>
-        <li class = li2><a class = a2 id = Messagerie href="../VUE/Messages_admin.php">Messagerie</a></li>
+        <li class = li2><a class = a2 id = Messagerie href="../VUE/Messages_back.php">Messagerie</a></li>
         <li class = li2><a class = a2 id = Messagerie href="../VUE/Messagerie_back_admin.php">FAQ</a></li>
 
     </ul>
