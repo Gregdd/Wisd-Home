@@ -1,0 +1,24 @@
+table{
+	margin: auto;
+	margin-top: 10px;
+	text-align: center;
+	background-color: #9ACD32;
+	border-radius:5px;
+	}
+th{
+	color: #800080;
+}
+#txtHint{
+	margin:auto;
+	text-align: center;
+}
+
+fieldset{
+	padding: 10px 10px 10px 10px;
+	margin-left: 38%;
+	margin-right: 38%;
+	text-align: center;
+}
+body{
+	background-color: #9ACD32;
+}
