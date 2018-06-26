@@ -43,6 +43,7 @@ function rechercheByPSEUDO($pseudo){
     $client = $req->fetch();
     $_SESSION['client']['Nom']=$client['Nom'];
     $_SESSION['client']['Prenom']=$client['Prenom'];
+	$_SESSION['client']['pseudo']=$client['pseudo'];
     $req->closeCursor();
 };
 
@@ -91,9 +92,9 @@ function getMdp($pseudo){
     return $mdp;
 }
 
-function getInfoPiece($id){
+function getInfoPiece($pseudo){
     include '../CONTROLEUR/database.php';
-    $houseID = gethouseID($id);
+    $houseID = gethouseID($pseudo);
     $req = $bdd->prepare('SELECT id,nom,superficie FROM pieces WHERE idhouse = ?');
     $req->execute(array($houseID[0]));
     return $req;
@@ -106,9 +107,9 @@ function majProfil($colonne,$new,$pseudo){
     $req->execute();
 }
 
-function addPiece($nom,$superficie,$id){
+function addPiece($nom,$superficie,$pseudo){
     include '../CONTROLEUR/database.php';
-    $idhouse = getHouseID($id);
+    $idhouse = getHouseID($pseudo);
     $sql = $bdd->prepare('INSERT INTO pieces(nom, superficie, idhouse) VALUES (:nom, :superficie, :idhouse)');
     $sql->execute(array('nom'=>$nom, 'superficie'=>$superficie, 'idhouse'=>$idhouse[0] )) ;
     $sql->closeCursor();
@@ -125,11 +126,11 @@ function addCapteurPiece($idCapteur,$idPiece){
     ));
 }
 
-function getHouseID($id){
+function getHouseID($pseudo){
     include '../CONTROLEUR/database.php';
-    $houseID = $bdd->prepare('SELECT maisonID FROM maison WHERE userID = ?');
-    $houseID->execute(array($id));
-    $houseID = $houseID->fetch();
+    $houseID = $bdd->prepare('SELECT maisonID FROM maison WHERE pseudo = ?');
+    $houseID->execute(array($pseudo));
+    $houseID=$houseID->fetch();
     return $houseID;
 }
 
