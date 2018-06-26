@@ -44,7 +44,7 @@ function showUser(str)
 <div id="txtHint"><b>Liste des messages</b></div>
 <form>
 <select name="statut" onchange="showUser(this.value)">
-<option value="all">Afficher tous les messages:</option>
+<option value="all">Afficher tous les messages</option>
 <option value="Lu">Traités</option>
 <option value="nonLu">Non traités</option>
 </select>
