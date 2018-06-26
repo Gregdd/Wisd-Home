@@ -36,7 +36,8 @@ if(!empty($_POST)) //Si le champ d'entrée n'est pas vide
             }
             else //Si les login et mdp ne match pas, on l'indique
             {
-                $error_message='Erreur de nom d\'utilisateur ou de mot de passe';
+              header ('Location: ../VUE/Connexion.php');
+              exit();
             }
         }
     }
