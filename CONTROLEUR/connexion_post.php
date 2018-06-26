@@ -25,7 +25,7 @@ if(!empty($_POST)) //Si le champ d'entrée n'est pas vide
                 session_start(); //on démarre la session
                 $_SESSION['nom'] = $ligne["Nom"];
                 $_SESSION['prenom'] = $ligne["Prenom"];
-                $_SESSION['pseudo'] = $pseudo;
+                $_SESSION['pseudo'] = $ligne["pseudo"];
                 $_SESSION['bday'] = $ligne["Date_naissance"];
                 $_SESSION['mail'] = $ligne["mail"];
                 $_SESSION['Ville'] = $ligne["Ville"];
