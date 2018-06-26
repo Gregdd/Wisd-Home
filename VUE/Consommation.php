@@ -42,7 +42,7 @@ $moisFr=array(0,'Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Aoû
           width: 900,
           chart: {
             title: 'Consommation',
-            subtitle: 'water on the left, electricity on the right'
+           
           },
           series: {
             0: { axis: 'eau' }, // Bind series 0 to an axis named 'distance'.
