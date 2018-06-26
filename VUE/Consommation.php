@@ -96,8 +96,8 @@ $moisFr=array(0,'Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Aoû
   <body>
   <?php include 'header_2.php';
   include '../CONTROLEUR/Access_denied.php';?>
+<br/>
     <button id="change-chart">Change to Classic</button>
-    <br><br>
     <div id="chart_div" style="width: 800px; height: 500px;margin-left:20%;"></div>
   <?php include'footer.php';?>
   </body>
