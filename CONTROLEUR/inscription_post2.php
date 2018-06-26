@@ -27,7 +27,7 @@ if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
 
     inscription($pseudo,$pass,$nom,$prenom,$mail,$adresse,$ville,$code_post,$bday,$reponse,$question);
     
-    header('Location: Connexion.php');
+    header('Location: ../VUE/Connexion.php');
 }
 
 
