@@ -1,5 +1,3 @@
-<?php session_start();
-?>
 <!DOCTYPE html>
 <html>
 
@@ -13,8 +11,9 @@
 	
 <body>
 
-<?php include ('Header_admin2.php');?>
-<?php include ('database.php');?>
+<?php include ('Header_admin2.php');
+include ('../CONTROLEUR/database.php');?>
+
 <main>
 	<h1>Mes messages</h1>
     <table>
@@ -28,8 +27,7 @@
     </table>
 </main>
 
-<footer>
 <?php include ('Footer.php');?>
-</footer>	
+
 </body>
 </html>
