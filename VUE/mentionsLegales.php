@@ -8,9 +8,9 @@
 <body>
 
 <?php
-if (isset($_SESSION['Nom'])){
-<?php include '../VUE/Header_2.php';?>
-else include 'Header_1.php'?>
+if (isset($_SESSION['Nom']))
+  include '../VUE/Header_2.php';
+else include '../VUE/Header_1.php'?>
 
 <main style = "margin : 3%;">
 
