@@ -5,7 +5,7 @@ function afficher_capteur(){
     $id = $_GET["ideal"];
 
     $req = $bdd->prepare('SELECT typecapteur,idcapteur FROM capteurpiece WHERE idpiece= ?');
-    $req->execute(array($id[0]));
+    $req->execute(array($id));
 
     while ($capteur = $req->fetch())
     {
@@ -24,7 +24,7 @@ function afficher_actionneur(){
     $id = $_GET["ideal"];
 
     $req = $bdd->prepare('SELECT typeactionneur,idactionneur FROM actionneurpiece WHERE idpiece= ?');
-    $req->execute(array($id[0]));
+    $req->execute(array($id));
 
     while ($actionneur = $req->fetch())
     {
