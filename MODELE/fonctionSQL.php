@@ -224,3 +224,8 @@ function reponseid(){
       echo('<option value='. $donnees['ID'] . '>' . $donnees['ID'] . '</option>');
   }
 }
+function getMessage(){
+    include 'database.php';
+    $entrees=$bdd->query("SELECT Date_Message, ID, Objet, Message FROM messagerie");
+    return $entrees;
+}
