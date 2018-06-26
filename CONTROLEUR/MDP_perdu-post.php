@@ -14,7 +14,7 @@ if(!empty($_POST['reponse'])){
     if($rep==$reponse[0] AND $_POST['pass']==$_POST['confirm_pass']){
         $newpass = $_POST['pass'];
         majProfil('Mot_de_passe',$newpass,$pseudo);
-        include('../VUE/Connexion.php');
+        header('Location: ../VUE/Connexion.php');
     }
     else{
         include('../VUE/MDP_perdu2.php');
