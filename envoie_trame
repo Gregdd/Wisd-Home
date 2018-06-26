@@ -7,18 +7,40 @@ try
 {
     die('Erreur : '.$e->getMessage());
 }
+/*$ch = curl_init();
 
-$ch = curl_init();
-curl_setopt(
-    $ch,
-    CURLOPT_URL,
-    "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=0G8A&TRAME=$l1");
-curl_setopt($ch, CURLOPT_HEADER, FALSE);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($ch, CURLOPT_URL,"http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=0G8A&TRAME=10G8A2301000100");
+curl_setopt($ch, CURLOPT_POST, 1);
 
-//$trame = $data_tab[1];
-$l1=array(1098321301333300007220180605093453);
-$l=array(1,'0G8A',2,$typeactionneur,$numactionneur,$valeurenvoye,$numtrame,10, 2018 , 06 ,06 ,13,00,00);
+
+$server_output = curl_exec ($ch);
+
+curl_close ($ch);
+*/
+
+
+
+
+    $begin="10G8A";
+    $val;
+    $date;
+    $n_capteur;
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL,"http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=006d&TRAME=10G8A230100339B");
+    curl_setopt($ch, CURLOPT_HEADER, FALSE);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    $data = curl_exec($ch);
+    curl_close($ch);
+    $data_tab= preg_split("/10G8A/", $data);
+    header('Location: Page_acceuil_piece_actionneur.php?ideal1=4');
+
+
+// further processing ....
+
+
+
+
+/*$l=array(1,'0G8A',2,$typeactionneur,$numactionneur,$valeurenvoye,$numtrame,10, 2018 , 06 ,06 ,13,00,00);
 $typeactionneur=1;
 $numactionneur=10;
 $valeurenvoye=111;
@@ -47,5 +69,6 @@ echo $v;
 
 
 ?>
+
 
 
