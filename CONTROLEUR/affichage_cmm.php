@@ -2,7 +2,7 @@
 
 include ('../MODELE/fonctionSQL.php');
 function afficherPiece(){
-    $entrees = getInfoPiece($_SESSION['ID']);
+    $entrees = getInfoPiece($_SESSION['pseudo']);
     while ($donnees = $entrees->fetch())
     {
         echo('<option value='.$donnees['id'].'>'.$donnees['nom'].'</option>');
