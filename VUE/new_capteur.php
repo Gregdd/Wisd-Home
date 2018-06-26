@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/Wisd-Home-master/VUE/css/Recherche.css" />
+    <link rel="stylesheet" href="/Wisd-Home-master/VUE/css/new_capteur.css" />
 </head>
 
 <body>
