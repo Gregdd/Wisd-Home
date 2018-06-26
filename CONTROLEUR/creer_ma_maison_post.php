@@ -7,7 +7,7 @@ include '../MODELE/fonctionSQL.php';
 if ((!empty($_POST['newPiece']))&& (!empty($_POST['superficie']) ) ) {
     $newPiece = $_POST['newPiece'];
     $superficie = $_POST['superficie'];
-    addPiece($newPiece,$superficie,$_SESSION['ID']);
+    addPiece($newPiece,$superficie,$_SESSION['pseudo']);
     header ('Location: ../VUE/creer_ma_maison.php');
 }
 
