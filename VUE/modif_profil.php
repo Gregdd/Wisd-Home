@@ -19,11 +19,11 @@
     <form method="post" action="../CONTROLEUR/Profil_actu.php">
     <div class="Colonne1">
         <fieldset>
-            <legend>Votre identitÃ©</legend>
-            <p> <span class="soustitre">Informations gÃ©nÃ©rales </span><br/><br/>
+            <legend>Votre identité :</legend>
+            <p> <span class="soustitre">Informations générales </span><br/><br/>
                 <label for="nom"> Nom : </label>
                 <input type="text" name="nom" id="nom" placeholder="Nom" size="25"> <br /><br />
-                <label for="prenom"> PrÃ©nom : </label>
+                <label for="prenom"> Prénom : </label>
                 <input type="text" name="prenom" id="prenom" placeholder="Prenom" size="25"/> <br /><br />
                 <label for="birth"> Date de naissance ?</label>
                 <input type="date" name="bday" id="birth"/> <br /><br />
