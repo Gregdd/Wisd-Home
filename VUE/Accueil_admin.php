@@ -13,7 +13,6 @@
 <main>
 
     <div class="bouton">
-        <a class = a2 href="../VUE/Accueil_admin.php">Accueil</a>
         <a class = a2 href="../VUE/Rechercher_un_client.php">Rechercher un client</a>
         <a class = a2 href="../VUE/stock.php">Stock capteurs</a>
         <a class = a2 href="../VUE/new_capteur.php">Nouveau capteur</a>
