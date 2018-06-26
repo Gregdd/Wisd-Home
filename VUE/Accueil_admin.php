@@ -16,7 +16,7 @@
         <a class = a2 href="../VUE/Rechercher_un_client.php">Rechercher un client</a>
         <a class = a2 href="../VUE/stock.php">Stock capteurs</a>
         <a class = a2 href="../VUE/new_capteur.php">Nouveau capteur</a>
-        <a class = a2 href="../VUE/Messages_admin.php">Messagerie</a>
+        <a class = a2 href="../VUE/Messages_back.php">Messagerie</a>
         <a class = a2 href="../VUE/Messagerie_back_admin.php">FAQ</a>
     </div>
 
