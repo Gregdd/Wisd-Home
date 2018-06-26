@@ -1,0 +1,7 @@
+<?php
+require 'database.php';
+$id=$_GET["id"];
+echo "Message traité.";
+$req = $bdd->prepare('UPDATE messagerie SET Statut="1" WHERE id_message =:ID');
+$req->execute(array('ID' => $id));
+?>
