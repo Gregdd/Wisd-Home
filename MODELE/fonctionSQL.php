@@ -226,7 +226,7 @@ function reponseid(){
   }
 }
 function getMessage(){
-    include 'database.php';
+    include '../CONTROLEUR/database.php';
     $entrees=$bdd->query("SELECT Date_Message, ID, Objet, Message FROM messagerie");
     return $entrees;
 }
